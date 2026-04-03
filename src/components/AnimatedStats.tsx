@@ -20,7 +20,7 @@ const stats: StatItem[] = [
     target: 2500000,
   },
   {
-    value: '15+',
+    value: '10+',
     label: 'Insurance Partners',
     target: 15,
   },

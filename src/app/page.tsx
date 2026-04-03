@@ -159,7 +159,7 @@ export default function Home() {
             Compare Yacht Insurance in New Zealand
           </h1>
           <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed drop-shadow-md">
-            Find the right marine insurance for your vessel. Compare quotes from 15+ top NZ insurers and save on your annual premium.
+            Find the right marine insurance for your vessel. Compare quotes from 10+ top NZ insurers and save on your annual premium.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

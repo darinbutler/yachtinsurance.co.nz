@@ -205,7 +205,7 @@ export default function BlogPage() {
             Ready to Protect Your Vessel?
           </h2>
           <p className="text-lg text-sky-100 mb-8 max-w-2xl mx-auto">
-            Compare quotes from 15+ top NZ marine insurers and find the right coverage for your boat, yacht, or jet ski.
+            Compare quotes from 10+ top NZ marine insurers and find the right coverage for your boat, yacht, or jet ski.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
