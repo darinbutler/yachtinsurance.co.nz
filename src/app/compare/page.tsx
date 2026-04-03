@@ -106,40 +106,15 @@ export default function Compare() {
         </div>
       </section>
 
-      {/* Above Fold: Intro + Quote Form */}
-      <section className="py-12 md:py-16 bg-white border-b border-slate-200">
+      {/* Insurer Cards Grid - Above the Fold */}
+      <section className="pt-8 pb-12 md:pt-10 md:pb-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Left Column - Intro Text */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-                Find Your Ideal Marine Insurance Provider
-              </h2>
-              <p className="text-slate-600 mb-4 leading-relaxed text-lg">
-                New Zealand has numerous yacht and boat insurance providers, each offering different coverage options, premium rates, and specialties. This comparison helps you find the insurer that best matches your vessel type and insurance needs.
-              </p>
-              <p className="text-slate-600 leading-relaxed">
-                Whether you own a small dinghy, cruising yacht, racing boat, or jet ski, New Zealand's marine insurers have coverage options available. Compare ratings, minimum premiums, key features, and specialties to make an informed decision.
-              </p>
-            </div>
-
-            {/* Right Column - Quote Form */}
-            <div className="lg:col-span-1">
-              <QuoteForm mode="compact" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Insurer Cards Grid */}
-      <section className="py-12 md:py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
               Insurer Profiles & Ratings
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Detailed overview of New Zealand's leading marine insurance providers
+              Compare New Zealand's leading marine insurance providers side-by-side
             </p>
           </div>
 
@@ -213,6 +188,34 @@ export default function Compare() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Form + Body Content */}
+      <section className="py-12 md:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Left Column - Body Content */}
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                Find Your Ideal Marine Insurance Provider
+              </h2>
+              <p className="text-slate-600 mb-4 leading-relaxed text-lg">
+                New Zealand has 1.6 million recreational vessels and the highest boat ownership per capita in the world. With numerous yacht and boat insurance providers each offering different coverage options, premium rates, and specialties, this comparison helps you find the insurer that best matches your vessel type and insurance needs.
+              </p>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Whether you own a small dinghy, cruising yacht, racing boat, or jet ski, New Zealand's marine insurers have coverage options available. Compare ratings, minimum premiums, key features, and specialties to make an informed decision.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                While boat insurance isn't legally required in New Zealand, approximately 87% of boat owners carry coverage. Marinas, yacht clubs, and lenders typically require at minimum third-party liability insurance. Comprehensive coverage protects against hull damage, theft, storm damage, and personal liability — giving you peace of mind on the water.
+              </p>
+            </div>
+
+            {/* Right Column - Quote Form */}
+            <div className="lg:col-span-1">
+              <QuoteForm mode="compact" />
+            </div>
           </div>
         </div>
       </section>
