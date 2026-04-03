@@ -47,42 +47,49 @@ const vesselTypes = [
     icon: Ship,
     description: 'Comprehensive coverage for sailing and motor yachts of all sizes',
     link: '/vessels/yacht',
+    image: 'https://images.unsplash.com/photo-1701979343436-37b840cba400?w=600&h=400&fit=crop',
   },
   {
     title: 'Jet Ski',
     icon: Waves,
     description: 'Specialist personal watercraft insurance with liability protection',
     link: '/vessels/jet-ski',
+    image: 'https://images.unsplash.com/photo-1768722688751-5d995b9e6393?w=600&h=400&fit=crop',
   },
   {
     title: 'Dinghy',
     icon: Sailboat,
     description: 'Affordable coverage for small sailing dinghies and tenders',
     link: '/vessels/dinghy',
+    image: 'https://images.unsplash.com/photo-1500514966906-fe245eea9344?w=600&h=400&fit=crop',
   },
   {
     title: 'Tender',
     icon: Anchor,
     description: 'Protection for auxiliary vessels and rescue dinghies',
     link: '/vessels/tender',
+    image: 'https://images.unsplash.com/photo-1643476821614-33ae2ec8092b?w=600&h=400&fit=crop',
   },
   {
     title: 'Racing Boat',
     icon: Trophy,
     description: 'Specialized racing yacht insurance including competition coverage',
     link: '/vessels/racing-boat',
+    image: 'https://images.unsplash.com/photo-1534854638093-bada1813ca19?w=600&h=400&fit=crop',
   },
   {
     title: 'Coastal Cruising',
     icon: Compass,
     description: 'Perfect for vessels that cruise NZ regional and Tasman waters',
     link: '/vessels/coastal-cruising',
+    image: 'https://images.unsplash.com/photo-1626869710563-be671a0cd919?w=600&h=400&fit=crop',
   },
   {
     title: 'Blue Water Cruiser',
     icon: Globe,
     description: 'Extended offshore coverage for international blue water passages',
     link: '/vessels/blue-water-cruiser',
+    image: 'https://images.unsplash.com/photo-1696028354827-0d36454dcaa8?w=600&h=400&fit=crop',
   },
 ];
 
@@ -137,9 +144,9 @@ export default function Home() {
       <section
         className="relative h-[60vh] min-h-[380px] sm:min-h-[450px] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1920&h=1080&fit=crop)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1625045641924-3c15809b6689?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 40%',
         }}
       >
         {/* Dark Overlay Gradient */}
@@ -213,24 +220,34 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col h-full"
+                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col h-full overflow-hidden group"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-sky-50 rounded-lg">
-                      <Icon className="w-6 h-6 text-sky-600" />
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={vessel.image}
+                      alt={`${vessel.title} insurance in New Zealand`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                      <div className="p-2 bg-white/90 rounded-lg backdrop-blur-sm">
+                        <Icon className="w-5 h-5 text-sky-600" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white drop-shadow-md">{vessel.title}</h3>
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900">{vessel.title}</h3>
                   </div>
-                  <p className="text-slate-600 text-sm mb-6 flex-grow">
-                    {vessel.description}
-                  </p>
-                  <Link
-                    href={vessel.link}
-                    className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-semibold transition-colors text-sm"
-                  >
-                    Learn More
-                    <ChevronRight size={16} />
-                  </Link>
+                  <div className="p-5 flex flex-col flex-grow">
+                    <p className="text-slate-600 text-sm mb-4 flex-grow">
+                      {vessel.description}
+                    </p>
+                    <Link
+                      href={vessel.link}
+                      className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-semibold transition-colors text-sm"
+                    >
+                      Learn More
+                      <ChevronRight size={16} />
+                    </Link>
+                  </div>
                 </div>
               );
             })}
