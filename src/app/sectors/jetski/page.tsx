@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Yacht Insurance NZ',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=1200&h=630&fit=crop',
+        url: 'https://images.unsplash.com/photo-1769655991063-cc63efc4e2d0?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
         alt: 'Jet ski racing in New Zealand waters',
@@ -143,6 +143,14 @@ export default function JetSkiInsurancePage() {
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
           <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
         </div>
+
+        <div
+          className="absolute inset-0 opacity-20 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1768722688751-5d995b9e6393?w=1600&h=900&fit=crop')`,
+            backgroundBlendMode: 'overlay',
+          }}
+        />
 
         <div className="relative text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">

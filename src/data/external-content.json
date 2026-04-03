@@ -1,0 +1,77 @@
+{
+  "scrapedAt": "2026-04-03T00:00:00Z",
+  "sources": [
+    "https://www.yachtingnz.org.nz",
+    "https://www.maritimenz.govt.nz"
+  ],
+  "articles": [
+    {
+      "title": "Princess Sofia Regatta: Kiwis battle through tough Day 4 as medal showdown looms",
+      "excerpt": "It was another demanding day on the water for New Zealand's sailors at the Princess Sofia Regatta in Palma, with tricky, shifty conditions again testing the fleet.",
+      "date": "2026-04-03",
+      "source": "Yachting New Zealand",
+      "sourceUrl": "https://www.yachtingnz.org.nz"
+    },
+    {
+      "title": "Princess Sofia Regatta: Kiwis still in medal hunt after chaotic start to finals racing",
+      "excerpt": "Race Results from Day 3 of the Princess Sofia Regatta showing New Zealand sailors competing at the international event.",
+      "date": "2026-04-02",
+      "source": "Yachting New Zealand",
+      "sourceUrl": "https://www.yachtingnz.org.nz"
+    },
+    {
+      "title": "Yachting New Zealand appoints advisory group to lead membership model and affiliation fee review",
+      "excerpt": "The review into Yachting New Zealand's club membership model and affiliation fee structure has gathered pace with the appointment of a 16-member advisory group.",
+      "date": "2026-04-01",
+      "source": "Yachting New Zealand",
+      "sourceUrl": "https://www.yachtingnz.org.nz"
+    },
+    {
+      "title": "Gautrey, Bilger lead charge as Kiwis shine on Day 2 in Palma",
+      "excerpt": "New Zealand sailors delivered strong performances on Day 2 of the 2026 Princess Sofia Regatta, with George Gautrey leading the charge after claiming top finishes.",
+      "date": "2026-04-01",
+      "source": "Yachting New Zealand",
+      "sourceUrl": "https://www.yachtingnz.org.nz"
+    },
+    {
+      "title": "21-strong Kiwi squad set for major test at Palma regatta",
+      "excerpt": "New Zealand's sailors are preparing for the major international yachting event in Palma with a strong squad competing across multiple classes.",
+      "date": "2026-03-30",
+      "source": "Yachting New Zealand",
+      "sourceUrl": "https://www.yachtingnz.org.nz"
+    },
+    {
+      "title": "A significant step forward: the 2026 Port and Harbour Marine Safety Code",
+      "excerpt": "For more than two decades, the Port and Harbour Marine Safety Code has been a cornerstone of safe navigation in Aotearoa's busy commercial ports and harbours.",
+      "date": "2026-03-25",
+      "source": "Maritime NZ",
+      "sourceUrl": "https://www.maritimenz.govt.nz"
+    },
+    {
+      "title": "Easy ways to avoid oil discharges",
+      "excerpt": "Vessels can discharge oily water that causes harm to the oceans and rivers we depend on for our livelihoods and wellbeing. Maritime NZ provides guidance on preventing such discharges.",
+      "date": "2026-03-24",
+      "source": "Maritime NZ",
+      "sourceUrl": "https://www.maritimenz.govt.nz"
+    },
+    {
+      "title": "Regulatory Amendment Package (RAP) 3 consultation coming soon",
+      "excerpt": "Maritime NZ will soon consult on Regulatory Amendment Package (RAP) 3, a package of proposed changes to the Maritime Rules and related policy designed to improve safety and support the maritime workforce.",
+      "date": "2026-03-24",
+      "source": "Maritime NZ",
+      "sourceUrl": "https://www.maritimenz.govt.nz"
+    }
+  ],
+  "summary": {
+    "totalArticles": 8,
+    "sourceBreakdown": {
+      "Yachting New Zealand": 5,
+      "Maritime NZ": 3
+    },
+    "categories": {
+      "racing": 5,
+      "safety": 2,
+      "regulation": 1
+    }
+  }
+}

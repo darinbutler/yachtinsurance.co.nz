@@ -1,0 +1,150 @@
+{
+  "scrapedAt": "2026-04-03T00:00:00Z",
+  "providers": [
+    {
+      "provider": "Mariner Insurance",
+      "url": "https://www.mariner.co.nz",
+      "vesselTypes": [
+        "Trailered boats",
+        "Jetski/PWC",
+        "Launch",
+        "Yacht",
+        "Blue water vessels",
+        "Construction vessels",
+        "Transit vessels",
+        "Charter boats"
+      ],
+      "features": [
+        "Specialist cover for all types of boat and watercraft",
+        "Locally owned and operated",
+        "Over 2000 positive reviews on Trustpilot",
+        "96% Excellent rating on Trustpilot",
+        "Over a decade of trusted service in NZ"
+      ],
+      "priceMentions": [
+        "Online quote available",
+        "Phone quote: 0800 466 467"
+      ],
+      "hasQuoteForm": true,
+      "callToAction": "Get a quote",
+      "phone": "0800 466 467"
+    },
+    {
+      "provider": "Tower Insurance",
+      "url": "https://www.tower.co.nz/boat-insurance",
+      "vesselTypes": [
+        "Runabout (powerboats)",
+        "Personal Water Craft (Jetski)",
+        "Launch/Cruiser",
+        "Yacht",
+        "Trailer Sailer",
+        "Off-beach (dinghy)",
+        "Multi-hulls (by phone)"
+      ],
+      "features": [
+        "Coastguard's recommended boat insurer",
+        "One event, one excess",
+        "Multi location cover (land, water, storage, trailer)",
+        "3 year replacement from new",
+        "Up to 5 year replacement value for boat motor",
+        "Emergency rescue up to $25,000",
+        "Social yacht racing cover",
+        "Marina liability up to $5,000,000",
+        "Optional recreational equipment cover ($5,000-$10,000)",
+        "Lay-up cover for winter storage",
+        "Water-skiing liability cover",
+        "Transport and accommodation costs",
+        "Fire and theft cover",
+        "Accidental loss cover"
+      ],
+      "priceMentions": [
+        "Quote available online",
+        "Phone for multihull quotes: 0800 006 386",
+        "Phone for custom boat quotes: 0800 379 372"
+      ],
+      "hasQuoteForm": true,
+      "phone": "0800 006 386",
+      "optionalBenefits": [
+        "Recreational equipment ($5,000 or $10,000)",
+        "Lay-up cover",
+        "Boat trailer"
+      ]
+    },
+    {
+      "provider": "The Marina Shop",
+      "url": "https://www.marine-insurance.co.nz",
+      "vesselTypes": [
+        "Monohulls",
+        "Catamarans",
+        "Trimarans",
+        "Yachts",
+        "Launches",
+        "SVs (Sailing Vessels)",
+        "Pleasure craft",
+        "Vessels on swing moorings",
+        "Vessels in marinas"
+      ],
+      "features": [
+        "Blue Water Marine Insurance (minimum 2 persons onboard)",
+        "Coastal Insurance",
+        "Public Liability Insurance (Third Party)",
+        "Travel Medical Insurance",
+        "Well-known and respected marine insurers",
+        "Quick and fair claims settlement history",
+        "Free no-obligation quotes",
+        "Global coverage (most locations)",
+        "A-rated underwriters only",
+        "24/7 claims support"
+      ],
+      "priceMentions": [
+        "Free no-obligation quotes",
+        "Public Liability quoted on fixed scale basis",
+        "Scale based on time on cover and hull construction type"
+      ],
+      "hasQuoteForm": true,
+      "phone": "+64 9 402 6093",
+      "email": "info@themarinashop.com",
+      "locations": [
+        "Lat 35° 19' 0\" S",
+        "Long 174° 7' 0\" E"
+      ],
+      "insuranceTypes": {
+        "blueWater": {
+          "description": "Minimum 2 persons onboard, most locations excluding War Zones",
+          "excluded": "Australian and New Zealand flagged vessels excluded"
+        },
+        "coastal": {
+          "description": "New Zealand and a few other countries, up to 200NM",
+          "availability": "Marinas and swing moorings in NZ"
+        },
+        "publicLiability": {
+          "description": "Third Party Insurance",
+          "excluded": "Australian, Canadian, USA and other flag vessels"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "totalProviders": 3,
+    "commonVesselTypes": [
+      "Yacht",
+      "Launch/Cruiser",
+      "Personal Water Craft (Jetski)",
+      "Powerboats/Runabouts"
+    ],
+    "commonFeatures": [
+      "Online quote forms",
+      "Multiple vessel type coverage",
+      "Accidental loss cover",
+      "Fire and theft cover",
+      "Multi-location coverage",
+      "Competitive ratings/reviews"
+    ],
+    "quoteAvailability": "All providers offer online quotes with phone support available",
+    "standoutProviders": {
+      "Mariner": "Highest Trustpilot rating (96% Excellent) with 2000+ reviews",
+      "Tower": "Coastguard recommended, most comprehensive optional benefits",
+      "Marina Shop": "Global coverage specialist, focused on pleasure craft"
+    }
+  }
+}

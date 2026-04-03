@@ -1,0 +1,163 @@
+{
+  "scrapedAt": "2026-04-03T00:00:00Z",
+  "comparisonDate": "2026-04-03",
+  "providers": [
+    {
+      "rank": 1,
+      "name": "Mariner Insurance",
+      "url": "https://www.mariner.co.nz",
+      "trustRating": "96% Excellent (Trustpilot)",
+      "reviews": "2000+",
+      "established": "10+ years in NZ market",
+      "vesselCoverage": "8+ types",
+      "keyStrengths": [
+        "Highest customer satisfaction",
+        "Locally owned and operated",
+        "Comprehensive vessel type coverage"
+      ],
+      "specialties": [
+        "Blue water insurance",
+        "Construction vessels",
+        "Charter boats"
+      ],
+      "contactMethod": "Phone (0800 466 467) or Online",
+      "quoteProcess": "Online form available"
+    },
+    {
+      "rank": 2,
+      "name": "Tower Insurance",
+      "url": "https://www.tower.co.nz/boat-insurance",
+      "recommendation": "Coastguard Recommended",
+      "vesselCoverage": "7 types (plus phone quotes)",
+      "keyStrengths": [
+        "Coastguard endorsement",
+        "Extensive optional benefits",
+        "Multiple coverage options",
+        "Emergency support up to $25,000"
+      ],
+      "uniqueFeatures": [
+        "Social yacht racing cover",
+        "Marina liability up to $5M",
+        "Lay-up cover for winter storage",
+        "3-year replacement guarantee from new"
+      ],
+      "optionalAddons": [
+        "Recreational equipment ($5,000-$10,000)",
+        "Lay-up cover",
+        "Boat trailer cover"
+      ],
+      "contactMethods": [
+        "General quotes: 0800 006 386",
+        "Custom boats: 0800 379 372",
+        "Online quote form"
+      ],
+      "quoteProcess": "Online form available"
+    },
+    {
+      "rank": 3,
+      "name": "The Marina Shop",
+      "url": "https://www.marine-insurance.co.nz",
+      "specialization": "Global Pleasure Craft Insurance",
+      "vesselCoverage": "9+ types (specialized)",
+      "keyStrengths": [
+        "Global coverage expertise",
+        "A-rated underwriters only",
+        "24/7 claims support",
+        "Free no-obligation quotes"
+      ],
+      "uniqueServices": [
+        "Travel Medical Insurance",
+        "Swing mooring coverage",
+        "Worldwide quotations",
+        "Condition report for older vessels"
+      ],
+      "insuranceTypes": [
+        "Blue Water (minimum 2 persons onboard)",
+        "Coastal (to 200NM)",
+        "Third Party Liability"
+      ],
+      "coveredLocations": [
+        "Most global locations",
+        "New Zealand",
+        "Coastal waters"
+      ],
+      "contactMethods": [
+        "Phone: +64 9 402 6093",
+        "Email: info@themarinashop.com",
+        "Online quote form"
+      ],
+      "quoteProcess": "Online form with email/phone follow-up"
+    }
+  ],
+  "featureComparison": {
+    "coverageTypes": {
+      "powerboats": {
+        "Mariner": "Yes",
+        "Tower": "Yes",
+        "MarinashMarinashop": "Limited"
+      },
+      "yachts": {
+        "Mariner": "Yes",
+        "Tower": "Yes",
+        "Marinashop": "Yes"
+      },
+      "jetskis": {
+        "Mariner": "Yes",
+        "Tower": "Yes",
+        "Marinashop": "Limited"
+      },
+      "launches": {
+        "Mariner": "Yes",
+        "Tower": "Yes",
+        "Marinashop": "Yes"
+      },
+      "multihulls": {
+        "Mariner": "Yes",
+        "Tower": "Phone quote",
+        "Marinashop": "Yes"
+      },
+      "global": {
+        "Mariner": "No",
+        "Tower": "NZ only",
+        "Marinashop": "Yes"
+      }
+    },
+    "optionalFeatures": {
+      "recreationalEquipment": {
+        "Mariner": "No",
+        "Tower": "Yes ($5-10k)",
+        "Marinashop": "No"
+      },
+      "layUpCover": {
+        "Mariner": "No",
+        "Tower": "Yes",
+        "Marinashop": "No"
+      },
+      "travelMedical": {
+        "Mariner": "No",
+        "Tower": "No",
+        "Marinashop": "Yes"
+      },
+      "emergencySupport": {
+        "Mariner": "Yes",
+        "Tower": "Up to $25k",
+        "Marinashop": "24/7 claims"
+      }
+    }
+  },
+  "priceIndicators": {
+    "note": "No fixed pricing displayed - all providers require custom quotes based on vessel details",
+    "quotingBasis": {
+      "Mariner": "Online instant quote + phone consultation",
+      "Tower": "Online quote calculator or phone for special cases",
+      "Marinashop": "Form submission with email/phone follow-up, fixed scale for liability"
+    }
+  },
+  "recommendation": {
+    "bestForNewBoatOwners": "Tower Insurance (Coastguard recommended, comprehensive)",
+    "bestForCompetitivePrice": "Mariner Insurance (highest satisfaction scores)",
+    "bestForGlobalCoverage": "The Marina Shop (worldwide expertise)",
+    "bestForSpecializedVessels": "Tower Insurance (custom quotes available)",
+    "bestForWinterStorage": "Tower Insurance (lay-up cover)"
+  }
+}

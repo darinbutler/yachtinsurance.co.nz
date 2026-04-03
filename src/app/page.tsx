@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: 'Yacht Insurance NZ',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=630&fit=crop',
+        url: 'https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
         alt: 'Luxury yacht sailing in New Zealand waters',
@@ -137,7 +137,7 @@ export default function Home() {
       <section
         className="relative h-[60vh] min-h-[380px] sm:min-h-[450px] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&h=1080&fit=crop)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

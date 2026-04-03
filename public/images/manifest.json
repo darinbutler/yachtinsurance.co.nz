@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-04-03T00:00:00Z",
+  "images": {
+    "hero-home": {
+      "alt": "White sailboat under full sail cutting through blue ocean water with dramatic close-up angle from deck level. Professional yacht insurance for New Zealand vessel owners.",
+      "source": "unsplash",
+      "photoId": "photo-1602943554726-d8bebe914982"
+    },
+    "hero-coverage": {
+      "alt": "Sailing yacht moving smoothly through calm blue ocean water under clear sky. Comprehensive marine insurance coverage for New Zealand sailing vessels.",
+      "source": "unsplash",
+      "photoId": "photo-1769655991063-cc63efc4e2d0"
+    },
+    "hero-compare": {
+      "alt": "Multiple sailboats gliding across calm ocean at golden hour sunset with warm light reflecting on water. Compare yacht insurance quotes for New Zealand boating.",
+      "source": "unsplash",
+      "photoId": "photo-1626869710563-be671a0cd919"
+    },
+    "hero-about": {
+      "alt": "White yacht anchored near lush green tropical mountain with turquoise water in New Zealand scenery. Trusted yacht insurance provider serving Kiwi boat owners.",
+      "source": "unsplash",
+      "photoId": "photo-1625694175188-8f596781bed9"
+    },
+    "hero-contact": {
+      "alt": "Sailboat sailing alone on vast open ocean water approaching from distance. Contact our New Zealand yacht insurance specialists for a quote today.",
+      "source": "unsplash",
+      "photoId": "photo-1696028354827-0d36454dcaa8"
+    },
+    "hero-blog": {
+      "alt": "Classic sailing on traditional wooden ship with white sails billowing in the wind. Read expert tips on marine vessel insurance for New Zealand sailors.",
+      "source": "unsplash",
+      "photoId": "photo-1774256627968-01e193f1e777"
+    },
+    "sector-yacht": {
+      "alt": "Close-up of white sailboat under full sail with dramatic ocean sailing angle. Specialized yacht insurance coverage for New Zealand sailing vessels.",
+      "source": "unsplash",
+      "photoId": "photo-1602943554726-d8bebe914982"
+    },
+    "sector-jetski": {
+      "alt": "Person riding jet ski at high speed on ocean water with spray and action. Personal watercraft and jet ski insurance for New Zealand marine recreation.",
+      "source": "unsplash",
+      "photoId": "photo-1768722688751-5d995b9e6393"
+    },
+    "sector-dinghy": {
+      "alt": "Small sailboats racing across dark blue sea water. Dinghy and small vessel insurance coverage for New Zealand boating enthusiasts.",
+      "source": "unsplash",
+      "photoId": "photo-1768667779694-c8a1ec81528e"
+    },
+    "sector-tender": {
+      "alt": "Yacht anchored near green mountain in calm turquoise waters. Tender boat and support vessel insurance for New Zealand yacht owners.",
+      "source": "unsplash",
+      "photoId": "photo-1625694175188-8f596781bed9"
+    },
+    "sector-racing": {
+      "alt": "Sailboats racing competitively on deep blue ocean with multiple boats under full sail. Competitive racing yacht insurance for New Zealand sailing events.",
+      "source": "unsplash",
+      "photoId": "photo-1759809278965-cce79bb60611"
+    },
+    "sector-coastal": {
+      "alt": "Sailboats racing across dark calm sea in coastal waters. Coastal cruising and day sailing insurance for New Zealand marine vessels.",
+      "source": "unsplash",
+      "photoId": "photo-1768667779694-c8a1ec81528e"
+    },
+    "sector-bluewater": {
+      "alt": "Sailboat on vast open ocean water for blue water passage sailing. Offshore and blue water sailing insurance for New Zealand adventurers.",
+      "source": "unsplash",
+      "photoId": "photo-1696028354827-0d36454dcaa8"
+    }
+  }
+}

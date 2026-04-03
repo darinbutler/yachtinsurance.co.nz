@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Yacht Insurance NZ",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=630&fit=crop",
+        url: "https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1200&h=630&fit=crop",
         width: 1200,
         height: 630,
         alt: "Luxury yacht sailing in New Zealand waters",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description:
       "Compare top yacht and marine insurance providers in New Zealand. Get instant quotes for boat, yacht, jet ski and marine insurance.",
     images: [
-      "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=630&fit=crop",
+      "https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1200&h=630&fit=crop",
     ],
   },
   verification: {

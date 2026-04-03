@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Yacht Insurance NZ',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=630&fit=crop',
+        url: 'https://images.unsplash.com/photo-1696028354827-0d36454dcaa8?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
         alt: 'Offshore sailing vessel',

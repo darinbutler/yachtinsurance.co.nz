@@ -18,52 +18,46 @@ export default function Logo({ variant = 'default' }: LogoProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id="anchorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="yachtGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#0284c7" />
               <stop offset="100%" stopColor="#14b8a6" />
             </linearGradient>
           </defs>
-          {/* Anchor design */}
-          <circle
-            cx="20"
-            cy="20"
-            r="18"
-            fill="none"
-            stroke="url(#anchorGradient)"
-            strokeWidth="1.5"
-            opacity="0.3"
+          {/* Yacht hull */}
+          <path
+            d="M 6 28 Q 8 32 20 32 Q 32 32 34 28 L 32 28 Q 30 30 20 30 Q 10 30 8 28 Z"
+            fill="url(#yachtGradient)"
           />
-          {/* Anchor shaft */}
+          {/* Mast */}
           <line
-            x1="20"
+            x1="18"
             y1="6"
-            x2="20"
+            x2="18"
             y2="28"
-            stroke="url(#anchorGradient)"
-            strokeWidth="2"
+            stroke="url(#yachtGradient)"
+            strokeWidth="1.5"
             strokeLinecap="round"
           />
-          {/* Anchor flukes (anchor arms) */}
+          {/* Main sail */}
           <path
-            d="M 20 28 Q 12 28 10 34"
-            fill="none"
-            stroke="url(#anchorGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
+            d="M 19 7 L 33 25 L 19 27 Z"
+            fill="url(#yachtGradient)"
+            opacity="0.7"
           />
+          {/* Jib sail */}
           <path
-            d="M 20 28 Q 28 28 30 34"
-            fill="none"
-            stroke="url(#anchorGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
+            d="M 17 8 L 7 25 L 17 26 Z"
+            fill="url(#yachtGradient)"
+            opacity="0.5"
           />
-          {/* Anchor ring */}
-          <circle
-            cx="20"
-            cy="8"
-            r="2.5"
-            fill="url(#anchorGradient)"
+          {/* Water line */}
+          <path
+            d="M 3 34 Q 8 31 13 34 Q 18 37 23 34 Q 28 31 33 34 Q 35 35 37 34"
+            fill="none"
+            stroke="url(#yachtGradient)"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            opacity="0.4"
           />
         </svg>
       </div>

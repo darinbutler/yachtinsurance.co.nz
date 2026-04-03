@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'Yacht Insurance NZ',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1563305503-2f917bc90a69?w=1200&h=630&fit=crop',
+        url: 'https://images.unsplash.com/photo-1626869710563-be671a0cd919?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
         alt: 'Comparing yacht insurance options',
@@ -87,7 +87,7 @@ export default function Compare() {
       <section
         className="relative h-[40vh] min-h-[300px] sm:min-h-[380px] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1563305503-2f917bc90a69?w=1920&h=1080&fit=crop)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1626869710563-be671a0cd919?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
