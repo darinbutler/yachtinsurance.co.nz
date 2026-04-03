@@ -134,21 +134,8 @@ export default function ContactPage() {
                   Takes less than 2 minutes
                 </div>
 
-                {/* Form Container with Strong Border */}
-                <div className="border-4 border-sky-500 rounded-xl overflow-hidden shadow-lg">
-                  <div className="bg-gradient-to-r from-sky-600 to-sky-500 px-6 py-6">
-                    <h2 className="text-2xl font-bold text-white">
-                      Your Free Quote
-                    </h2>
-                    <p className="text-sky-100 mt-1">
-                      Get personalized insurance quotes from multiple NZ insurers
-                    </p>
-                  </div>
-
-                  <div className="p-6 md:p-8 bg-slate-50">
-                    <QuoteForm mode="full" />
-                  </div>
-                </div>
+                {/* Form Container */}
+                <QuoteForm mode="full" />
               </div>
             </div>
 

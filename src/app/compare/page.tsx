@@ -125,11 +125,7 @@ export default function Compare() {
 
             {/* Right Column - Quote Form */}
             <div className="lg:col-span-1">
-              <div className="bg-sky-50 rounded-xl p-6 border-2 border-sky-200 sticky top-20">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Get Multiple Quotes</h3>
-                <p className="text-sm text-slate-600 mb-6">Compare personalized quotes from our partner insurers</p>
-                <QuoteForm mode="compact" />
-              </div>
+              <QuoteForm mode="compact" />
             </div>
           </div>
         </div>

@@ -158,51 +158,73 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full px-4 py-3 bg-sky-600 text-white rounded-xl font-medium hover:bg-sky-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
+        className="w-full px-4 py-3.5 bg-gradient-to-r from-sky-600 to-teal-500 text-white rounded-xl font-semibold text-lg hover:from-sky-700 hover:to-teal-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
       >
-        {isSubmitting ? 'Submitting...' : 'Get My Free Quote'}
+        {isSubmitting ? 'Submitting...' : 'Get My Free Quote →'}
       </button>
+      <p className="text-center text-xs text-slate-400 mt-2">No credit card required</p>
     </form>
   );
 
+  const trustBadges = (
+    <div className="mt-6 pt-6 border-t border-slate-200">
+      <div className="grid grid-cols-2 gap-3">
+        <div className="flex items-center gap-2">
+          <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
+          <span className="text-xs text-slate-600 font-medium">ICNZ Registered</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
+          <span className="text-xs text-slate-600 font-medium">No Broker Fees</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Lock size={16} className="text-emerald-500 flex-shrink-0" />
+          <span className="text-xs text-slate-600 font-medium">256-bit SSL Secure</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Shield size={16} className="text-emerald-500 flex-shrink-0" />
+          <span className="text-xs text-slate-600 font-medium">24hr Response</span>
+        </div>
+      </div>
+    </div>
+  );
+
   if (mode === 'compact') {
-    return formContent;
+    return (
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg ring-2 ring-sky-500 sticky top-20">
+        {/* Compact Header */}
+        <div className="bg-gradient-to-r from-sky-600 to-teal-500 px-5 py-4">
+          <div className="flex items-center gap-2 mb-1">
+            <Shield size={18} className="text-white" />
+            <h3 className="text-lg font-bold text-white">Get Your Free Quote</h3>
+          </div>
+          <p className="text-sky-100 text-sm">No obligation — takes under 2 minutes</p>
+        </div>
+        <div className="px-5 py-5">
+          {formContent}
+          {trustBadges}
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+    <div className="bg-white rounded-xl overflow-hidden shadow-xl ring-2 ring-sky-500">
       {/* Header */}
       <div className="bg-gradient-to-r from-sky-600 to-teal-500 px-6 py-8">
-        <h2 className="text-2xl font-bold text-white">Free, No-Obligation Quote</h2>
+        <div className="flex items-center gap-3 mb-2">
+          <div className="p-2 bg-white/20 rounded-lg">
+            <Shield size={22} className="text-white" />
+          </div>
+          <h2 className="text-2xl font-bold text-white">Free, No-Obligation Quote</h2>
+        </div>
         <p className="text-sky-100 mt-1">Get a personalized quote in under 2 minutes</p>
       </div>
 
       {/* Form Content */}
       <div className="px-6 py-8">
         {formContent}
-
-        {/* Trust Badges */}
-        <div className="mt-8 pt-8 border-t border-slate-200">
-          <p className="text-xs text-slate-500 font-medium mb-4">Why Choose Us</p>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex items-start gap-2">
-              <CheckCircle2 size={16} className="text-sky-600 flex-shrink-0 mt-0.5" />
-              <span className="text-xs text-slate-700">ICNZ-Registered</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle2 size={16} className="text-sky-600 flex-shrink-0 mt-0.5" />
-              <span className="text-xs text-slate-700">No Broker Fees</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <Lock size={16} className="text-sky-600 flex-shrink-0 mt-0.5" />
-              <span className="text-xs text-slate-700">256-bit SSL</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle2 size={16} className="text-sky-600 flex-shrink-0 mt-0.5" />
-              <span className="text-xs text-slate-700">24hr Response</span>
-            </div>
-          </div>
-        </div>
+        {trustBadges}
       </div>
     </div>
   );
