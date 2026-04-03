@@ -320,7 +320,7 @@ export default function Home() {
                 <div className="mb-4">
                   <p className="text-xs text-slate-500 mb-2">Min. Premium</p>
                   <p className="text-lg font-semibold text-sky-600">
-                    {insurer.minPremium}
+                    <span className="text-xs font-normal text-slate-500">from </span>{insurer.minPremium}
                   </p>
                 </div>
                 <Link

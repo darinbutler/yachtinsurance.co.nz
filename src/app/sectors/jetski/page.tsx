@@ -128,12 +128,43 @@ export default function JetSkiInsurancePage() {
     serviceType: 'Jet Ski Insurance',
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vessel Types',
+        item: 'https://yachtinsurance.co.nz/sectors',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Jet Ski',
+        item: 'https://yachtinsurance.co.nz/sectors/jetski',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -181,7 +212,7 @@ export default function JetSkiInsurancePage() {
                   Our jet ski insurance specialists provide fast, affordable coverage
                   that protects you and your passengers while you enjoy the thrill
                   of the water. Get comprehensive protection with liability limits
-                  that match New Zealand maritime law.
+                  that match New Zealand maritime law. <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">Learn about coverage options</Link>.
                 </p>
               </div>
 
@@ -355,6 +386,101 @@ export default function JetSkiInsurancePage() {
                   Complete peace of mind
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NZ-Specific Considerations */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            Jet Skiing in New Zealand Waters
+          </h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+            New Zealand's unique marine environment presents specific challenges and opportunities for jet ski enthusiasts
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Regional Usage Patterns
+              </h3>
+              <p className="text-slate-700 mb-3">
+                Popular jet skiing destinations across New Zealand include the Hauraki Gulf near Auckland, the Bay of Islands in Northland, and Lake Taupo. Each region has distinct water conditions and seasonal patterns that affect insurance rates. Insurers often provide better premiums for riders who stick to protected harbours and designated recreation areas rather than open ocean riding.
+              </p>
+              <p className="text-slate-600 text-sm">
+                If you primarily use your jet ski in a specific region—like cruising between Waiheke and Great Barrier Island, or in sheltered Lake Waikato—inform your insurer. Many offer location-based discounts for safer, protected waters.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Seasonal Considerations
+              </h3>
+              <p className="text-slate-700 mb-3">
+                New Zealand's summer season (November to March) sees peak jet ski activity, particularly around the Auckland waterfront and Bay of Islands. Winter months bring rougher conditions and higher accident rates due to larger swells and colder water temperatures. Some insurers adjust premiums seasonally or offer reduced-premium policies for winter-only storage.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Consider a seasonal policy if you only operate your jet ski during summer months. You could save 30-40% on annual premiums by insuring coverage only during your active riding season.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Common Claims & Prevention
+              </h3>
+              <p className="text-slate-700 mb-3">
+                In New Zealand waters, the most frequent jet ski insurance claims involve collision with other vessels, damage from rock strikes in shallow areas, and theft from unattended moorings. The Ministry of Transport reports that personal watercraft operators have higher accident rates than other boating types, particularly when operating near populated beaches and harbours.
+              </p>
+              <p className="text-slate-600 text-sm">
+                To reduce your premium, maintain a clean riding record, complete a boating safety course recognized by the Maritime Safety Authority, and use reliable security measures such as chain locks and electronic tracking for your jet ski. Riders who invest in safety certifications often qualify for 15-20% premium discounts.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Storage & Security Requirements
+              </h3>
+              <p className="text-slate-700 mb-3">
+                Jet ski theft is a significant concern in popular boating areas like Auckland, Tauranga, and Rotorua. Insurance companies in New Zealand typically require secure storage solutions to maintain coverage at standard rates. This might include locked boat sheds, secure marina berths, or on-property storage with proper security measures.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Leaving your jet ski unattended on a beach or public ramp is typically not covered by standard insurance. Invest in secure parking facilities and you'll likely see your premiums drop. Some marinas offer jet ski-specific secure parking with 24-hour surveillance, which can substantially improve your insurance rates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Sectors Section */}
+      <section className="py-16 px-4 md:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Insurance for Other Vessel Types</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700">Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Comprehensive coverage for cruising yachts and motor vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700">Racing Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Specialist coverage for competitive sailing and regattas.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/dinghy" className="text-sky-600 hover:text-sky-700">Dinghy Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Coverage for small boats and tender vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/bluewater" className="text-sky-600 hover:text-sky-700">Blue Water Cruising</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Extended coverage for offshore cruising expeditions.</p>
             </div>
           </div>
         </div>

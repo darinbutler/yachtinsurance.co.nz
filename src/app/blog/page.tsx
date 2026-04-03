@@ -38,32 +38,59 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Yacht Insurance Blog & Guides',
+    description:
+      'Expert guides on yacht and marine insurance in New Zealand',
+    url: 'https://yachtinsurance.co.nz/blog',
+    mainEntity: blogPosts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      image: post.image,
+      datePublished: post.date,
+      author: {
+        '@type': 'Person',
+        name: post.author,
+      },
+      articleBody: post.content,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://yachtinsurance.co.nz/blog',
+      },
+    ],
+  };
+
   return (
     <>
       {/* Schema Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'CollectionPage',
-            name: 'Yacht Insurance Blog & Guides',
-            description:
-              'Expert guides on yacht and marine insurance in New Zealand',
-            url: 'https://yachtinsurance.co.nz/blog',
-            mainEntity: blogPosts.map((post) => ({
-              '@type': 'BlogPosting',
-              headline: post.title,
-              description: post.excerpt,
-              image: post.image,
-              datePublished: post.date,
-              author: {
-                '@type': 'Person',
-                name: post.author,
-              },
-              articleBody: post.content,
-            })),
-          }),
+          __html: JSON.stringify(collectionSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -184,6 +211,45 @@ export default function BlogPage() {
             >
               Compare Insurers
             </Link>
+            <Link
+              href="/coverage"
+              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-sky-700 transition-colors"
+            >
+              Learn About Coverage
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">Related Pages</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/coverage" className="text-sky-600 hover:text-sky-700">What's Covered in Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Learn about coverage types, exclusions, and how to select the right protection level for your vessel.</p>
+            </div>
+            <div className="bg-slate-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/compare" className="text-sky-600 hover:text-sky-700">Compare Insurance Providers</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Find the best marine insurance provider with our comprehensive comparison of NZ insurers.</p>
+            </div>
+            <div className="bg-slate-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/faqs" className="text-sky-600 hover:text-sky-700">Frequently Asked Questions</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Get answers to common questions about yacht insurance, coverage, and claims.</p>
+            </div>
+            <div className="bg-slate-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/contact" className="text-sky-600 hover:text-sky-700">Get Your Free Quote</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Compare quotes from multiple NZ marine insurers and find the right protection for your boat.</p>
+            </div>
           </div>
         </div>
       </section>

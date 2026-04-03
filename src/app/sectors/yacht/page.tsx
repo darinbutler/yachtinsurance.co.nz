@@ -155,12 +155,43 @@ export default function YachtInsurancePage() {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vessel Types',
+        item: 'https://yachtinsurance.co.nz/sectors',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Yacht',
+        item: 'https://yachtinsurance.co.nz/sectors/yacht',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -213,7 +244,7 @@ export default function YachtInsurancePage() {
                   Our yacht insurance specialists understand the unique risks facing
                   boat owners in NZ waters. We connect you with the best insurers
                   offering competitive rates, flexible coverage options, and claims
-                  service you can trust when you need it most.
+                  service you can trust when you need it most. <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">Compare providers</Link> and <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">learn about available coverage</Link>.
                 </p>
               </div>
 
@@ -397,7 +428,7 @@ export default function YachtInsurancePage() {
             Choosing the Right Coverage
           </h3>
           <p className="text-slate-700 mb-4">
-            Modern yacht insurance offers flexible coverage options. Most policies
+            Modern yacht insurance offers flexible <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">coverage options</Link>. Most policies
             include hull protection, third-party liability, salvage services, and
             crew protection. Many boat owners also add coverage for navigation
             equipment, personal effects, and extended cruising areas.
@@ -439,6 +470,39 @@ export default function YachtInsurancePage() {
             handle the comparison work, letting you focus on your boating passion
             with confidence that your vessel is protected.
           </p>
+        </div>
+      </section>
+
+      {/* Related Sectors Section */}
+      <section className="py-16 px-4 md:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Insurance for Other Vessel Types</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/jetski" className="text-sky-600 hover:text-sky-700">Jet Ski Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Fast-track coverage for personal watercraft and jet skis.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700">Racing Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Specialized coverage for competitive racing yachts.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/dinghy" className="text-sky-600 hover:text-sky-700">Dinghy Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Coverage for small boats and tender vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/bluewater" className="text-sky-600 hover:text-sky-700">Blue Water Cruising</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Extended coverage for offshore cruising expeditions.</p>
+            </div>
+          </div>
         </div>
       </section>
 

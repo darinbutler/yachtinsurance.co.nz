@@ -101,12 +101,43 @@ export default function DinghyInsurancePage() {
     serviceType: 'Dinghy Insurance',
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vessel Types',
+        item: 'https://yachtinsurance.co.nz/sectors',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Dinghy',
+        item: 'https://yachtinsurance.co.nz/sectors/dinghy',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -342,6 +373,129 @@ export default function DinghyInsurancePage() {
           <p className="text-center text-slate-600 mt-8">
             Actual premiums depend on vessel value, usage, and coverage selected
           </p>
+        </div>
+      </section>
+
+      {/* NZ Dinghy Racing & Regional Considerations */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            Dinghy Sailing in New Zealand
+          </h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+            From weekend club racing to serious competition, dinghies are central to New Zealand's sailing culture
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                NZ Dinghy Racing Scene
+              </h3>
+              <p className="text-slate-700 mb-3">
+                New Zealand's dinghy racing community is vibrant and competitive, with active sailing clubs in Auckland, Wellington, Christchurch, and throughout the regions. Popular classes include the Laser, Optimist, 470, and increasingly, modern single-designs. The New Zealand Sailing Association organizes nationals and supports regional championships across the country, particularly strong in the Hauraki Gulf and around the Marlborough Sounds.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Racing dinghies experience higher wear and tear due to competitive use, which is reflected in insurance premiums. Many insurers offer specialized racing-specific policies that account for the elevated accident and damage rates typical in competitive sailing, with premiums starting around $300-400 annually for active racers.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Club Vs. Independent Sailing
+              </h3>
+              <p className="text-slate-700 mb-3">
+                If your dinghy is based at a sailing club, you'll typically get better insurance rates than independent sailors. Clubs often have shared moorings with security measures, regular maintenance facilities, and structured insurance programs through their clubs. Club-based dinghies average $100-150 less annually in insurance than similarly valued independent dinghies.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Most clubs either provide collective insurance or offer preferred rates from partner insurers. Check with your sailing club about bundled insurance options—you may qualify for automatic premium reductions by sailing with an organized club versus at a private mooring.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Regional Sailing Conditions
+              </h3>
+              <p className="text-slate-700 mb-3">
+                Dinghy insurance costs vary considerably by region. Waters in the Hauraki Gulf and Bay of Islands see higher accident rates due to challenging tide and current conditions, which can increase premiums by 15-25%. Conversely, protected lake sailing (Lake Taupo, Lake Wanaka) and sheltered harbours like Marlborough Sounds typically offer lower premiums due to calmer conditions and lower collision risk.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Report your primary sailing location to insurers for the most accurate quotes. If you split your sailing between multiple regions, focus on your most-used location for the policy description.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Common Dinghy Claims & Loss Prevention
+              </h3>
+              <p className="text-slate-700 mb-3">
+                The most frequent dinghy insurance claims in New Zealand involve collision damage with other vessels during racing, rig damage from high wind events, and theft of equipment from unattended dinghies at moorings. Winter sailing brings increased claims related to water damage and broken masts in heavy weather conditions.
+              </p>
+              <p className="text-slate-600 text-sm">
+                To reduce your premiums, maintain your dinghy properly, store it securely (not on public beaches), and document your safety record. Completing a RYA or similar sailing course can reduce premiums by 10-15%. Additionally, installing GPS trackers on your dinghy can qualify you for theft discounts, particularly important for high-value racing dinghies worth $5,000+.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Tips for Lower Premiums
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">1.</span>
+                  <span className="text-slate-600"><strong>Join a club:</strong> Organized club membership can reduce premiums by 20%+ through preferred rates and collective schemes</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">2.</span>
+                  <span className="text-slate-600"><strong>Secure storage:</strong> Keep your dinghy locked at a secure facility rather than exposed at a public ramp</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">3.</span>
+                  <span className="text-slate-600"><strong>Increase deductible:</strong> Choosing a $1,000 deductible instead of $500 can save 15-25% on premiums</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">4.</span>
+                  <span className="text-slate-600"><strong>Maintenance record:</strong> Document regular maintenance and servicing to prove you're a responsible owner</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">5.</span>
+                  <span className="text-slate-600"><strong>Bundle with yacht:</strong> If you own a larger yacht, insuring your dinghy with the same provider typically costs 20-30% less</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Sectors Section */}
+      <section className="py-16 px-4 md:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Insurance for Other Vessel Types</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700">Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Comprehensive coverage for cruising yachts and motor vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/jetski" className="text-sky-600 hover:text-sky-700">Jet Ski Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Fast-track coverage for personal watercraft.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/tender" className="text-sky-600 hover:text-sky-700">Tender Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Protection for boat tenders and support vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/bluewater" className="text-sky-600 hover:text-sky-700">Blue Water Cruising</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Extended coverage for offshore cruising expeditions.</p>
+            </div>
+          </div>
         </div>
       </section>
 

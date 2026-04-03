@@ -38,6 +38,7 @@ export default function Footer() {
                 { label: 'Compare', href: '/compare' },
                 { label: 'Blog', href: '/blog' },
                 { label: 'About', href: '/about' },
+                { label: 'FAQs', href: '/faqs' },
                 { label: 'Contact', href: '/contact' },
               ].map((link) => (
                 <li key={link.href}>

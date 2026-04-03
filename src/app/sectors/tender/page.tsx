@@ -106,12 +106,43 @@ export default function TenderInsurancePage() {
     serviceType: 'Tender Insurance',
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vessel Types',
+        item: 'https://yachtinsurance.co.nz/sectors',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Tender',
+        item: 'https://yachtinsurance.co.nz/sectors/tender',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -331,6 +362,129 @@ export default function TenderInsurancePage() {
                 Inform your insurer if you typically moor your tender at a specific
                 marina for best rates.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NZ Tender Insurance Specifics */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            Tender Insurance for New Zealand Cruisers
+          </h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+            Essential coverage for your auxiliary vessel in NZ waters
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Popular NZ Cruising Grounds
+              </h3>
+              <p className="text-slate-700 mb-3">
+                New Zealand's cruising destinations—the Bay of Islands, Hauraki Gulf, Marlborough Sounds, and Fiordland—each present unique tender insurance considerations. Cruisers in the Marlborough Sounds deal with strong tidal currents that increase collision risk, while Bay of Islands cruisers contend with exposed anchorages and stronger weather. Fiordland cruisers often operate tenders in remote areas with limited rescue services, which some insurers factor into premiums.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Be specific with your insurer about where you primarily cruise. If you spend most of the year in the Hauraki Gulf but occasionally venture to Fiordland, that distinction affects your coverage and premiums. Some insurers offer regional variations and may provide better rates for relatively protected cruising grounds.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Tender Theft in NZ Waters
+              </h3>
+              <p className="text-slate-700 mb-3">
+                Tender theft is a significant problem in New Zealand, particularly in popular cruising areas and near populated centers. Inflatable tenders and RIBs left unattended at anchorages are vulnerable to opportunistic theft, especially high-end brands like Zodiac and Brig. Auckland, Tauranga, and Wellington anchorages report particularly high theft rates for unattended tenders.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Protect your premium by implementing proper security: keep your tender locked to your yacht with a quality marine-grade chain lock, use GPS tracking devices (now affordable and widely recommended), and consider installing visibility deterrents like bright reflective tape. Tenders with security systems installed may qualify for 10-15% premium reductions from some insurers.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Seasonal Weather & Tender Damage
+              </h3>
+              <p className="text-slate-700 mb-3">
+                New Zealand's summer season (November-March) is prime cruising time but also brings stronger wind and swell conditions later in the season. Winter anchoring requires tenders to withstand heavier chop and stronger gusts, which increases damage claims. RIBs are generally better suited to rough conditions than inflatable tenders, and insurers price accordingly—RIB premiums are typically 20-30% higher than softer inflatable tenders due to higher usage intensity.
+              </p>
+              <p className="text-slate-600 text-sm">
+                If you cruise seasonally (only during summer), consider a seasonal tender insurance policy that covers November through March. This can reduce annual costs by 30-40% compared to year-round coverage, though ensure you maintain proper winterization of your tender and engine during off-season storage.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Common Tender Claims in NZ
+              </h3>
+              <p className="text-slate-700 mb-3">
+                Insurance claims data from New Zealand marine insurers show that the most frequent tender losses involve: outboard engine damage or theft (nearly 30% of claims), punctures and damage to inflatable tenders (25%), collision damage at anchorages (20%), and complete vessel theft (15%). Engine theft is particularly common for high-value four-stroke outboards worth $4,000-8,000.
+              </p>
+              <p className="text-slate-600 text-sm">
+                Protect against these specific risks: remove or secure your outboard engine when the tender is unattended; carry spare patches and repair kits for inflatable tenders; maintain situational awareness of other vessels at your anchorage; and consider removing your engine entirely if leaving the boat unattended for extended periods, or store it in a locked cabin.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-sky-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">
+                Reducing Your Tender Insurance Premiums
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">1.</span>
+                  <span className="text-slate-600"><strong>Bundle with yacht policy:</strong> Insuring your tender with your yacht provider typically saves 20-30% versus separate coverage</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">2.</span>
+                  <span className="text-slate-600"><strong>Install security systems:</strong> GPS tracking, engine locks, and chain security can reduce premiums 10-15%</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">3.</span>
+                  <span className="text-slate-600"><strong>Seasonal coverage:</strong> Insure only during cruising season (Nov-March) for potential 30-40% savings</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">4.</span>
+                  <span className="text-slate-600"><strong>Increase deductible:</strong> Moving from $500 to $1,500 deductible saves approximately 20-25% annually</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-sky-600 font-bold flex-shrink-0">5.</span>
+                  <span className="text-slate-600"><strong>Maintain proper records:</strong> Document maintenance, engine servicing, and haul-outs to prove responsible ownership</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Sectors Section */}
+      <section className="py-16 px-4 md:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Insurance for Other Vessel Types</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700">Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Comprehensive coverage for cruising yachts and motor vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/dinghy" className="text-sky-600 hover:text-sky-700">Dinghy Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Coverage for small boats and additional support vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700">Racing Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Specialist coverage for competitive sailing and regattas.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/bluewater" className="text-sky-600 hover:text-sky-700">Blue Water Cruising</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Extended coverage for offshore cruising expeditions.</p>
             </div>
           </div>
         </div>

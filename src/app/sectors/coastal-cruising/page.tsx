@@ -113,12 +113,43 @@ export default function CoastalCruisingInsurancePage() {
     serviceType: 'Coastal Cruising Insurance',
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vessel Types',
+        item: 'https://yachtinsurance.co.nz/sectors',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Coastal Cruising',
+        item: 'https://yachtinsurance.co.nz/sectors/coastal-cruising',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -402,6 +433,39 @@ export default function CoastalCruisingInsurancePage() {
           <p className="text-center text-slate-600 mt-8 text-sm">
             Based on vessel value and cruising area. Exact premiums depend on many factors.
           </p>
+        </div>
+      </section>
+
+      {/* Related Sectors Section */}
+      <section className="py-16 px-4 md:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Insurance for Other Vessel Types</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700">Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Comprehensive coverage for cruising yachts and motor vessels.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/bluewater" className="text-sky-600 hover:text-sky-700">Blue Water Cruising</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Extended coverage for offshore cruising expeditions.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700">Racing Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Specialist coverage for competitive sailing and regattas.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/coverage" className="text-sky-600 hover:text-sky-700">Coverage Guide</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Understand all coverage types and choose the right protection.</p>
+            </div>
+          </div>
         </div>
       </section>
 

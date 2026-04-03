@@ -76,11 +76,34 @@ export default function Compare() {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Compare Insurers',
+        item: 'https://yachtinsurance.co.nz/compare',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
@@ -155,7 +178,7 @@ export default function Compare() {
                       Minimum Premium
                     </p>
                     <p className="text-2xl font-bold text-sky-600">
-                      {insurer.minPremium}
+                      <span className="text-xs font-normal text-slate-400">from </span>{insurer.minPremium}
                     </p>
                   </div>
 
@@ -205,10 +228,10 @@ export default function Compare() {
                 New Zealand has 1.6 million recreational vessels and the highest boat ownership per capita in the world. With numerous yacht and boat insurance providers each offering different coverage options, premium rates, and specialties, this comparison helps you find the insurer that best matches your vessel type and insurance needs.
               </p>
               <p className="text-slate-600 mb-4 leading-relaxed">
-                Whether you own a small dinghy, cruising yacht, racing boat, or jet ski, New Zealand's marine insurers have coverage options available. Compare ratings, minimum premiums, key features, and specialties to make an informed decision.
+                Whether you own a small <Link href="/sectors/dinghy" className="text-sky-600 hover:text-sky-700 font-semibold">dinghy</Link>, <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700 font-semibold">cruising yacht</Link>, <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing boat</Link>, or <Link href="/sectors/jetski" className="text-sky-600 hover:text-sky-700 font-semibold">jet ski</Link>, New Zealand's marine insurers have coverage options available. Compare ratings, minimum premiums, key features, and specialties to make an informed decision.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                While boat insurance isn't legally required in New Zealand, approximately 87% of boat owners carry coverage. Marinas, yacht clubs, and lenders typically require at minimum third-party liability insurance. Comprehensive coverage protects against hull damage, theft, storm damage, and personal liability — giving you peace of mind on the water.
+                While boat insurance isn't legally required in New Zealand, approximately 87% of boat owners carry coverage. Marinas, yacht clubs, and lenders typically require at minimum third-party liability insurance. <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">Comprehensive coverage</Link> protects against hull damage, theft, storm damage, and personal liability — giving you peace of mind on the water.
               </p>
             </div>
 
@@ -258,7 +281,7 @@ export default function Compare() {
                       </div>
                     </td>
                     <td className="px-6 py-4 text-center font-medium text-sky-600">
-                      {insurer.minPremium}
+                      <span className="text-xs font-normal text-slate-400">from </span>{insurer.minPremium}
                     </td>
                     <td className="px-6 py-4 text-sm">
                       {insurer.specialties.slice(0, 2).join(', ')}
@@ -297,7 +320,7 @@ export default function Compare() {
                 <div className="px-6 py-4 space-y-4">
                   <div>
                     <p className="text-xs text-slate-500 font-semibold mb-1">Min Premium</p>
-                    <p className="text-xl font-bold text-sky-600">{insurer.minPremium}</p>
+                    <p className="text-xl font-bold text-sky-600"><span className="text-xs font-normal text-slate-400">from </span>{insurer.minPremium}</p>
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 font-semibold mb-2">Specialties</p>
@@ -320,9 +343,9 @@ export default function Compare() {
         </div>
       </section>
 
-      {/* How to Choose Section */}
+      {/* How to Choose Section — 5 columns */}
       <section className="py-12 md:py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               How to Choose the Right Marine Insurer
@@ -332,26 +355,31 @@ export default function Compare() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5">
             {chooseInsurertips.map((tip, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 border border-slate-200">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-sky-100">
-                      <span className="text-sky-600 font-bold text-lg">{index + 1}</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">
-                      {tip.title}
-                    </h3>
-                    <p className="text-slate-600">
-                      {tip.description}
-                    </p>
-                  </div>
+              <div key={index} className="bg-white rounded-xl p-5 border border-slate-200 hover:border-sky-300 hover:shadow-lg transition-all text-center group">
+                <div className="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-sky-500 to-teal-500 text-white font-bold text-xl shadow-md group-hover:scale-110 transition-transform">
+                  {index + 1}
                 </div>
+                <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">
+                  {tip.title}
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {tip.description}
+                </p>
               </div>
             ))}
+          </div>
+
+          {/* CTA underneath */}
+          <div className="text-center mt-10">
+            <Link
+              href="/contact"
+              className="inline-block px-10 py-4 bg-gradient-to-r from-sky-600 to-teal-500 text-white rounded-xl font-semibold text-lg hover:from-sky-700 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Compare Quotes Now — It&apos;s Free →
+            </Link>
+            <p className="text-sm text-slate-500 mt-3">No obligation, no brokerage fees</p>
           </div>
         </div>
       </section>
@@ -384,7 +412,7 @@ export default function Compare() {
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Coverage Options Across Different Providers</h3>
             <p>
-              While all marine insurers provide basic hull and liability coverage, differences emerge in optional features. Some providers specialize in new-for-old replacement policies, guaranteed agreed value without depreciation, or specialized racing coverage. Offshore cruising requires providers with blue water experience and international geographic coverage. Charter and commercial vessels need different policies than recreational boats.
+              While all marine insurers provide basic hull and liability coverage, differences emerge in optional features. Some providers specialize in new-for-old replacement policies, guaranteed agreed value without depreciation, or specialized <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing coverage</Link>. <Link href="/sectors/bluewater" className="text-sky-600 hover:text-sky-700 font-semibold">Offshore cruising</Link> requires providers with blue water experience and international geographic coverage. <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">Learn more about coverage options</Link> to understand which features matter for your vessel.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Claims Handling and Customer Support</h3>
@@ -410,6 +438,39 @@ export default function Compare() {
             <p className="text-slate-600 italic mt-8">
               Ready to compare yacht insurance providers and find the right coverage for your vessel? Get multiple quotes today to see how much you can save with the right insurer.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">Related Pages</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/coverage" className="text-sky-600 hover:text-sky-700">What's Covered in Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Understand all coverage types, from hull and machinery to specialized racing and offshore cruising protection.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/faqs" className="text-sky-600 hover:text-sky-700">Frequently Asked Questions</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Get answers about selecting the right insurer, coverage differences, and how providers are rated.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700">Yacht Insurance Specialists</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Find specialized coverage for yachts, racing boats, jet skis, dinghies, and other vessel types.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/contact" className="text-sky-600 hover:text-sky-700">Get Your Free Quote</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Start comparing quotes from NZ's leading marine insurers and find the best value for your vessel.</p>
+            </div>
           </div>
         </div>
       </section>

@@ -110,11 +110,34 @@ export default function Coverage() {
     serviceType: 'Marine Insurance',
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Coverage',
+        item: 'https://yachtinsurance.co.nz/coverage',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
@@ -153,10 +176,10 @@ export default function Coverage() {
                 Yacht and boat insurance provides comprehensive protection for your marine investment. Whether you own a small dinghy or a large cruising yacht, marine insurance protects against the unique risks of vessel ownership in New Zealand waters.
               </p>
               <p className="text-slate-600 mb-4 leading-relaxed">
-                Marine insurance typically falls into two main categories: damage to your own vessel (hull and machinery) and liability for damage you cause to others (third-party liability). Most policies also include optional covers for personal effects, weather damage, theft, and specialized needs like racing or overseas cruising.
+                Marine insurance typically falls into two main categories: damage to your own vessel (hull and machinery) and liability for damage you cause to others (third-party liability). Most policies also include optional covers for personal effects, weather damage, theft, and specialized needs like <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing</Link> or overseas cruising.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Understanding what's covered under each policy type helps you make informed decisions about your insurance needs and ensures your vessel is properly protected during normal cruising, racing, or mooring.
+                Understanding what's covered under each policy type helps you make informed decisions. <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">Compare providers</Link> to find the right protection for your needs, or <Link href="/contact" className="text-sky-600 hover:text-sky-700 font-semibold">get a free quote today</Link>.
               </p>
             </div>
 
@@ -458,7 +481,7 @@ export default function Coverage() {
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Comparing Marine Insurers for Best Coverage</h3>
             <p>
-              New Zealand has numerous marine insurance providers, from large national insurers like Tower and NZI to specialist marine operators like Mariner, Star Insurance, and Nautilus Marine. Each offers slightly different coverage variations, premium calculations, and claims experiences. Specialist marine insurers typically offer superior claims handling specific to marine risks and may provide better value for serious sailors. Comparing quotes across multiple providers ensures you get the best coverage at competitive rates.
+              New Zealand has numerous marine insurance providers, from large national insurers like Tower and NZI to specialist marine operators like Mariner, Star Insurance, and Nautilus Marine. Each offers slightly different coverage variations, premium calculations, and claims experiences. Specialist marine insurers typically offer superior claims handling specific to marine risks and may provide better value for serious sailors. <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">Compare quotes across multiple providers</Link> to ensure you get the best coverage at competitive rates.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Coverage for Different Vessel Types</h3>
@@ -474,6 +497,39 @@ export default function Coverage() {
             <p className="text-slate-600 italic mt-8">
               Ready to find the right coverage for your yacht? Compare quotes from New Zealand's leading marine insurers to get the protection you need at a price that suits your budget.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">Related Pages</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/compare" className="text-sky-600 hover:text-sky-700">Compare Insurance Providers</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Find the best marine insurance provider for your vessel with side-by-side comparison of ratings, premiums, and specialties.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700">Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Explore comprehensive coverage options specifically designed for sailing yachts, motor yachts, and superyachts.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/faqs" className="text-sky-600 hover:text-sky-700">Frequently Asked Questions</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Get answers to common questions about coverage types, exclusions, and finding the right insurance policy.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/contact" className="text-sky-600 hover:text-sky-700">Get Your Free Quote</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Compare quotes from multiple NZ insurers and discover how much coverage you could get at the right price.</p>
+            </div>
           </div>
         </div>
       </section>

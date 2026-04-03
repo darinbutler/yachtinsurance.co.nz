@@ -109,11 +109,34 @@ export default function About() {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yachtinsurance.co.nz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://yachtinsurance.co.nz/about',
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
@@ -152,10 +175,10 @@ export default function About() {
                 YachtInsurance.co.nz exists to simplify yacht and boat insurance for New Zealand vessel owners. We believe finding the right insurance shouldn't be complicated or time-consuming.
               </p>
               <p className="text-slate-600 mb-4 leading-relaxed">
-                Our mission is to provide transparent, independent insurance comparison services that help you find better coverage at fairer premiums. We compare policies from New Zealand's leading marine insurers, explaining coverage differences so you can make informed decisions.
+                Our mission is to provide transparent, independent insurance <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">comparison services that help you find better coverage</Link> at fairer premiums. We <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">compare policies from New Zealand's leading marine insurers</Link>, explaining <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">coverage differences</Link> so you can make informed decisions.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Whether you own a small recreational boat, a cruising yacht, or a racing vessel, we're committed to matching you with the insurance provider and coverage level that best fits your needs and budget.
+                Whether you own a small recreational boat, a <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700 font-semibold">cruising yacht</Link>, or a <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing vessel</Link>, we're committed to matching you with the insurance provider and coverage level that best fits your needs and budget. <Link href="/contact" className="text-sky-600 hover:text-sky-700 font-semibold">Get free quotes today</Link>.
               </p>
             </div>
 
@@ -420,7 +443,7 @@ export default function About() {
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Expert Guidance</h3>
             <p>
-              Our team understands marine insurance thoroughly. We explain coverage differences, highlight what each policy includes and excludes, and help you understand what different coverage levels mean for your specific vessel and usage. This expert guidance helps you make confident decisions.
+              Our team understands marine insurance thoroughly. We explain <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">coverage differences</Link>, highlight what each policy includes and excludes, and help you understand what different coverage levels mean for your specific vessel and usage. This expert guidance helps you make confident decisions.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Tailored Recommendations</h3>
@@ -436,6 +459,39 @@ export default function About() {
             <p className="text-slate-600 italic mt-8">
               Ready to compare yacht insurance from New Zealand's leading providers? Start your free quote comparison today and discover how much you could save on your marine insurance.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">Related Pages</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/coverage" className="text-sky-600 hover:text-sky-700">What's Covered in Yacht Insurance</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Explore all coverage options available across different policy types and understand what protection is right for your vessel.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/compare" className="text-sky-600 hover:text-sky-700">Compare Insurance Providers</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">View side-by-side comparison of New Zealand's leading marine insurers and their ratings, specialties, and minimum premiums.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/faqs" className="text-sky-600 hover:text-sky-700">Frequently Asked Questions</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Get answers to common questions about yacht insurance coverage, costs, claims, and specialized coverage options.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg text-slate-900 mb-2">
+                <Link href="/contact" className="text-sky-600 hover:text-sky-700">Get Your Free Quote</Link>
+              </h3>
+              <p className="text-slate-600 text-sm mb-4">Start comparing quotes from multiple NZ marine insurers and find the best coverage for your vessel today.</p>
+            </div>
           </div>
         </div>
       </section>
