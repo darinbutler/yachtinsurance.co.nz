@@ -137,7 +137,7 @@ export default function ThankYouPage() {
                   <Phone className="w-6 h-6 text-sky-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-slate-900 mb-1">Phone</p>
-                    <p className="text-slate-600">+64 9 XXX XXXX</p>
+                    <a href="tel:+6498859549" className="text-slate-600 hover:text-sky-600 transition-colors">09 885 9549</a>
                   </div>
                 </div>
 
