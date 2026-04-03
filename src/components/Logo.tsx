@@ -76,9 +76,9 @@ export default function Logo({ variant = 'default' }: LogoProps) {
       </div>
 
       {!isCompact && (
-        <div className="flex flex-col gap-0">
+        <div className="flex items-baseline gap-1.5">
           <span
-            className={`text-[14px] sm:text-[18px] font-extrabold tracking-[0.15em] leading-tight ${
+            className={`text-[18px] sm:text-[22px] font-extrabold tracking-[0.1em] leading-tight ${
               isWhite ? 'text-white' : 'text-sky-700'
             }`}
             style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
@@ -86,7 +86,7 @@ export default function Logo({ variant = 'default' }: LogoProps) {
             YACHT
           </span>
           <span
-            className={`text-[10px] sm:text-[12px] font-semibold tracking-[0.25em] leading-tight ${
+            className={`text-[14px] sm:text-[17px] font-semibold tracking-[0.15em] leading-tight ${
               isWhite ? 'text-sky-200' : 'text-slate-500'
             }`}
             style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
