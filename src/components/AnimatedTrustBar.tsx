@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Users, Gift, Compass, ShieldCheck } from 'lucide-react';
+import { BarChart3, CircleDollarSign, Compass, ShieldCheck } from 'lucide-react';
 
 const trustItems = [
-  { value: '15+', label: 'NZ Insurers', icon: Users, countTo: 15 },
-  { value: 'Free', label: 'Quote Service', icon: Gift, countTo: null },
-  { value: 'Expert', label: 'Marine Advice', icon: Compass, countTo: null },
+  { value: '10+', label: 'NZ Insurers Compared', icon: BarChart3, countTo: 10 },
+  { value: 'Zero', label: 'Brokerage Fees', icon: CircleDollarSign, countTo: null },
+  { value: 'Expert', label: 'Maritime Advice', icon: Compass, countTo: null },
   { value: 'ICNZ', label: 'Registered', icon: ShieldCheck, countTo: null },
 ];
 
@@ -77,12 +77,12 @@ export default function AnimatedTrustBar() {
                 key={index}
                 className={`
                   relative overflow-hidden rounded-xl
-                  bg-white/[0.08] backdrop-blur-lg border border-white/20
+                  bg-teal-600/90 backdrop-blur-lg border border-teal-400/30
                   px-4 py-4 sm:py-5
                   text-center
                   transition-all duration-700 ease-out
-                  hover:bg-white/[0.15] hover:border-white/30 hover:scale-[1.03]
-                  group cursor-default
+                  hover:bg-teal-500/95 hover:border-teal-300/50 hover:scale-[1.03]
+                  group cursor-default shadow-lg shadow-teal-900/20
                   ${isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-6'
@@ -91,21 +91,21 @@ export default function AnimatedTrustBar() {
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Shimmer effect on hover */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
                 {/* Icon */}
                 <div
                   className={`
                     mx-auto mb-2 w-10 h-10 sm:w-11 sm:h-11
-                    rounded-full bg-white/10 border border-white/20
+                    rounded-full bg-white/15 border border-white/25
                     flex items-center justify-center
                     transition-all duration-500
-                    group-hover:bg-sky-400/20 group-hover:border-sky-300/40 group-hover:scale-110
+                    group-hover:bg-white/25 group-hover:border-white/40 group-hover:scale-110
                     ${isVisible ? 'scale-100' : 'scale-50'}
                   `}
                   style={{ transitionDelay: `${index * 150 + 300}ms` }}
                 >
-                  <Icon className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-sky-300 group-hover:text-white transition-colors duration-300" />
+                  <Icon className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-teal-100 group-hover:text-white transition-colors duration-300" />
                 </div>
 
                 {/* Value */}
@@ -118,12 +118,12 @@ export default function AnimatedTrustBar() {
                 </p>
 
                 {/* Label */}
-                <p className="text-xs sm:text-sm text-sky-200/80 mt-0.5 font-medium tracking-wide">
+                <p className="text-xs sm:text-sm text-teal-100/90 mt-0.5 font-medium tracking-wide">
                   {item.label}
                 </p>
 
                 {/* Subtle glow at bottom */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-teal-300/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             );
           })}
