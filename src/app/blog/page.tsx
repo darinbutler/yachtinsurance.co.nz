@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
-import QuoteForm from '@/components/QuoteForm';
+import { Calendar, User, Clock, ArrowRight, Shield } from 'lucide-react';
 import { blogPosts } from '@/data/blog-posts';
 
 export const metadata: Metadata = {
@@ -89,32 +88,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Above Fold: Intro + Quote Form */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2">
-              <p className="text-lg text-slate-700 mb-4">
-                Welcome to the YachtInsurance.co.nz blog, your trusted resource
-                for marine insurance knowledge. Our expert guides cover
-                everything from understanding hull coverage to managing risks on
-                the water.
-              </p>
-              <p className="text-slate-600">
-                Whether you're a new boat owner or an experienced sailor, our
-                articles provide practical advice, coverage explanations, and
-                insights into New Zealand's marine insurance landscape.
-              </p>
-            </div>
-            <div>
-              <QuoteForm mode="compact" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Blog Grid */}
-      <section className="py-16 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
@@ -147,13 +122,13 @@ export default function BlogPage() {
                   </p>
 
                   {/* Meta Information */}
-                  <div className="space-y-3 mb-6 text-sm text-slate-500">
-                    <div className="flex items-center gap-2">
-                      <User size={16} className="text-sky-600" />
+                  <div className="flex flex-wrap gap-4 mb-6 text-sm text-slate-500">
+                    <div className="flex items-center gap-1.5">
+                      <User size={14} className="text-sky-600" />
                       <span>{post.author}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar size={16} className="text-sky-600" />
+                    <div className="flex items-center gap-1.5">
+                      <Calendar size={14} className="text-sky-600" />
                       <span>
                         {new Date(post.date).toLocaleDateString('en-NZ', {
                           year: 'numeric',
@@ -162,8 +137,8 @@ export default function BlogPage() {
                         })}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock size={16} className="text-sky-600" />
+                    <div className="flex items-center gap-1.5">
+                      <Clock size={14} className="text-sky-600" />
                       <span>{post.readTime} min read</span>
                     </div>
                   </div>
@@ -179,6 +154,36 @@ export default function BlogPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-14 md:py-20 bg-gradient-to-r from-sky-600 to-teal-500">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
+            <Shield size={16} className="text-white" />
+            <span className="text-sm font-medium text-white">Free, No-Obligation Quotes</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Protect Your Vessel?
+          </h2>
+          <p className="text-lg text-sky-100 mb-8 max-w-2xl mx-auto">
+            Compare quotes from 15+ top NZ marine insurers and find the right coverage for your boat, yacht, or jet ski.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-white text-sky-700 rounded-xl font-semibold text-lg hover:bg-sky-50 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/compare"
+              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-sky-700 transition-colors"
+            >
+              Compare Insurers
+            </Link>
           </div>
         </div>
       </section>

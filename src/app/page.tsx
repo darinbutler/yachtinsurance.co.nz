@@ -143,35 +143,35 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative h-[69vh] min-h-[440px] sm:min-h-[520px] flex flex-col items-center justify-center overflow-hidden"
+        className="relative h-[78vh] min-h-[500px] sm:min-h-[580px] flex flex-col items-center justify-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1625045641924-3c15809b6689?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center 40%',
         }}
       >
-        {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/60" />
+        {/* Light Overlay Gradient - keeps image visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 via-slate-900/30 to-transparent" />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 flex-grow flex flex-col items-center justify-center">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10 flex-grow flex flex-col justify-center">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-3xl drop-shadow-lg">
             Compare Yacht Insurance in New Zealand
           </h1>
-          <p className="text-lg sm:text-xl text-sky-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed drop-shadow-md">
             Find the right marine insurance for your vessel. Compare quotes from 15+ top NZ insurers and save on your annual premium.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="px-8 py-3 sm:py-4 bg-sky-600 text-white rounded-xl font-semibold hover:bg-sky-700 transition-colors shadow-lg hover:shadow-xl"
+              className="px-8 py-3 sm:py-4 bg-sky-600 text-white rounded-xl font-semibold hover:bg-sky-700 transition-colors shadow-lg hover:shadow-xl text-center"
             >
               Get a Free Quote
             </Link>
             <Link
               href="/compare"
-              className="px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-colors"
+              className="px-8 py-3 sm:py-4 bg-white/15 backdrop-blur-sm border-2 border-white/60 text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-colors text-center"
             >
               Compare Insurers
             </Link>
