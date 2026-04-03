@@ -521,4 +521,71 @@ Work cooperatively with your insurer's assigned claims adjuster. Provide complet
 
 Proper preparation, appropriate insurance coverage, and realistic risk assessment enable you to face New Zealand's challenging storm seasons with confidence. Take time now to prepare your vessel, upgrade safety equipment, ensure insurance coverage meets your needs, and build crew competence. With these preparations complete, you can enjoy winter boating knowing your vessel and crew are adequately protected.`,
   },
+  {
+    slug: "insuring-small-boats-tenders-dinghies-nz",
+    title: "Insuring Small Boats, Tenders & Dinghies in New Zealand",
+    excerpt:
+      "A practical guide to insuring smaller vessels in NZ — what's covered, what's not, and how to get the right protection without overpaying.",
+    author: "Liam Ngata",
+    date: "2026-02-15",
+    image:
+      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?w=1600&h=900&fit=crop",
+    category: "Guides",
+    readTime: 6,
+    content: `# Insuring Small Boats, Tenders & Dinghies in New Zealand
+
+Many boat owners assume that smaller vessels don't need insurance, but the reality is quite different. Whether you own a sailing dinghy, an inflatable tender, or a small runabout, the right insurance protects you from financial surprises that can easily exceed the value of the vessel itself. Third-party liability alone makes small boat insurance a smart investment for any owner operating on New Zealand waters.
+
+## Do You Really Need Insurance for a Small Boat?
+
+While New Zealand law doesn't mandate insurance for recreational vessels, there are compelling reasons to carry it. A collision with another vessel, damage to a marina berth, or an injury to a passenger can result in liability claims running into tens of thousands of dollars. Even a modest dinghy can cause significant damage in the wrong circumstances, and without insurance you're personally liable for every dollar.
+
+Many marinas and yacht clubs in New Zealand require proof of third-party liability insurance before granting berth access or membership. If you're racing your dinghy at club level, regatta organisers increasingly require participants to hold current insurance. Having a policy in place keeps your options open.
+
+## Types of Cover for Small Vessels
+
+Small boat insurance policies in New Zealand typically offer several layers of protection that can be combined to suit your needs and budget.
+
+**Hull and Equipment Cover** protects the physical vessel against damage from collisions, storms, theft, vandalism, and sinking. Most policies offer agreed value cover, meaning you and the insurer pre-agree on the vessel's worth, which simplifies the claims process. This is particularly important for custom-built racing dinghies or tenders with expensive outboard motors.
+
+**Third-Party Liability** covers your legal liability if you cause injury to someone or damage their property while operating your vessel. This is often the most important component of a small boat policy and typically the most affordable. Standard liability limits range from one to five million dollars.
+
+**Trailer Cover** is often overlooked but essential if you tow your vessel. Trailer damage from road accidents, theft from driveways, or damage at boat ramps can be costly to repair. Most small boat policies offer trailer cover as an add-on for a modest additional premium.
+
+**Personal Effects** cover protects items carried aboard such as electronics, fishing equipment, and safety gear. While limits are usually modest, this cover prevents out-of-pocket expenses for replacing essential equipment.
+
+## What Affects Your Premium?
+
+Premiums for small boat insurance in New Zealand are generally very affordable, often just a few hundred dollars per year. Several factors influence the final cost.
+
+The vessel's value is the primary driver. A basic sailing dinghy worth a few thousand dollars will cost far less to insure than a performance racing dinghy or a large RIB tender worth twenty thousand or more. The type of use matters too — vessels used for racing typically attract a small loading compared to recreational-only use.
+
+Where you keep and operate your vessel affects pricing. Boats stored in secure facilities or at home attract lower premiums than those kept on exposed moorings. Your claims history and boating experience also factor into the calculation, with experienced sailors generally receiving better rates.
+
+## Standalone vs Combined Policies
+
+If you own a larger yacht and a tender, you have two options for insuring the tender. Many yacht insurance policies allow you to add your tender as a scheduled item, covering it under the same policy. This is often the simplest and most cost-effective approach, as insurers frequently offer discounts for combined cover.
+
+Alternatively, a standalone policy for your tender or dinghy gives you independent coverage that isn't tied to your main vessel. This can be advantageous if you use the tender independently, sell one vessel but keep the other, or want different coverage levels for each.
+
+Discuss both options with your insurer to determine which approach offers the best value for your specific situation. In many cases, the combined approach provides broader coverage at a lower total premium.
+
+## Tips for Keeping Premiums Low
+
+There are several practical steps you can take to reduce your small boat insurance costs. Installing security devices such as outboard motor locks and trailer wheel clamps demonstrates risk mitigation and may qualify you for discounts. Completing a recognised boating safety course shows responsibility and often results in premium reductions.
+
+Choosing a higher excess reduces your annual premium, which can make sense for a vessel you're confident in maintaining well. Paying your premium annually rather than monthly avoids instalment fees that typically add five to ten percent to your total cost.
+
+Maintaining a clean claims history is the most effective long-term strategy for keeping premiums low. Small claims that barely exceed your excess are often best handled out of pocket to protect your no-claims record and future premium levels.
+
+## Making a Claim
+
+If your small boat is damaged, stolen, or involved in an incident, contact your insurer as soon as possible. Document everything with photographs before making any repairs beyond what's necessary to prevent further damage. Keep receipts for any emergency repairs and a written record of what happened.
+
+Most insurers will assess the damage and either approve repairs at your chosen repairer or arrange their own assessment. For total losses where the repair cost exceeds the vessel's agreed value, the insurer will pay out the agreed sum. Having your vessel properly valued when you take out the policy ensures you receive a fair payout.
+
+## Getting the Right Cover
+
+The best approach to insuring a small boat in New Zealand is to compare quotes from several specialist marine insurers. General insurers may offer boat cover, but specialist marine insurers typically provide better coverage, more competitive rates, and claims handlers who understand the marine environment. A few minutes comparing options can save you hundreds of dollars annually while ensuring you have the protection that matters.`,
+  },
 ];
