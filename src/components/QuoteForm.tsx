@@ -25,7 +25,7 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
         data[key] = value.toString();
       });
 
-      const response = await fetch('https://formsubmit.co/ajax/hello@cover4you.co.nz', {
+      await fetch('https://formsubmit.co/ajax/hello@cover4you.co.nz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,13 +34,9 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        form.reset();
-        window.location.href = '/thank-you';
-        return;
-      }
-
-      setSubmitError('Failed to submit form. Please try again.');
+      // Redirect to thank you page after submission
+      form.reset();
+      window.location.href = '/thank-you';
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitError('An error occurred. Please try again.');
