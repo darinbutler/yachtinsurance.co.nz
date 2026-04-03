@@ -59,36 +59,6 @@ const values = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: 'Michael Chen',
-    role: 'Founder & Director',
-    initials: 'MC',
-    color: 'bg-sky-500',
-    bio: 'Marine insurance specialist with 15+ years experience in NZ boating industry',
-  },
-  {
-    name: 'Sarah Williams',
-    role: 'Operations Manager',
-    initials: 'SW',
-    color: 'bg-blue-500',
-    bio: 'Manages quote processing and client coordination across all marine insurance partnerships',
-  },
-  {
-    name: 'James Rodriguez',
-    role: 'Insurance Analyst',
-    initials: 'JR',
-    color: 'bg-teal-500',
-    bio: 'Analyzes coverage options and insurance provider policies to ensure competitive offerings',
-  },
-  {
-    name: 'Emma Thompson',
-    role: 'Customer Success Lead',
-    initials: 'ET',
-    color: 'bg-cyan-500',
-    bio: 'Supports clients throughout their insurance comparison and policy selection process',
-  },
-];
 
 export default function About() {
   const aboutSchema = {
@@ -311,51 +281,6 @@ export default function About() {
                   </h3>
                   <p className="text-slate-600">
                     {process.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The Team Section */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Marine industry experts dedicated to helping you find better insurance
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-slate-50 to-sky-50 rounded-lg overflow-hidden border border-sky-200 hover:shadow-lg transition-shadow"
-              >
-                {/* Avatar Section */}
-                <div className="p-8 flex flex-col items-center bg-gradient-to-b from-sky-100 to-slate-50">
-                  <div
-                    className={`w-16 h-16 rounded-full ${member.color} flex items-center justify-center text-white font-bold text-2xl mb-4`}
-                  >
-                    {member.initials}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 text-center">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-sky-600 font-semibold mt-1">
-                    {member.role}
-                  </p>
-                </div>
-
-                {/* Bio Section */}
-                <div className="p-6 border-t border-sky-200">
-                  <p className="text-sm text-slate-600 text-center">
-                    {member.bio}
                   </p>
                 </div>
               </div>
