@@ -86,51 +86,42 @@ export default function FAQsPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[46vh] min-h-[340px] sm:min-h-[380px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&q=80"
-            alt="Yacht harbour in New Zealand"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-900/50 to-slate-900/30" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="flex items-center gap-2 text-sm text-slate-300 mb-4">
+      <section
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-white font-medium">FAQs</span>
           </nav>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-2.5 bg-sky-500/20 backdrop-blur-sm rounded-xl border border-sky-400/30">
-              <HelpCircle size={28} className="text-sky-300" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-              Frequently Asked Questions
-            </h1>
-          </div>
-          <p className="text-lg md:text-xl text-slate-200 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg max-w-4xl">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-3xl leading-relaxed">
             Everything you need to know about yacht and marine insurance in New Zealand
           </p>
+          <div className="space-y-4 text-slate-300 max-w-3xl">
+            <p>
+              Navigating yacht and boat insurance in New Zealand can feel overwhelming, especially if you&apos;re a first-time boat owner or switching providers. Below we&apos;ve compiled the most common questions our visitors ask about marine insurance coverage, costs, claims, and policy features. If you can&apos;t find the answer you&apos;re looking for, feel free to{' '}
+              <Link href="/contact" className="text-sky-300 hover:text-white transition-colors font-medium underline underline-offset-2">
+                contact us directly
+              </Link>{' '}
+              for personalised advice from a qualified NZ marine insurance adviser.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* FAQ Content */}
       <section className="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Intro Text */}
-          <div className="mb-12">
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Navigating yacht and boat insurance in New Zealand can feel overwhelming, especially if you&apos;re
-              a first-time boat owner or switching providers. Below we&apos;ve compiled the most common questions
-              our visitors ask about marine insurance coverage, costs, claims, and policy features. If you
-              can&apos;t find the answer you&apos;re looking for, feel free to{' '}
-              <Link href="/contact" className="text-sky-600 hover:text-sky-700 font-medium underline underline-offset-2">
-                contact us directly
-              </Link>{' '}
-              for personalised advice from a qualified NZ marine insurance adviser.
-            </p>
-          </div>
 
           {/* FAQ Accordion */}
           <div className="space-y-4">

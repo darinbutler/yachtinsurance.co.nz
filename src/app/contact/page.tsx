@@ -122,35 +122,37 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Section */}
+      {/* Hero Section with Form */}
       <section
-        className="relative h-[46vh] min-h-[345px] sm:min-h-[403px] flex items-center justify-center overflow-hidden"
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/60" />
-
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
-            Get Your Free Yacht Insurance Quote
-          </h1>
-          <p className="text-lg text-sky-100">
-            Takes less than 2 minutes. No credit card required.
-          </p>
-        </div>
-      </section>
-
-      {/* Main Content Section */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Left: Quote Form */}
-            <div className="md:col-span-2">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <span className="text-white font-medium">Contact</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg max-w-4xl">
+                Get Your Free Yacht Insurance Quote
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-3xl leading-relaxed">
+                Takes less than 2 minutes. No credit card required.
+              </p>
+              <div className="space-y-4 text-slate-300 max-w-3xl">
+                <p>
+                  Compare quotes from 15+ top New Zealand marine insurers and find the perfect coverage for your yacht, boat, or jet ski.
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-2">
               <div className="relative">
                 {/* Badge */}
                 <div className="absolute -top-4 left-6 bg-amber-400 text-slate-900 px-4 py-1 rounded-full text-xs font-semibold z-10">
@@ -160,6 +162,18 @@ export default function ContactPage() {
                 {/* Form Container */}
                 <QuoteForm mode="full" />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Left: Contact Info */}
+            <div className="md:col-span-2">
+              {/* Placeholder for additional content if needed */}
             </div>
 
             {/* Right: Contact Info & Trust Badges */}

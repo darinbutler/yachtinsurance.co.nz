@@ -140,51 +140,46 @@ export default function Coverage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Section */}
+      {/* Full Above-Fold Hero with Background Image */}
       <section
-        className="relative h-[46vh] min-h-[345px] sm:min-h-[437px] flex items-center justify-center overflow-hidden"
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1769655991063-cc63efc4e2d0?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/75 to-slate-900/65" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
-            Yacht Insurance Coverage in New Zealand
-          </h1>
-          <p className="text-lg sm:text-xl text-sky-100 max-w-3xl mx-auto">
-            Understand what's covered, what's excluded, and choose the right protection level for your vessel
-          </p>
-        </div>
-      </section>
-
-      {/* Above Fold: Intro + Quote Form */}
-      <section className="py-12 md:py-16 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Left Column - Intro Text */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-                Understanding Marine Insurance Coverage
-              </h2>
-              <p className="text-slate-600 mb-4 leading-relaxed text-lg">
-                Yacht and boat insurance provides comprehensive protection for your marine investment. Whether you own a small dinghy or a large cruising yacht, marine insurance protects against the unique risks of vessel ownership in New Zealand waters.
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            {/* Left Column - Text */}
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <span className="text-white font-medium">Coverage</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Yacht Insurance Coverage in New Zealand
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
+                Understand what&apos;s covered, what&apos;s excluded, and choose the right protection level for your vessel.
               </p>
-              <p className="text-slate-600 mb-4 leading-relaxed">
-                Marine insurance typically falls into two main categories: damage to your own vessel (hull and machinery) and liability for damage you cause to others (third-party liability). Most policies also include optional covers for personal effects, weather damage, theft, and specialized needs like <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing</Link> or overseas cruising.
-              </p>
-              <p className="text-slate-600 leading-relaxed">
-                Understanding what's covered under each policy type helps you make informed decisions. <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">Compare providers</Link> to find the right protection for your needs, or <Link href="/contact" className="text-sky-600 hover:text-sky-700 font-semibold">get a free quote today</Link>.
-              </p>
+              <div className="space-y-4 text-slate-300 max-w-2xl">
+                <p className="leading-relaxed">
+                  Marine insurance typically falls into two main categories: damage to your own vessel (hull and machinery) and liability for damage you cause to others. Most policies also include optional covers for personal effects, weather damage, theft, and specialized needs like <Link href="/sectors/racing-boat" className="text-sky-300 hover:text-white font-semibold underline underline-offset-2">racing</Link> or overseas cruising.
+                </p>
+                <p className="leading-relaxed">
+                  <Link href="/compare" className="text-sky-300 hover:text-white font-semibold underline underline-offset-2">Compare providers</Link> to find the right protection, or fill in the form to <Link href="/contact" className="text-sky-300 hover:text-white font-semibold underline underline-offset-2">get a free quote today</Link>.
+                </p>
+              </div>
             </div>
 
             {/* Right Column - Quote Form */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-2">
               <QuoteForm mode="compact" />
             </div>
           </div>

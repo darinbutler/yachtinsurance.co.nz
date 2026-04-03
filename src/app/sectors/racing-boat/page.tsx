@@ -147,58 +147,42 @@ export default function RacingBoatInsurancePage() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="h-[52vh] bg-gradient-to-br from-sky-600 via-blue-600 to-indigo-600 text-white flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
-        </div>
-
-        <div className="relative text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Racing Boat Insurance New Zealand
-          </h1>
-          <p className="text-xl md:text-2xl text-sky-100 max-w-2xl mx-auto">
-            Specialist coverage for competitive sailing and racing yachts
-          </p>
-        </div>
-      </section>
-
-      {/* Above Fold Section */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-b border-slate-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2 space-y-6">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Insurance for Competitive Sailors
-                </h2>
-                <p className="text-lg text-slate-700 mb-4">
-                  New Zealand has a rich tradition of competitive sailing, from club
-                  racing series to national championships and the legendary America's
-                  Cup. Racing demands specialized insurance that protects your
-                  investment while accommodating the unique risks of competitive sport.
+      {/* Full Above-Fold Hero */}
+      <section
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <Link href="/" className="hover:text-white transition-colors">Vessel Types</Link>
+                <span>/</span>
+                <span className="text-white font-medium">Racing Boat</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Racing Boat Insurance New Zealand
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
+                Specialist coverage for competitive sailing and racing yachts
+              </p>
+              <div className="space-y-4 text-slate-300 max-w-2xl">
+                <p>
+                  New Zealand has a rich tradition of competitive sailing, from club racing series to national championships and the legendary America's Cup. Racing demands specialized insurance that protects your investment while accommodating the unique risks of competitive sport.
                 </p>
-                <p className="text-slate-600">
-                  Standard yacht insurance often excludes or limits racing coverage.
-                  Our specialist racing boat insurance is designed specifically for
-                  competitive sailors, with coverage tailored to racing activities and
-                  competitive events. <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">Compare racing boat specialists</Link> today.
-                </p>
-              </div>
-
-              <div className="bg-sky-50 rounded-lg p-6 border border-sky-200">
-                <h3 className="font-semibold text-sky-900 mb-3">
-                  New Zealand Racing Heritage
-                </h3>
-                <p className="text-slate-700 text-sm">
-                  From Auckland's thriving winter racing series to classic yacht
-                  divisions, racing is fundamental to NZ sailing culture
+                <p>
+                  Standard yacht insurance often excludes or limits racing coverage. Our specialist racing boat insurance is designed specifically for competitive sailors, with coverage tailored to racing activities and competitive events. <Link href="/compare" className="text-sky-300 hover:text-white underline underline-offset-2">Compare racing boat specialists</Link> today.
                 </p>
               </div>
             </div>
-
-            <div>
+            <div className="lg:col-span-2">
               <QuoteForm mode="compact" />
             </div>
           </div>

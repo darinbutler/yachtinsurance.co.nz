@@ -168,66 +168,42 @@ export default function JetSkiInsurancePage() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="h-[52vh] bg-gradient-to-br from-sky-600 via-sky-500 to-cyan-500 text-white flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
-        </div>
-
-        <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1768722688751-5d995b9e6393?w=1600&h=900&fit=crop')`,
-            backgroundBlendMode: 'overlay',
-          }}
-        />
-
-        <div className="relative text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Jet Ski Insurance New Zealand
-          </h1>
-          <p className="text-xl md:text-2xl text-sky-100 max-w-2xl mx-auto">
-            Specialist personal watercraft coverage with comprehensive protection
-          </p>
-        </div>
-      </section>
-
-      {/* Above Fold Section */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-b border-slate-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2 space-y-6">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Jet Ski Insurance Designed for Thrill Seekers
-                </h2>
-                <p className="text-lg text-slate-700 mb-4">
-                  Jet skiing is one of New Zealand's most exciting water sports, but
-                  it comes with significant liability exposure. Without proper
-                  insurance, a single accident could leave you facing thousands in
-                  legal costs and damages.
+      {/* Full Above-Fold Hero */}
+      <section
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1768722688751-5d995b9e6393?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <Link href="/" className="hover:text-white transition-colors">Vessel Types</Link>
+                <span>/</span>
+                <span className="text-white font-medium">Jet Ski</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Jet Ski Insurance New Zealand
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
+                Specialist personal watercraft coverage with comprehensive protection
+              </p>
+              <div className="space-y-4 text-slate-300 max-w-2xl">
+                <p>
+                  Jet skiing is one of New Zealand's most exciting water sports, but it comes with significant liability exposure. Without proper insurance, a single accident could leave you facing thousands in legal costs and damages.
                 </p>
-                <p className="text-slate-600">
-                  Our jet ski insurance specialists provide fast, affordable coverage
-                  that protects you and your passengers while you enjoy the thrill
-                  of the water. Get comprehensive protection with liability limits
-                  that match New Zealand maritime law. <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">Learn about coverage options</Link>.
-                </p>
-              </div>
-
-              <div className="bg-sky-50 rounded-lg p-6 border border-sky-200">
-                <h3 className="font-semibold text-sky-900 mb-3">
-                  Average Annual Premium
-                </h3>
-                <p className="text-3xl font-bold text-sky-600 mb-2">$300-$500</p>
-                <p className="text-sm text-sky-700">
-                  for typical personal jet ski coverage
+                <p>
+                  Our jet ski insurance specialists provide fast, affordable coverage that protects you and your passengers while you enjoy the thrill of the water. Get comprehensive protection with liability limits that match New Zealand maritime law. <Link href="/coverage" className="text-sky-300 hover:text-white underline underline-offset-2">Learn about coverage options</Link>.
                 </p>
               </div>
             </div>
-
-            <div>
+            <div className="lg:col-span-2">
               <QuoteForm mode="compact" />
             </div>
           </div>

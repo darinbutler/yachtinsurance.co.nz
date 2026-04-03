@@ -106,26 +106,52 @@ export default function Compare() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Section */}
+      {/* Full Above-Fold Hero with Background Image */}
       <section
-        className="relative h-[46vh] min-h-[345px] sm:min-h-[437px] flex items-center justify-center overflow-hidden"
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1626869710563-be671a0cd919?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/75 to-slate-900/65" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
-            Compare Yacht Insurance Providers in NZ
-          </h1>
-          <p className="text-lg sm:text-xl text-sky-100 max-w-3xl mx-auto">
-            Side-by-side comparison of New Zealand's leading marine insurers. Find the right provider for your vessel.
-          </p>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            {/* Left Column - Text */}
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <span className="text-white font-medium">Compare Insurers</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Compare Yacht Insurance Providers in NZ
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
+                Side-by-side comparison of New Zealand's leading marine insurers. Find the right provider for your vessel.
+              </p>
+              <div className="space-y-4 text-slate-300 max-w-2xl">
+                <p className="leading-relaxed text-lg">
+                  New Zealand has 1.6 million recreational vessels and the highest boat ownership per capita in the world. With numerous yacht and boat insurance providers each offering different coverage options, premium rates, and specialties, this comparison helps you find the insurer that best matches your vessel type and insurance needs.
+                </p>
+                <p className="leading-relaxed">
+                  Whether you own a small <Link href="/sectors/dinghy" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">dinghy</Link>, <Link href="/sectors/yacht" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">cruising yacht</Link>, <Link href="/sectors/racing-boat" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">racing boat</Link>, or <Link href="/sectors/jetski" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">jet ski</Link>, New Zealand's marine insurers have coverage options available. Compare ratings, minimum premiums, key features, and specialties to make an informed decision.
+                </p>
+                <p className="leading-relaxed">
+                  While boat insurance isn't legally required in New Zealand, approximately 87% of boat owners carry coverage. Marinas, yacht clubs, and lenders typically require at minimum third-party liability insurance. <Link href="/coverage" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">Comprehensive coverage</Link> protects against hull damage, theft, storm damage, and personal liability — giving you peace of mind on the water.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Quote Form */}
+            <div className="lg:col-span-2">
+              <QuoteForm mode="compact" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -211,34 +237,6 @@ export default function Compare() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quote Form + Body Content */}
-      <section className="py-12 md:py-16 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Left Column - Body Content */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-                Find Your Ideal Marine Insurance Provider
-              </h2>
-              <p className="text-slate-600 mb-4 leading-relaxed text-lg">
-                New Zealand has 1.6 million recreational vessels and the highest boat ownership per capita in the world. With numerous yacht and boat insurance providers each offering different coverage options, premium rates, and specialties, this comparison helps you find the insurer that best matches your vessel type and insurance needs.
-              </p>
-              <p className="text-slate-600 mb-4 leading-relaxed">
-                Whether you own a small <Link href="/sectors/dinghy" className="text-sky-600 hover:text-sky-700 font-semibold">dinghy</Link>, <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700 font-semibold">cruising yacht</Link>, <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing boat</Link>, or <Link href="/sectors/jetski" className="text-sky-600 hover:text-sky-700 font-semibold">jet ski</Link>, New Zealand's marine insurers have coverage options available. Compare ratings, minimum premiums, key features, and specialties to make an informed decision.
-              </p>
-              <p className="text-slate-600 leading-relaxed">
-                While boat insurance isn't legally required in New Zealand, approximately 87% of boat owners carry coverage. Marinas, yacht clubs, and lenders typically require at minimum third-party liability insurance. <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">Comprehensive coverage</Link> protects against hull damage, theft, storm damage, and personal liability — giving you peace of mind on the water.
-              </p>
-            </div>
-
-            {/* Right Column - Quote Form */}
-            <div className="lg:col-span-1">
-              <QuoteForm mode="compact" />
-            </div>
           </div>
         </div>
       </section>

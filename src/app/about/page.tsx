@@ -109,52 +109,55 @@ export default function About() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Hero Section */}
+      {/* Full Above-Fold Hero with Background Image */}
       <section
-        className="relative h-[46vh] min-h-[345px] sm:min-h-[437px] flex items-center justify-center overflow-hidden"
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1625694175188-8f596781bed9?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/75 to-slate-900/65" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
-            About YachtInsurance.co.nz
-          </h1>
-          <p className="text-lg sm:text-xl text-sky-100 max-w-3xl mx-auto">
-            Helping New Zealand boat owners find better yacht and marine insurance coverage
-          </p>
-        </div>
-      </section>
-
-      {/* Above Fold: Mission + Quote Form */}
-      <section className="py-12 md:py-16 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Left Column - Mission */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-                Our Mission
-              </h2>
-              <p className="text-slate-600 mb-4 leading-relaxed text-lg">
-                YachtInsurance.co.nz exists to simplify yacht and boat insurance for New Zealand vessel owners. We believe finding the right insurance shouldn't be complicated or time-consuming.
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            {/* Left Column - Text */}
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <span className="text-white font-medium">About</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                About YachtInsurance.co.nz
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
+                Helping New Zealand boat owners find better yacht and marine insurance coverage
               </p>
-              <p className="text-slate-600 mb-4 leading-relaxed">
-                Our mission is to provide transparent, independent insurance <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">comparison services that help you find better coverage</Link> at fairer premiums. We <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">compare policies from New Zealand's leading marine insurers</Link>, explaining <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">coverage differences</Link> so you can make informed decisions.
-              </p>
-              <p className="text-slate-600 leading-relaxed">
-                Whether you own a small recreational boat, a <Link href="/sectors/yacht" className="text-sky-600 hover:text-sky-700 font-semibold">cruising yacht</Link>, or a <Link href="/sectors/racing-boat" className="text-sky-600 hover:text-sky-700 font-semibold">racing vessel</Link>, we're committed to matching you with the insurance provider and coverage level that best fits your needs and budget. <Link href="/contact" className="text-sky-600 hover:text-sky-700 font-semibold">Get free quotes today</Link>.
-              </p>
+              <div className="space-y-4 text-slate-300 max-w-2xl">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    Our Mission
+                  </h2>
+                  <p className="leading-relaxed text-lg mb-4">
+                    YachtInsurance.co.nz exists to simplify yacht and boat insurance for New Zealand vessel owners. We believe finding the right insurance shouldn't be complicated or time-consuming.
+                  </p>
+                  <p className="leading-relaxed mb-4">
+                    Our mission is to provide transparent, independent insurance <Link href="/compare" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">comparison services that help you find better coverage</Link> at fairer premiums. We <Link href="/compare" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">compare policies from New Zealand's leading marine insurers</Link>, explaining <Link href="/coverage" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">coverage differences</Link> so you can make informed decisions.
+                  </p>
+                  <p className="leading-relaxed">
+                    Whether you own a small recreational boat, a <Link href="/sectors/yacht" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">cruising yacht</Link>, or a <Link href="/sectors/racing-boat" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">racing vessel</Link>, we're committed to matching you with the insurance provider and coverage level that best fits your needs and budget. <Link href="/contact" className="text-sky-300 hover:text-white underline underline-offset-2 transition-colors">Get free quotes today</Link>.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Right Column - Quote Form */}
-            <div className="lg:col-span-1">
-              <div className="bg-sky-50 rounded-xl p-6 border-2 border-sky-200 sticky top-20">
+            <div className="lg:col-span-2">
+              <div className="bg-sky-50 rounded-xl p-6 border-2 border-sky-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">Ready to Compare?</h3>
                 <p className="text-sm text-slate-600 mb-6">Get quotes from multiple NZ marine insurers instantly</p>
                 <QuoteForm mode="compact" />

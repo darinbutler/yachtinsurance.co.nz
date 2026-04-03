@@ -195,82 +195,42 @@ export default function YachtInsurancePage() {
         }}
       />
 
-      {/* Hero Section */}
+      {/* Full Above-Fold Hero */}
       <section
-        className="h-[52vh] bg-gradient-to-br from-sky-600 via-sky-500 to-teal-500 text-white flex items-center justify-center relative overflow-hidden"
-        aria-label="Yacht insurance hero section"
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-1/3 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
-        </div>
-
-        <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1600&h=900&fit=crop')`,
-            backgroundBlendMode: 'overlay',
-          }}
-        />
-
-        <div className="relative text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Yacht Insurance New Zealand
-          </h1>
-          <p className="text-xl md:text-2xl text-sky-100 max-w-2xl mx-auto">
-            Comprehensive marine coverage for sailing and motor yachts of all
-            sizes
-          </p>
-        </div>
-      </section>
-
-      {/* Above Fold Section */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-b border-slate-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2 space-y-6">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Your Yacht Deserves Expert Protection
-                </h2>
-                <p className="text-lg text-slate-700 mb-4">
-                  Whether you own a modest sailing yacht, a sleek motor vessel, or
-                  a luxury superyacht, comprehensive insurance protects your
-                  investment and provides peace of mind on the water. New Zealand's
-                  dynamic marine environment demands specialized coverage tailored
-                  to your specific vessel and cruising patterns.
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-3">
+              <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <Link href="/" className="hover:text-white transition-colors">Vessel Types</Link>
+                <span>/</span>
+                <span className="text-white font-medium">Yacht</span>
+              </nav>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Yacht Insurance New Zealand
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
+                Comprehensive marine coverage for sailing and motor yachts of all sizes
+              </p>
+              <div className="space-y-4 text-slate-300 max-w-2xl">
+                <p>
+                  Whether you own a modest sailing yacht, a sleek motor vessel, or a luxury superyacht, comprehensive insurance protects your investment and provides peace of mind on the water. New Zealand's dynamic marine environment demands specialized coverage tailored to your specific vessel and cruising patterns.
                 </p>
-                <p className="text-slate-600">
-                  Our yacht insurance specialists understand the unique risks facing
-                  boat owners in NZ waters. We connect you with the best insurers
-                  offering competitive rates, flexible coverage options, and claims
-                  service you can trust when you need it most. <Link href="/compare" className="text-sky-600 hover:text-sky-700 font-semibold">Compare providers</Link> and <Link href="/coverage" className="text-sky-600 hover:text-sky-700 font-semibold">learn about available coverage</Link>.
+                <p>
+                  Our yacht insurance specialists understand the unique risks facing boat owners in NZ waters. We connect you with the best insurers offering competitive rates, flexible coverage options, and claims service you can trust when you need it most. <Link href="/compare" className="text-sky-300 hover:text-white underline underline-offset-2">Compare providers</Link> and <Link href="/coverage" className="text-sky-300 hover:text-white underline underline-offset-2">learn about available coverage</Link>.
                 </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4 pt-4">
-                <div className="bg-sky-50 rounded-lg p-4 border border-sky-200">
-                  <p className="text-sm font-semibold text-sky-900 mb-1">
-                    Average Premium Savings
-                  </p>
-                  <p className="text-3xl font-bold text-sky-600">28%</p>
-                  <p className="text-xs text-sky-700 mt-1">
-                    vs. going direct to insurers
-                  </p>
-                </div>
-                <div className="bg-teal-50 rounded-lg p-4 border border-teal-200">
-                  <p className="text-sm font-semibold text-teal-900 mb-1">
-                    24-Hour Response
-                  </p>
-                  <p className="text-3xl font-bold text-teal-600">100%</p>
-                  <p className="text-xs text-teal-700 mt-1">
-                    of inquiries answered next business day
-                  </p>
-                </div>
               </div>
             </div>
-
-            <div>
+            <div className="lg:col-span-2">
               <QuoteForm mode="compact" />
             </div>
           </div>

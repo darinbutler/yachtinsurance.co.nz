@@ -96,22 +96,31 @@ export default function BlogPage() {
 
       {/* Hero Section */}
       <section
-        className="h-[40vh] bg-gradient-to-br from-sky-600 via-sky-500 to-teal-500 text-white flex items-center justify-center relative overflow-hidden"
-        aria-label="Blog hero section"
+        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
-        </div>
-
-        <div className="relative text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+          <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-white font-medium">Blog</span>
+          </nav>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg max-w-4xl">
             Yacht Insurance Blog & Guides
           </h1>
-          <p className="text-xl md:text-2xl text-sky-100 max-w-2xl mx-auto">
-            Expert insights to help you protect your vessel and make informed
-            insurance decisions
+          <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-3xl leading-relaxed">
+            Expert insights and guides to help you protect your vessel and make informed insurance decisions
           </p>
+          <div className="space-y-4 text-slate-300 max-w-3xl">
+            <p>
+              Explore our collection of expert articles on yacht insurance, marine coverage, risk management, and best practices for boat owners in New Zealand.
+            </p>
+          </div>
         </div>
       </section>
 
