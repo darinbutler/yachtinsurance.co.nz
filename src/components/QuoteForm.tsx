@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
 import { CheckCircle2, Shield, Lock } from 'lucide-react';
 
 interface QuoteFormProps {
@@ -8,50 +7,18 @@ interface QuoteFormProps {
 }
 
 export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError('');
-
-    const form = e.currentTarget;
-
-    try {
-      const formData = new FormData(form);
-      const data: Record<string, string> = {};
-      formData.forEach((value, key) => {
-        data[key] = value.toString();
-      });
-
-      await fetch('https://formsubmit.co/ajax/hello@cover4you.co.nz', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      // Redirect to thank you page after submission
-      form.reset();
-      window.location.href = '/thank-you';
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitError('An error occurred. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const formContent = (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form
+      action="https://formsubmit.co/hello@cover4you.co.nz"
+      method="POST"
+      className="space-y-4"
+    >
       {/* Hidden fields for FormSubmit.co */}
       <input type="hidden" name="_subject" value="New Quote Request - YachtInsurance.co.nz" />
-      <input type="hidden" name="_next" value="https://yachtinsurance.co.nz/thank-you" />
+      <input type="hidden" name="_next" value="https://yachtinsurance.co.nz/thank-you/" />
       <input type="hidden" name="_cc" value="butlerdarin@gmail.com" />
       <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" style={{ display: 'none' }} />
 
       {/* Name Field */}
       <div>
@@ -156,20 +123,12 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
         </div>
       )}
 
-      {/* Error Message */}
-      {submitError && (
-        <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-sm text-red-700">{submitError}</p>
-        </div>
-      )}
-
       {/* Submit Button */}
       <button
         type="submit"
-        disabled={isSubmitting}
-        className="w-full px-4 py-3.5 bg-gradient-to-r from-sky-600 to-teal-500 text-white rounded-xl font-semibold text-lg hover:from-sky-700 hover:to-teal-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+        className="w-full px-4 py-3.5 bg-gradient-to-r from-sky-600 to-teal-500 text-white rounded-xl font-semibold text-lg hover:from-sky-700 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
       >
-        {isSubmitting ? 'Submitting...' : 'Get My Free Quote →'}
+        Get My Free Quote →
       </button>
       <p className="text-center text-xs text-slate-400 mt-2">No credit card required</p>
     </form>
