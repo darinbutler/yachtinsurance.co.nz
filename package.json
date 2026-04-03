@@ -1,0 +1,35 @@
+{
+  "name": "yacht-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "generate-images": "node scripts/generate-images.js",
+    "scrape:competitors": "node scripts/scrape-competitors.js",
+    "scrape:content": "node scripts/scrape-content.js",
+    "scrape:pricing": "node scripts/scrape-pricing.js",
+    "scrape:all": "node scripts/refresh-data.js",
+    "images": "node scripts/generate-images.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "apify-client": "^2.22.3",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

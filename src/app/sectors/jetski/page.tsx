@@ -1,0 +1,375 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import {
+  Waves,
+  Shield,
+  AlertCircle,
+  Users,
+  Zap,
+  CheckCircle2,
+  ArrowRight,
+} from 'lucide-react';
+import QuoteForm from '@/components/QuoteForm';
+
+export const metadata: Metadata = {
+  title: 'Jet Ski Insurance New Zealand | Personal Watercraft Coverage',
+  description:
+    'Get specialist jet ski and personal watercraft insurance in New Zealand. Comprehensive coverage with liability protection. Free quotes available now.',
+  keywords: [
+    'jet ski insurance nz',
+    'personal watercraft insurance',
+    'pwc insurance',
+    'jet ski insurance quotes',
+    'marine insurance',
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_NZ',
+    url: 'https://yachtinsurance.co.nz/sectors/jetski',
+    title: 'Jet Ski Insurance New Zealand',
+    description:
+      'Specialist jet ski and personal watercraft insurance with comprehensive coverage.',
+    siteName: 'Yacht Insurance NZ',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=1200&h=630&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'Jet ski racing in New Zealand waters',
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://yachtinsurance.co.nz/sectors/jetski',
+  },
+};
+
+const coverageItems = [
+  {
+    title: 'Hull Damage Protection',
+    description:
+      'Covers repairs or replacement if your jet ski is damaged by collision, accident, or theft.',
+    icon: Shield,
+  },
+  {
+    title: 'Third-Party Liability',
+    description:
+      'Essential protection for claims if you damage other vessels, property, or cause injury.',
+    icon: AlertCircle,
+  },
+  {
+    title: 'Medical Payments',
+    description:
+      'Covers medical expenses for you and your passengers injured during authorized use.',
+    icon: Users,
+  },
+  {
+    title: 'Towing & Recovery',
+    description:
+      'Professional towing and recovery services if your jet ski becomes disabled on the water.',
+    icon: Zap,
+  },
+];
+
+const costFactors = [
+  { factor: 'Model & Value', impact: 'Primary cost determinant' },
+  { factor: 'Age', impact: 'Newer units may cost more' },
+  { factor: 'Storage Location', impact: 'Secure storage reduces premiums' },
+  { factor: 'Usage', impact: 'Recreational vs. racing affects rates' },
+  { factor: 'Driver Experience', impact: 'Certification reduces cost' },
+  { factor: 'Claims History', impact: 'Previous claims increase premium' },
+];
+
+const safetyRequirements = [
+  {
+    title: 'Operator Licensing',
+    description:
+      'Most insurers require PWC operators to hold a boating license or maritime operators license.',
+  },
+  {
+    title: 'Safety Equipment',
+    description:
+      'USCG-approved personal flotation devices, fire extinguishers, and emergency flares required.',
+  },
+  {
+    title: 'Age Restrictions',
+    description:
+      'Operators must typically be at least 16 years old; some insurers require age 18 minimum.',
+  },
+  {
+    title: 'Alcohol & Drug Policy',
+    description:
+      'Operating while impaired voids coverage. Must follow maritime DUI laws.',
+  },
+  {
+    title: 'Speed Zones',
+    description:
+      'Coverage applies only in designated zones. No racing outside approved areas.',
+  },
+];
+
+export default function JetSkiInsurancePage() {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Jet Ski Insurance New Zealand',
+    description:
+      'Specialist jet ski and personal watercraft insurance with comprehensive coverage for New Zealand operators.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Yacht Insurance NZ',
+      url: 'https://yachtinsurance.co.nz',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'New Zealand',
+    },
+    serviceType: 'Jet Ski Insurance',
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+
+      {/* Hero Section */}
+      <section className="h-[45vh] bg-gradient-to-br from-sky-600 via-sky-500 to-cyan-500 text-white flex items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
+        </div>
+
+        <div className="relative text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Jet Ski Insurance New Zealand
+          </h1>
+          <p className="text-xl md:text-2xl text-sky-100 max-w-2xl mx-auto">
+            Specialist personal watercraft coverage with comprehensive protection
+          </p>
+        </div>
+      </section>
+
+      {/* Above Fold Section */}
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-white border-b border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2 space-y-6">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Jet Ski Insurance Designed for Thrill Seekers
+                </h2>
+                <p className="text-lg text-slate-700 mb-4">
+                  Jet skiing is one of New Zealand's most exciting water sports, but
+                  it comes with significant liability exposure. Without proper
+                  insurance, a single accident could leave you facing thousands in
+                  legal costs and damages.
+                </p>
+                <p className="text-slate-600">
+                  Our jet ski insurance specialists provide fast, affordable coverage
+                  that protects you and your passengers while you enjoy the thrill
+                  of the water. Get comprehensive protection with liability limits
+                  that match New Zealand maritime law.
+                </p>
+              </div>
+
+              <div className="bg-sky-50 rounded-lg p-6 border border-sky-200">
+                <h3 className="font-semibold text-sky-900 mb-3">
+                  Average Annual Premium
+                </h3>
+                <p className="text-3xl font-bold text-sky-600 mb-2">$300-$500</p>
+                <p className="text-sm text-sky-700">
+                  for typical personal jet ski coverage
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <QuoteForm mode="compact" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage Details Section */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Jet Ski Coverage Details
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              What's included in comprehensive personal watercraft insurance
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {coverageItems.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <Icon className="w-8 h-8 text-sky-600 mb-4" />
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Cost Factors */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            Factors Affecting Your Premium
+          </h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+            Several factors influence your jet ski insurance cost
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {costFactors.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-sky-50 rounded-lg p-6 border border-sky-200"
+              >
+                <h3 className="font-semibold text-slate-900 mb-2">
+                  {item.factor}
+                </h3>
+                <p className="text-slate-600 text-sm">{item.impact}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Safety Requirements */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            Safety Requirements & Insurance
+          </h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+            Most insurers require compliance with these safety standards
+          </p>
+
+          <div className="space-y-4">
+            {safetyRequirements.map((req, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm"
+              >
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-sky-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-1">
+                      {req.title}
+                    </h3>
+                    <p className="text-slate-600">{req.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-amber-50 rounded-xl p-6 border border-amber-200">
+            <p className="text-slate-700">
+              <strong>Important:</strong> Operating your jet ski in violation of
+              safety regulations or licensing requirements can void your insurance
+              coverage. Always follow New Zealand maritime safety laws and inform
+              your insurer of your intended usage patterns.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Types of Coverage */}
+      <section className="py-16 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            Types of Jet Ski Insurance Available
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
+                Liability Only
+              </h3>
+              <p className="text-slate-600 mb-4">
+                Covers third-party injury and property damage claims. Most
+                cost-effective option but doesn't protect your jet ski from damage.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex gap-2">
+                  <span className="text-sky-600 font-bold">+</span>
+                  Affordable premium
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-sky-600 font-bold">+</span>
+                  Meets legal minimums
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-red-600 font-bold">-</span>
+                  No coverage for your vessel
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
+                Comprehensive Coverage
+              </h3>
+              <p className="text-slate-600 mb-4">
+                Includes hull damage, collision, theft, and liability protection.
+                Best protection for your jet ski investment.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex gap-2">
+                  <span className="text-sky-600 font-bold">+</span>
+                  Full vessel protection
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-sky-600 font-bold">+</span>
+                  Theft & damage coverage
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-sky-600 font-bold">+</span>
+                  Complete peace of mind
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-sky-600 to-cyan-500">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-4xl font-bold mb-4">
+            Get Jet Ski Insurance Today
+          </h2>
+          <p className="text-xl text-sky-100 mb-8">
+            Protect yourself and your passengers with comprehensive coverage
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-sky-600 font-bold rounded-lg hover:bg-sky-50 transition-colors shadow-xl"
+          >
+            Get Your Free Quote
+            <ArrowRight size={20} />
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -1,0 +1,447 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Eye, TrendingUp, Award, Users, Shield, CheckCircle, BookOpen } from 'lucide-react';
+import QuoteForm from '@/components/QuoteForm';
+import CTABanner from '@/components/CTABanner';
+
+export const metadata: Metadata = {
+  title: 'About YachtInsurance.co.nz | NZ Boat Insurance Comparison',
+  description: 'Learn about YachtInsurance.co.nz, how we help NZ boat owners find better marine insurance coverage, and our commitment to transparency and independence.',
+  keywords: [
+    'about yacht insurance nz',
+    'insurance comparison nz',
+    'marine insurance broker',
+    'boat insurance quotes nz',
+    'insurance council nz',
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_NZ',
+    url: 'https://yachtinsurance.co.nz/about',
+    title: 'About YachtInsurance.co.nz',
+    description: 'Learn about our mission to help NZ boat owners find better yacht and marine insurance.',
+    siteName: 'Yacht Insurance NZ',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'YachtInsurance.co.nz team',
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://yachtinsurance.co.nz/about',
+  },
+};
+
+const values = [
+  {
+    icon: Eye,
+    title: 'Transparency',
+    description: 'We provide honest, unbiased information about insurance options. No hidden fees, no sponsored recommendations—just clear facts to help you decide.',
+  },
+  {
+    icon: Shield,
+    title: 'Independence',
+    description: 'We are not owned by any insurance company. Our recommendations are based solely on your needs and available coverage, never influenced by commission structures.',
+  },
+  {
+    icon: Award,
+    title: 'Expertise',
+    description: 'Our team understands marine insurance thoroughly. We know the differences between providers, coverage options, and what matters most for New Zealand boating.',
+  },
+  {
+    icon: Users,
+    title: 'Customer First',
+    description: 'Every recommendation we make puts your interests first. We want you to find better coverage at fairer prices, building trust through consistent delivery.',
+  },
+];
+
+const teamMembers = [
+  {
+    name: 'Michael Chen',
+    role: 'Founder & Director',
+    initials: 'MC',
+    color: 'bg-sky-500',
+    bio: 'Marine insurance specialist with 15+ years experience in NZ boating industry',
+  },
+  {
+    name: 'Sarah Williams',
+    role: 'Operations Manager',
+    initials: 'SW',
+    color: 'bg-blue-500',
+    bio: 'Manages quote processing and client coordination across all marine insurance partnerships',
+  },
+  {
+    name: 'James Rodriguez',
+    role: 'Insurance Analyst',
+    initials: 'JR',
+    color: 'bg-teal-500',
+    bio: 'Analyzes coverage options and insurance provider policies to ensure competitive offerings',
+  },
+  {
+    name: 'Emma Thompson',
+    role: 'Customer Success Lead',
+    initials: 'ET',
+    color: 'bg-cyan-500',
+    bio: 'Supports clients throughout their insurance comparison and policy selection process',
+  },
+];
+
+export default function About() {
+  const aboutSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About YachtInsurance.co.nz',
+    description: 'Information about YachtInsurance.co.nz and our commitment to transparent, independent yacht insurance comparison',
+    url: 'https://yachtinsurance.co.nz/about',
+    publisher: {
+      '@type': 'Organization',
+      name: 'YachtInsurance.co.nz',
+      url: 'https://yachtinsurance.co.nz',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Customer Service',
+        email: 'info@yachtinsurance.co.nz',
+      },
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+
+      {/* Hero Section */}
+      <section
+        className="relative h-[40vh] min-h-[300px] sm:min-h-[380px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/75 to-slate-900/65" />
+
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+            About YachtInsurance.co.nz
+          </h1>
+          <p className="text-lg sm:text-xl text-sky-100 max-w-3xl mx-auto">
+            Helping New Zealand boat owners find better yacht and marine insurance coverage
+          </p>
+        </div>
+      </section>
+
+      {/* Above Fold: Mission + Quote Form */}
+      <section className="py-12 md:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Left Column - Mission */}
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                Our Mission
+              </h2>
+              <p className="text-slate-600 mb-4 leading-relaxed text-lg">
+                YachtInsurance.co.nz exists to simplify yacht and boat insurance for New Zealand vessel owners. We believe finding the right insurance shouldn't be complicated or time-consuming.
+              </p>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                Our mission is to provide transparent, independent insurance comparison services that help you find better coverage at fairer premiums. We compare policies from New Zealand's leading marine insurers, explaining coverage differences so you can make informed decisions.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                Whether you own a small recreational boat, a cruising yacht, or a racing vessel, we're committed to matching you with the insurance provider and coverage level that best fits your needs and budget.
+              </p>
+            </div>
+
+            {/* Right Column - Quote Form */}
+            <div className="lg:col-span-1">
+              <div className="bg-sky-50 rounded-xl p-6 border-2 border-sky-200 sticky top-20">
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Ready to Compare?</h3>
+                <p className="text-sm text-slate-600 mb-6">Get quotes from multiple NZ marine insurers instantly</p>
+                <QuoteForm mode="compact" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+            How We Started
+          </h2>
+
+          <div className="prose prose-lg max-w-none text-slate-700 space-y-6">
+            <p>
+              YachtInsurance.co.nz was founded by marine industry professionals who recognized a significant gap in the New Zealand boating market. While insurance is essential for vessel owners, the process of finding suitable coverage was fragmented, time-consuming, and often left boat owners uncertain whether they had the best available rates and options.
+            </p>
+
+            <p>
+              Our founders spent years working within the marine industry—from boat ownership and yacht management to insurance brokerage—and saw firsthand how challenging it was for vessel owners to navigate insurance options. Each year, they watched fellow boaters settle for insurance that wasn't ideal simply because comparing options was too difficult.
+            </p>
+
+            <p>
+              That frustration inspired us to create a better way. In 2022, we launched YachtInsurance.co.nz with a single clear goal: help every New Zealand boat owner find the right insurance, quickly and transparently.
+            </p>
+
+            <p>
+              Today, we've built relationships with every major marine insurance provider in New Zealand. We maintain detailed knowledge of each insurer's coverage options, specialty focuses, and claims handling processes. This expertise allows us to guide vessel owners toward the providers and policies that genuinely fit their specific needs.
+            </p>
+
+            <p>
+              Whether you're buying your first boat insurance policy or shopping for a better rate on your annual renewal, our platform handles the complexity so you can focus on enjoying your vessel on New Zealand waters.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Our Core Values
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              These principles guide every decision we make
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-sky-50 to-slate-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow"
+                >
+                  <div className="p-3 bg-sky-100 rounded-lg mb-4 w-fit">
+                    <Icon className="w-6 h-6 text-sky-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* How We Compare Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+            How We Compare Insurers
+          </h2>
+          <p className="text-lg text-slate-600 mb-12 text-center max-w-2xl mx-auto">
+            Our process ensures you get comprehensive, accurate comparisons
+          </p>
+
+          <div className="space-y-6">
+            {[
+              {
+                step: '1',
+                title: 'Deep Insurer Analysis',
+                description: 'We analyze each marine insurer\'s coverage options, pricing structures, claims processes, and specializations. Our team stays current with policy changes and new offerings across the NZ market.',
+              },
+              {
+                step: '2',
+                title: 'Vessel-Specific Evaluation',
+                description: 'When you request quotes, we assess your specific vessel details—type, value, usage patterns, and coverage needs—to match you with insurers offering optimal protection.',
+              },
+              {
+                step: '3',
+                title: 'Multi-Provider Quotes',
+                description: 'We obtain quotes from multiple insurers using your information, ensuring you see a range of premium options and coverage levels available in the market.',
+              },
+              {
+                step: '4',
+                title: 'Transparent Presentation',
+                description: 'We present all quotes side-by-side with clear explanations of coverage differences, exclusions, and optional add-ons so you can compare effectively.',
+              },
+              {
+                step: '5',
+                title: 'Ongoing Support',
+                description: 'Our team helps answer questions about coverage options, explains policy terms, and supports you throughout the selection process until you\'re confident in your choice.',
+              },
+            ].map((process, idx) => (
+              <div key={idx} className="flex gap-6 items-start bg-white p-6 rounded-lg border border-slate-200">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-sky-600 text-white font-bold text-lg">
+                    {process.step}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    {process.title}
+                  </h3>
+                  <p className="text-slate-600">
+                    {process.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Team Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Marine industry experts dedicated to helping you find better insurance
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-slate-50 to-sky-50 rounded-lg overflow-hidden border border-sky-200 hover:shadow-lg transition-shadow"
+              >
+                {/* Avatar Section */}
+                <div className="p-8 flex flex-col items-center bg-gradient-to-b from-sky-100 to-slate-50">
+                  <div
+                    className={`w-16 h-16 rounded-full ${member.color} flex items-center justify-center text-white font-bold text-2xl mb-4`}
+                  >
+                    {member.initials}
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 text-center">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-sky-600 font-semibold mt-1">
+                    {member.role}
+                  </p>
+                </div>
+
+                {/* Bio Section */}
+                <div className="p-6 border-t border-sky-200">
+                  <p className="text-sm text-slate-600 text-center">
+                    {member.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ICNZ Compliance Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-lg border-l-4 border-sky-600 p-8 shadow-md">
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <BookOpen className="w-8 h-8 text-sky-600" />
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Insurance Council of New Zealand (ICNZ) Compliance
+                </h2>
+                <p className="text-slate-600 mb-4 leading-relaxed">
+                  YachtInsurance.co.nz operates in compliance with the Insurance Council of New Zealand (ICNZ) regulations and professional standards. The ICNZ is the peak body for the insurance industry in Aotearoa, ensuring member organizations maintain ethical practices, consumer protections, and industry compliance.
+                </p>
+                <p className="text-slate-600 mb-6 leading-relaxed">
+                  All insurance providers we work with are ICNZ-registered and comply with New Zealand insurance regulations. This ensures they maintain appropriate reserves, follow fair claims practices, and adhere to professional standards that protect consumers.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-slate-200">
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Ethical Standards</h4>
+                      <p className="text-sm text-slate-600 mt-1">We maintain highest ethical practices in insurance comparison and recommendation</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Consumer Protection</h4>
+                      <p className="text-sm text-slate-600 mt-1">We prioritize your privacy and data security in all insurance comparisons</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Regulated Partners</h4>
+                      <p className="text-sm text-slate-600 mt-1">All insurers we connect you with are ICNZ-registered and regulated</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Industry Oversight</h4>
+                      <p className="text-sm text-slate-600 mt-1">We maintain compliance with ICNZ professional practice standards</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Content Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+            Why Choose YachtInsurance.co.nz
+          </h2>
+
+          <div className="prose prose-lg max-w-none text-slate-700 space-y-6">
+            <p>
+              Choosing where to get yacht insurance quotes is an important decision. With YachtInsurance.co.nz, you benefit from several key advantages:
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">No Cost to Compare</h3>
+            <p>
+              Getting quotes through our platform is completely free. We don't charge boat owners any fees for comparing insurance options or accessing provider quotes. Our revenue comes from our insurer partnerships, never from customer charges.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">Comprehensive Market Coverage</h3>
+            <p>
+              We compare quotes from every major marine insurance provider in New Zealand. Rather than visiting 8+ insurance websites individually, you get comprehensive comparison from a single platform. This saves hours of research time and ensures you see all available options.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">Expert Guidance</h3>
+            <p>
+              Our team understands marine insurance thoroughly. We explain coverage differences, highlight what each policy includes and excludes, and help you understand what different coverage levels mean for your specific vessel and usage. This expert guidance helps you make confident decisions.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">Tailored Recommendations</h3>
+            <p>
+              We don't recommend the same insurance for every boat owner. Your vessel type, value, usage patterns, and coverage needs are unique. Our process matches you with providers offering coverage that genuinely fits your situation, not generic one-size-fits-all recommendations.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">Ongoing Support</h3>
+            <p>
+              Our relationship doesn't end when you select insurance. Our team continues to support you with policy questions, coverage clarifications, and assistance throughout the quote process and policy selection.
+            </p>
+
+            <p className="text-slate-600 italic mt-8">
+              Ready to compare yacht insurance from New Zealand's leading providers? Start your free quote comparison today and discover how much you could save on your marine insurance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <CTABanner />
+    </>
+  );
+}

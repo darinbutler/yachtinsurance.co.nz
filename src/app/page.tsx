@@ -1,0 +1,429 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Ship, Waves, Sailboat, Anchor, Trophy, Compass, Globe, Shield, DollarSign, Lock, CloudRain, ChevronRight } from 'lucide-react';
+import HowItWorks from '@/components/HowItWorks';
+import AnimatedStats from '@/components/AnimatedStats';
+import QuoteForm from '@/components/QuoteForm';
+import CTABanner from '@/components/CTABanner';
+import { insurers } from '@/data/insurers';
+import { faqs } from '@/data/faqs';
+
+export const metadata: Metadata = {
+  title: 'Yacht Insurance NZ | Compare & Save | YachtInsurance.co.nz',
+  description: 'Compare top yacht and marine insurance providers in New Zealand. Get instant quotes for boat, yacht, jet ski and marine insurance from specialists like Mariner, Tower and NMI. Save on premiums today.',
+  keywords: [
+    'yacht insurance nz',
+    'boat insurance nz',
+    'marine insurance new zealand',
+    'jet ski insurance nz',
+    'boat insurance quotes',
+    'yacht insurance comparison',
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_NZ',
+    url: 'https://yachtinsurance.co.nz',
+    title: 'Yacht Insurance NZ | Compare & Save',
+    description: 'Compare top yacht and marine insurance providers in New Zealand. Get instant quotes for boat, yacht, jet ski and marine insurance.',
+    siteName: 'Yacht Insurance NZ',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&h=630&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'Luxury yacht sailing in New Zealand waters',
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://yachtinsurance.co.nz',
+  },
+};
+
+const vesselTypes = [
+  {
+    title: 'Yacht',
+    icon: Ship,
+    description: 'Comprehensive coverage for sailing and motor yachts of all sizes',
+    link: '/vessels/yacht',
+  },
+  {
+    title: 'Jet Ski',
+    icon: Waves,
+    description: 'Specialist personal watercraft insurance with liability protection',
+    link: '/vessels/jet-ski',
+  },
+  {
+    title: 'Dinghy',
+    icon: Sailboat,
+    description: 'Affordable coverage for small sailing dinghies and tenders',
+    link: '/vessels/dinghy',
+  },
+  {
+    title: 'Tender',
+    icon: Anchor,
+    description: 'Protection for auxiliary vessels and rescue dinghies',
+    link: '/vessels/tender',
+  },
+  {
+    title: 'Racing Boat',
+    icon: Trophy,
+    description: 'Specialized racing yacht insurance including competition coverage',
+    link: '/vessels/racing-boat',
+  },
+  {
+    title: 'Coastal Cruising',
+    icon: Compass,
+    description: 'Perfect for vessels that cruise NZ regional and Tasman waters',
+    link: '/vessels/coastal-cruising',
+  },
+  {
+    title: 'Blue Water Cruiser',
+    icon: Globe,
+    description: 'Extended offshore coverage for international blue water passages',
+    link: '/vessels/blue-water-cruiser',
+  },
+];
+
+const benefitCards = [
+  {
+    title: 'Hull & Machinery Protection',
+    description: 'Comprehensive damage coverage for your vessel structure and engine systems',
+    icon: Shield,
+  },
+  {
+    title: 'Third-Party Liability',
+    description: 'Protection against claims from damage to other vessels, swimmers, or property',
+    icon: DollarSign,
+  },
+  {
+    title: 'Theft & Vandalism Cover',
+    description: 'Full replacement value if your vessel is stolen or deliberately damaged',
+    icon: Lock,
+  },
+  {
+    title: 'Storm & Weather Damage',
+    description: 'Coverage for weather-related damage including wind, hail, and rough seas',
+    icon: CloudRain,
+  },
+];
+
+export default function Home() {
+  const topInsurers = insurers.slice(0, 4);
+  const homepageFaqs = faqs.slice(0, 5);
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homepageFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      {/* Hero Section */}
+      <section
+        className="relative h-[60vh] min-h-[380px] sm:min-h-[450px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/60" />
+
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+            Compare Yacht Insurance in New Zealand
+          </h1>
+          <p className="text-lg sm:text-xl text-sky-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Find the right marine insurance for your vessel. Compare quotes from 15+ top NZ insurers and save on your annual premium.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-3 sm:py-4 bg-sky-600 text-white rounded-xl font-semibold hover:bg-sky-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/compare"
+              className="px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-colors"
+            >
+              Compare Insurers
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Bar */}
+      <section className="bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+            <div className="text-center">
+              <p className="text-2xl sm:text-3xl font-bold text-sky-600">15+</p>
+              <p className="text-sm sm:text-base text-slate-600 mt-1">NZ Insurers</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl sm:text-3xl font-bold text-sky-600">Free</p>
+              <p className="text-sm sm:text-base text-slate-600 mt-1">Quote Service</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl sm:text-3xl font-bold text-sky-600">Expert</p>
+              <p className="text-sm sm:text-base text-slate-600 mt-1">Marine Advice</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl sm:text-3xl font-bold text-sky-600">ICNZ</p>
+              <p className="text-sm sm:text-base text-slate-600 mt-1">Registered</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vessel Types Grid */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Insurance for Every Vessel Type
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Specialized coverage options tailored to your vessel's specific needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {vesselTypes.map((vessel, index) => {
+              const Icon = vessel.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col h-full"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-sky-50 rounded-lg">
+                      <Icon className="w-6 h-6 text-sky-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">{vessel.title}</h3>
+                  </div>
+                  <p className="text-slate-600 text-sm mb-6 flex-grow">
+                    {vessel.description}
+                  </p>
+                  <Link
+                    href={vessel.link}
+                    className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-semibold transition-colors text-sm"
+                  >
+                    Learn More
+                    <ChevronRight size={16} />
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Note for 7 items in lg view */}
+          <div className="block lg:hidden mt-6">
+            <Link
+              href="/vessels"
+              className="w-full block text-center px-6 py-3 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700 transition-colors"
+            >
+              View All Vessel Types
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <HowItWorks />
+
+      {/* Why Insure Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why Insure Your Vessel?
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Comprehensive protection for your marine investment
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefitCards.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <div className="p-3 bg-teal-50 rounded-lg mb-4 w-fit">
+                    <Icon className="w-6 h-6 text-teal-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm">{benefit.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Stats */}
+      <AnimatedStats />
+
+      {/* Featured Insurers Preview */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Featured Insurance Partners
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Top-rated insurers trusted by thousands of NZ boat owners
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {topInsurers.map((insurer, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-slate-50 to-sky-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-slate-900">
+                    {insurer.name}
+                  </h3>
+                  <div className="flex items-center gap-1">
+                    <span className="text-lg font-bold text-amber-500">
+                      {insurer.rating}
+                    </span>
+                    <span className="text-xs text-slate-500">/5</span>
+                  </div>
+                </div>
+                <p className="text-sm text-slate-600 mb-4 line-clamp-2">
+                  {insurer.description}
+                </p>
+                <div className="mb-4">
+                  <p className="text-xs text-slate-500 mb-2">Min. Premium</p>
+                  <p className="text-lg font-semibold text-sky-600">
+                    {insurer.minPremium}
+                  </p>
+                </div>
+                <Link
+                  href="/compare"
+                  className="inline-block px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-semibold hover:bg-sky-700 transition-colors w-full text-center"
+                >
+                  View Details
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/compare"
+              className="inline-block px-8 py-3 bg-sky-600 text-white rounded-xl font-semibold hover:bg-sky-700 transition-colors"
+            >
+              Compare All {insurers.length} Insurers
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mini Quote Form Section */}
+      <section className="py-12 md:py-20 bg-slate-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Get Your Free Quote in 2 Minutes
+            </h2>
+            <p className="text-lg text-slate-600">
+              No credit card required. Instant quotes from multiple insurers.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-sky-500">
+            <div className="bg-sky-600 px-6 py-4">
+              <p className="text-white font-semibold">Quick Quote Form</p>
+            </div>
+            <div className="p-6">
+              <QuoteForm mode="compact" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-slate-600">
+              Find answers to common yacht insurance questions
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {homepageFaqs.map((faq, index) => (
+              <details
+                key={index}
+                className="group bg-slate-50 rounded-lg border border-slate-200 hover:border-sky-300 transition-colors"
+              >
+                <summary className="flex items-center justify-between w-full p-6 cursor-pointer font-semibold text-slate-900 hover:text-sky-600 transition-colors">
+                  {faq.question}
+                  <svg
+                    className="w-5 h-5 text-slate-600 group-open:rotate-180 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6 text-slate-600 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/faqs"
+              className="inline-block px-8 py-3 bg-sky-600 text-white rounded-xl font-semibold hover:bg-sky-700 transition-colors"
+            >
+              View More FAQs
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <CTABanner />
+    </>
+  );
+}
