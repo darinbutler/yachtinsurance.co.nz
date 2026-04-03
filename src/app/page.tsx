@@ -5,6 +5,7 @@ import HowItWorks from '@/components/HowItWorks';
 import AnimatedStats from '@/components/AnimatedStats';
 import QuoteForm from '@/components/QuoteForm';
 import CTABanner from '@/components/CTABanner';
+import AnimatedTrustBar from '@/components/AnimatedTrustBar';
 import { insurers } from '@/data/insurers';
 import { faqs } from '@/data/faqs';
 
@@ -177,29 +178,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Trust Bar - Overlaying Hero */}
-        <div className="relative z-10 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 bg-white/10 backdrop-blur-md rounded-xl px-6 py-5 border border-white/20">
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-white">15+</p>
-                <p className="text-sm sm:text-base text-sky-200 mt-1">NZ Insurers</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-white">Free</p>
-                <p className="text-sm sm:text-base text-sky-200 mt-1">Quote Service</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-white">Expert</p>
-                <p className="text-sm sm:text-base text-sky-200 mt-1">Marine Advice</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-white">ICNZ</p>
-                <p className="text-sm sm:text-base text-sky-200 mt-1">Registered</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Animated Trust Bar - Overlaying Hero */}
+        <AnimatedTrustBar />
       </section>
 
       {/* Vessel Types Grid */}
