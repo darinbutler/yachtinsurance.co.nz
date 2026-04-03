@@ -34,14 +34,13 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
-      if (response.ok && (result.success === 'true' || result.success === true)) {
+      if (response.ok) {
         form.reset();
         window.location.href = '/thank-you';
-      } else {
-        setSubmitError('Failed to submit form. Please try again.');
+        return;
       }
+
+      setSubmitError('Failed to submit form. Please try again.');
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitError('An error occurred. Please try again.');
