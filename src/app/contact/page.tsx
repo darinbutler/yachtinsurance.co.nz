@@ -151,6 +151,29 @@ export default function ContactPage() {
                   Compare quotes from 15+ top New Zealand marine insurers and find the perfect coverage for your yacht, boat, or jet ski.
                 </p>
               </div>
+
+              {/* Why Choose Us USP List */}
+              <div className="mt-8">
+                <h2 className="text-2xl font-bold text-white mb-5">
+                  Why Choose Yacht Insurance NZ?
+                </h2>
+                <ul className="space-y-3">
+                  {whyChooseUs.map((item, index) => (
+                    <li key={index} className="flex gap-3 items-start">
+                      <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-200 font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6">
+                  <Link
+                    href="/about"
+                    className="inline-block px-6 py-3 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700 transition-colors"
+                  >
+                    Learn More About Our Service
+                  </Link>
+                </div>
+              </div>
             </div>
             <div className="lg:col-span-2">
               <div className="relative">
@@ -249,38 +272,14 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Why Choose Us Extended Section */}
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                Why Choose Yacht Insurance NZ?
-              </h3>
-
-              <ul className="space-y-3">
-                {whyChooseUs.map((item, index) => (
-                  <li key={index} className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-700 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8">
-                <Link
-                  href="/"
-                  className="inline-block px-6 py-3 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700 transition-colors"
-                >
-                  Learn More About Our Service
-                </Link>
-              </div>
-            </div>
-
+          {/* Quick Facts Section */}
+          <div className="max-w-2xl mx-auto mb-12">
             <div className="bg-gradient-to-br from-sky-50 to-teal-50 rounded-lg p-8 border border-sky-200">
               <h4 className="text-lg font-bold text-slate-900 mb-4">
                 Quick Facts
               </h4>
 
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
                   <p className="text-sm text-slate-600 font-medium">
                     Average Response Time
@@ -288,21 +287,21 @@ export default function ContactPage() {
                   <p className="text-2xl font-bold text-sky-600">Under 24 Hours</p>
                 </div>
 
-                <div className="border-t border-sky-300 pt-4">
+                <div>
                   <p className="text-sm text-slate-600 font-medium">
                     Insurance Partners
                   </p>
                   <p className="text-2xl font-bold text-sky-600">15+ Insurers</p>
                 </div>
 
-                <div className="border-t border-sky-300 pt-4">
+                <div>
                   <p className="text-sm text-slate-600 font-medium">
                     Vessels Covered
                   </p>
                   <p className="text-2xl font-bold text-sky-600">All Types</p>
                 </div>
 
-                <div className="border-t border-sky-300 pt-4">
+                <div>
                   <p className="text-sm text-slate-600 font-medium">
                     Average Quote Cost
                   </p>
