@@ -180,7 +180,7 @@ The Bay of Islands to Fiordland voyage represents an unforgettable New Zealand e
     author: "Aroha Patel",
     date: "2026-03-20",
     image:
-      "https://images.unsplash.com/photo-1541976884346-f18aedc57b95?w=1600&h=900&fit=crop",
+      "https://images.unsplash.com/photo-1626869710563-be671a0cd919?w=1600&h=900&fit=crop",
     category: "Personal Watercraft",
     readTime: 6,
     content: `# Jet Ski Insurance NZ: What You Need to Know Before Hitting the Water
