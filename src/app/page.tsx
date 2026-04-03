@@ -356,14 +356,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-sky-500">
-            <div className="bg-sky-600 px-6 py-4">
-              <p className="text-white font-semibold">Quick Quote Form</p>
-            </div>
-            <div className="p-6">
-              <QuoteForm mode="compact" />
-            </div>
-          </div>
+          <QuoteForm mode="compact" />
         </div>
       </section>
 
