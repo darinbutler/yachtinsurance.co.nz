@@ -124,6 +124,7 @@ export default function ContactPage() {
 
       {/* Hero Section with Form */}
       <section
+        id="quote-form"
         className="relative min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1920&h=1080&fit=crop)',
@@ -247,25 +248,13 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
-                  <div className="p-3 bg-sky-600/20 rounded-xl">
-                    <Mail className="w-6 h-6 text-sky-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-400 font-medium mb-1">Email Us</p>
-                    <a href="mailto:hello@cover4you.co.nz" className="text-lg text-white font-semibold hover:text-sky-400 transition-colors">
-                      hello@cover4you.co.nz
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 items-start">
                   <div className="p-3 bg-teal-600/20 rounded-xl">
                     <Phone className="w-6 h-6 text-teal-400" />
                   </div>
                   <div>
                     <p className="text-sm text-slate-400 font-medium mb-1">Call Us</p>
-                    <a href="tel:+641800924824" className="text-lg text-white font-semibold hover:text-teal-400 transition-colors">
-                      +64 1800 924 824
+                    <a href="tel:+6498859549" className="text-lg text-white font-semibold hover:text-teal-400 transition-colors">
+                      09 885 9549
                     </a>
                   </div>
                 </div>
@@ -278,6 +267,15 @@ export default function ContactPage() {
                     <p className="text-sm text-slate-400 font-medium mb-1">Office Hours</p>
                     <p className="text-lg text-white font-semibold">Mon–Fri, 8:30am – 5:00pm NZST</p>
                   </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact/#quote-form"
+                    className="inline-block w-full text-center px-6 py-3.5 bg-gradient-to-r from-sky-600 to-teal-500 text-white rounded-xl font-semibold text-lg hover:from-sky-700 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl"
+                  >
+                    Complete a Quote Form
+                  </Link>
                 </div>
               </div>
             </div>
