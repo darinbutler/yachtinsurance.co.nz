@@ -9,6 +9,8 @@ import {
   AlertCircle,
   CheckCircle2,
   ArrowRight,
+  Zap,
+  Lock,
 } from 'lucide-react';
 import QuoteForm from '@/components/QuoteForm';
 
@@ -228,6 +230,49 @@ export default function YachtInsurancePage() {
                 <p>
                   Our yacht insurance specialists understand the unique risks facing boat owners in NZ waters. We connect you with the best insurers offering competitive rates, flexible coverage options, and claims service you can trust when you need it most. <Link href="/compare" className="text-sky-300 hover:text-white underline underline-offset-2">Compare providers</Link> and <Link href="/coverage" className="text-sky-300 hover:text-white underline underline-offset-2">learn about available coverage</Link>.
                 </p>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <Shield className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">ICNZ Registered Advisors</span>
+                </div>
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">10+ NZ Insurers Compared</span>
+                </div>
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <Zap className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">Same-Day Quote Response</span>
+                </div>
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <Lock className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">No Broker Fees or Markups</span>
+                </div>
+              </div>
+
+              {/* Why Choose Us */}
+              <div className="mt-8">
+                <h2 className="text-xl font-bold text-white mb-4">Why NZ Boat Owners Choose Us</h2>
+                <ul className="space-y-2.5">
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Dedicated marine insurance specialists — not generalists</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Coverage tailored to NZ waters and conditions</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Fast claims support when you need it most</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Access to exclusive insurer rates and discounts</span>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="lg:col-span-2">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Anchor, Shield, Waves, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Anchor, Shield, Waves, Zap, CheckCircle2, ArrowRight, Lock } from 'lucide-react';
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -179,6 +179,49 @@ export default function TenderInsurancePage() {
                 <p>
                   Tender insurance is often overlooked by yacht owners but is essential protection. We help you find affordable coverage that works with your yacht insurance or as a standalone policy.
                 </p>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <Shield className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">ICNZ Registered Advisors</span>
+                </div>
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">10+ NZ Insurers Compared</span>
+                </div>
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <Zap className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">Same-Day Quote Response</span>
+                </div>
+                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                  <Lock className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-sm text-white font-medium">No Broker Fees or Markups</span>
+                </div>
+              </div>
+
+              {/* Why Choose Us */}
+              <div className="mt-8">
+                <h2 className="text-xl font-bold text-white mb-4">Why Tender Owners Choose Us</h2>
+                <ul className="space-y-2.5">
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Standalone or combined with your yacht policy</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Coverage for RIBs, inflatables and rigid tenders</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Outboard motor and electronics protection</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-200">Affordable premiums for auxiliary vessels</span>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="lg:col-span-2">

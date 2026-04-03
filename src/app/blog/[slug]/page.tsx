@@ -62,79 +62,66 @@ export async function generateMetadata({
 }
 
 function renderContent(content: string) {
-  const sections = content.split(/(?=^## )/m);
+  const lines = content.split('\n');
+  const elements: React.ReactNode[] = [];
 
-  return sections.map((section, idx) => {
-    const lines = section.split('\n');
-    const firstLine = lines[0];
+  lines.forEach((line, idx) => {
+    const trimmed = line.trim();
+    if (!trimmed) return;
 
-    if (firstLine.startsWith('# ')) {
-      return (
-        <h1
-          key={idx}
-          className="text-4xl font-bold text-slate-900 mb-8 mt-8 first:mt-0"
-        >
-          {firstLine.replace('# ', '')}
-        </h1>
-      );
+    if (trimmed.startsWith('# ') && !trimmed.startsWith('## ')) {
+      // Skip the top-level title since we render it separately in the header
+      return;
     }
 
-    if (firstLine.startsWith('## ')) {
-      return (
-        <h2
-          key={idx}
-          className="text-2xl font-bold text-slate-900 mb-4 mt-8"
-        >
-          {firstLine.replace('## ', '')}
+    if (trimmed.startsWith('## ')) {
+      elements.push(
+        <h2 key={idx} className="text-2xl font-bold text-slate-900 mb-4 mt-10">
+          {trimmed.replace('## ', '')}
         </h2>
       );
+      return;
     }
 
-    if (firstLine.startsWith('### ')) {
-      return (
-        <h3
-          key={idx}
-          className="text-xl font-bold text-slate-900 mb-3 mt-6"
-        >
-          {firstLine.replace('### ', '')}
+    if (trimmed.startsWith('### ')) {
+      elements.push(
+        <h3 key={idx} className="text-xl font-bold text-slate-900 mb-3 mt-6">
+          {trimmed.replace('### ', '')}
         </h3>
       );
+      return;
     }
 
-    return (
-      <div key={idx} className="prose prose-slate max-w-none text-slate-700">
-        {lines
-          .filter((l) => l.trim())
-          .map((line, lineIdx) => {
-            if (line.startsWith('**') && line.endsWith('**')) {
-              return (
-                <p key={lineIdx} className="mb-4">
-                  <strong className="text-slate-900">
-                    {line.replace(/\*\*/g, '')}
-                  </strong>{' '}
-                  {lines[lineIdx + 1]?.replace(/^\d+\. /, '')}
-                </p>
-              );
-            }
-            if (line.startsWith('- ')) {
-              return (
-                <li key={lineIdx} className="ml-6 mb-2 text-slate-700">
-                  {line.substring(2)}
-                </li>
-              );
-            }
-            if (line.trim() && !line.startsWith('**')) {
-              return (
-                <p key={lineIdx} className="mb-4 text-slate-700">
-                  {line}
-                </p>
-              );
-            }
-            return null;
-          })}
-      </div>
+    if (trimmed.startsWith('- ')) {
+      elements.push(
+        <li key={idx} className="ml-6 mb-2 text-slate-700 list-disc">
+          {trimmed.substring(2)}
+        </li>
+      );
+      return;
+    }
+
+    // Handle bold-prefixed paragraphs like "**Hull Coverage** protects..."
+    const boldMatch = trimmed.match(/^\*\*(.+?)\*\*\s*(.*)/);
+    if (boldMatch) {
+      elements.push(
+        <p key={idx} className="mb-4 text-slate-700 leading-relaxed">
+          <strong className="text-slate-900">{boldMatch[1]}</strong>{' '}
+          {boldMatch[2]}
+        </p>
+      );
+      return;
+    }
+
+    // Regular paragraph
+    elements.push(
+      <p key={idx} className="mb-4 text-slate-700 leading-relaxed">
+        {trimmed}
+      </p>
     );
   });
+
+  return elements;
 }
 
 export default async function BlogPostPage({
