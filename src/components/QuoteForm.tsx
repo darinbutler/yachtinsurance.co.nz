@@ -18,12 +18,23 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const response = await fetch('https://formsubmit.co/hello@cover4you.co.nz', {
-        method: 'POST',
-        body: formData,
+      const data: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        data[key] = value.toString();
       });
 
-      if (response.ok) {
+      const response = await fetch('https://formsubmit.co/ajax/hello@cover4you.co.nz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         e.currentTarget.reset();
         window.location.href = 'https://yachtinsurance.co.nz/thank-you';
       } else {
