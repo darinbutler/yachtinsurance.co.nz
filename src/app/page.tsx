@@ -293,7 +293,7 @@ export default function Home() {
               Featured Insurance Partners
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Top-rated insurers trusted by thousands of NZ boat owners
+              Leading NZ marine insurers covering vessels across the country
             </p>
           </div>
 
