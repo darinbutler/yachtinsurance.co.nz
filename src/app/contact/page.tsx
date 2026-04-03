@@ -190,130 +190,115 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main Content Section */}
-      <section className="py-12 md:py-20 bg-white">
+      {/* How It Works Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Left: Contact Info */}
-            <div className="md:col-span-2">
-              {/* Placeholder for additional content if needed */}
-            </div>
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              How It Works
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Getting the right yacht insurance in New Zealand is simple with our free comparison service
+            </p>
+          </div>
 
-            {/* Right: Contact Info & Trust Badges */}
-            <div className="space-y-8">
-              {/* Contact Information */}
-              <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
-                <h3 className="text-xl font-bold text-slate-900 mb-6">
-                  Get in Touch
-                </h3>
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            {[
+              { step: '1', title: 'Tell Us About Your Vessel', description: 'Fill out our quick form with details about your boat, yacht, or jet ski. It takes less than 2 minutes and there\'s no obligation.', icon: '🚤' },
+              { step: '2', title: 'We Compare 15+ Insurers', description: 'Our team contacts top NZ marine insurers on your behalf to find the best coverage options and most competitive premiums.', icon: '📊' },
+              { step: '3', title: 'Get Your Tailored Quote', description: 'Receive personalised quotes within 24 hours. Choose the policy that suits you best with guidance from our expert advisors.', icon: '✅' },
+            ].map((item) => (
+              <div key={item.step} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-sky-300 hover:shadow-lg transition-all group">
+                <div className="absolute -top-5 left-8 w-10 h-10 bg-gradient-to-br from-sky-600 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
+                  {item.step}
+                </div>
+                <div className="text-4xl mb-4 mt-2">{item.icon}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                {/* Email */}
-                <div className="flex gap-4 mb-6 pb-6 border-b border-slate-200">
-                  <div className="p-3 bg-sky-100 rounded-lg h-fit">
-                    <Mail className="w-5 h-5 text-sky-600" />
+      {/* Stats & Contact Info Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Stats Row */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+            {[
+              { value: '24hrs', label: 'Average Response Time' },
+              { value: '15+', label: 'NZ Insurance Partners' },
+              { value: 'All Types', label: 'Vessels Covered' },
+              { value: '$0', label: 'Brokerage Fees' },
+            ].map((stat, index) => (
+              <div key={index} className="text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                <p className="text-3xl lg:text-4xl font-bold text-sky-400 mb-2">{stat.value}</p>
+                <p className="text-sm text-slate-300 font-medium">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact Info + Trust Badges */}
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Contact Details */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+
+              <div className="space-y-6">
+                <div className="flex gap-4 items-start">
+                  <div className="p-3 bg-sky-600/20 rounded-xl">
+                    <Mail className="w-6 h-6 text-sky-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-600 font-medium">Email</p>
-                    <a
-                      href="mailto:hello@cover4you.co.nz"
-                      className="text-sky-600 font-semibold hover:text-sky-700 transition-colors"
-                    >
+                    <p className="text-sm text-slate-400 font-medium mb-1">Email Us</p>
+                    <a href="mailto:hello@cover4you.co.nz" className="text-lg text-white font-semibold hover:text-sky-400 transition-colors">
                       hello@cover4you.co.nz
                     </a>
                   </div>
                 </div>
 
-                {/* Phone */}
-                <div className="flex gap-4">
-                  <div className="p-3 bg-teal-100 rounded-lg h-fit">
-                    <Phone className="w-5 h-5 text-teal-600" />
+                <div className="flex gap-4 items-start">
+                  <div className="p-3 bg-teal-600/20 rounded-xl">
+                    <Phone className="w-6 h-6 text-teal-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-600 font-medium">Phone</p>
-                    <a
-                      href="tel:+641800924824"
-                      className="text-sky-600 font-semibold hover:text-sky-700 transition-colors"
-                    >
+                    <p className="text-sm text-slate-400 font-medium mb-1">Call Us</p>
+                    <a href="tel:+641800924824" className="text-lg text-white font-semibold hover:text-teal-400 transition-colors">
                       +64 1800 924 824
                     </a>
                   </div>
                 </div>
-              </div>
 
-              {/* Trust Badges Grid */}
-              <div className="space-y-3">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">
-                  Why Choose Us
-                </h3>
+                <div className="flex gap-4 items-start">
+                  <div className="p-3 bg-amber-600/20 rounded-xl">
+                    <Shield className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-slate-400 font-medium mb-1">Office Hours</p>
+                    <p className="text-lg text-white font-semibold">Mon–Fri, 8:30am – 5:00pm NZST</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust & Guarantee Badges */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-8">Our Guarantee</h3>
+
+              <div className="grid grid-cols-2 gap-4">
                 {trustBadges.map((badge, index) => {
                   const Icon = badge.icon;
                   return (
-                    <div
-                      key={index}
-                      className="bg-white rounded-lg p-4 border border-slate-200 hover:border-sky-300 transition-colors"
-                    >
-                      <div className="flex gap-3">
-                        <div className="p-2 bg-sky-50 rounded-lg h-fit">
-                          <Icon className="w-4 h-4 text-sky-600" />
-                        </div>
-                        <div>
-                          <p className="font-semibold text-sm text-slate-900">
-                            {badge.title}
-                          </p>
-                          <p className="text-xs text-slate-600 mt-0.5">
-                            {badge.description}
-                          </p>
-                        </div>
+                    <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                      <div className="p-2.5 bg-sky-600/20 rounded-lg w-fit mb-3">
+                        <Icon className="w-5 h-5 text-sky-400" />
                       </div>
+                      <p className="font-semibold text-white text-sm mb-1">{badge.title}</p>
+                      <p className="text-xs text-slate-400">{badge.description}</p>
                     </div>
                   );
                 })}
-              </div>
-            </div>
-          </div>
-
-          {/* Quick Facts Section */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-sky-50 to-teal-50 rounded-lg p-8 border border-sky-200">
-              <h4 className="text-lg font-bold text-slate-900 mb-4">
-                Quick Facts
-              </h4>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <p className="text-sm text-slate-600 font-medium">
-                    Average Response Time
-                  </p>
-                  <p className="text-2xl font-bold text-sky-600">Under 24 Hours</p>
-                </div>
-
-                <div>
-                  <p className="text-sm text-slate-600 font-medium">
-                    Insurance Partners
-                  </p>
-                  <p className="text-2xl font-bold text-sky-600">15+ Insurers</p>
-                </div>
-
-                <div>
-                  <p className="text-sm text-slate-600 font-medium">
-                    Vessels Covered
-                  </p>
-                  <p className="text-2xl font-bold text-sky-600">All Types</p>
-                </div>
-
-                <div>
-                  <p className="text-sm text-slate-600 font-medium">
-                    Average Quote Cost
-                  </p>
-                  <p className="text-2xl font-bold text-sky-600">$350+ p.a.</p>
-                </div>
-              </div>
-
-              <div className="mt-6 p-4 bg-white rounded-lg border border-sky-300">
-                <p className="text-sm text-slate-700 text-center">
-                  <span className="font-semibold">No Hidden Fees.</span> Compare
-                  real rates from real insurers.
-                </p>
               </div>
             </div>
           </div>
