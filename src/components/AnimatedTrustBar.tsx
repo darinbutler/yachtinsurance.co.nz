@@ -77,12 +77,12 @@ export default function AnimatedTrustBar() {
                 key={index}
                 className={`
                   relative overflow-hidden rounded-xl
-                  bg-teal-600/90 backdrop-blur-lg border border-teal-400/30
+                  bg-sky-700/90 backdrop-blur-lg border border-sky-400/30
                   px-4 py-4 sm:py-5
                   text-center
                   transition-all duration-700 ease-out
-                  hover:bg-teal-500/95 hover:border-teal-300/50 hover:scale-[1.03]
-                  group cursor-default shadow-lg shadow-teal-900/20
+                  hover:bg-sky-600/95 hover:border-sky-300/50 hover:scale-[1.03]
+                  group cursor-default shadow-lg shadow-sky-900/20
                   ${isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-6'
@@ -105,7 +105,7 @@ export default function AnimatedTrustBar() {
                   `}
                   style={{ transitionDelay: `${index * 150 + 300}ms` }}
                 >
-                  <Icon className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-teal-100 group-hover:text-white transition-colors duration-300" />
+                  <Icon className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-sky-100 group-hover:text-white transition-colors duration-300" />
                 </div>
 
                 {/* Value */}
@@ -118,12 +118,12 @@ export default function AnimatedTrustBar() {
                 </p>
 
                 {/* Label */}
-                <p className="text-xs sm:text-sm text-teal-100/90 mt-0.5 font-medium tracking-wide">
+                <p className="text-xs sm:text-sm text-sky-100/90 mt-0.5 font-medium tracking-wide">
                   {item.label}
                 </p>
 
                 {/* Subtle glow at bottom */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-teal-300/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-sky-300/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             );
           })}
