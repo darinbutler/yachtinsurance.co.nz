@@ -16,8 +16,10 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
     setIsSubmitting(true);
     setSubmitError('');
 
+    const form = e.currentTarget;
+
     try {
-      const formData = new FormData(e.currentTarget);
+      const formData = new FormData(form);
       const data: Record<string, string> = {};
       formData.forEach((value, key) => {
         data[key] = value.toString();
@@ -34,13 +36,14 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
 
       const result = await response.json();
 
-      if (response.ok && result.success) {
-        e.currentTarget.reset();
-        window.location.href = 'https://yachtinsurance.co.nz/thank-you';
+      if (response.ok && (result.success === 'true' || result.success === true)) {
+        form.reset();
+        window.location.href = '/thank-you';
       } else {
         setSubmitError('Failed to submit form. Please try again.');
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitError('An error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
