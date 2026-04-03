@@ -125,7 +125,7 @@ export default function ContactPage() {
       {/* Hero Section with Form */}
       <section
         id="quote-form"
-        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        className="relative lg:min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1602943554726-d8bebe914982?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
@@ -133,7 +133,7 @@ export default function ContactPage() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 sm:pt-28 sm:pb-16 lg:py-28">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-3">
               <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
@@ -141,7 +141,7 @@ export default function ContactPage() {
                 <span>/</span>
                 <span className="text-white font-medium">Contact</span>
               </nav>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg max-w-4xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg max-w-4xl">
                 Get Your Free Yacht Insurance Quote
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-3xl leading-relaxed">

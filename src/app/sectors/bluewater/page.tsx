@@ -175,7 +175,7 @@ export default function BlueWaterInsurancePage() {
 
       {/* Full Above-Fold Hero */}
       <section
-        className="relative min-h-[100vh] flex items-center overflow-hidden"
+        className="relative lg:min-h-[100vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1696028354827-0d36454dcaa8?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
@@ -183,7 +183,7 @@ export default function BlueWaterInsurancePage() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/50" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 sm:pt-28 sm:pb-16 lg:py-28">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-3">
               <nav className="flex items-center gap-2 text-sm text-slate-300 mb-6">
@@ -193,7 +193,7 @@ export default function BlueWaterInsurancePage() {
                 <span>/</span>
                 <span className="text-white font-medium">Blue Water</span>
               </nav>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                 Blue Water Cruiser Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
@@ -209,28 +209,28 @@ export default function BlueWaterInsurancePage() {
               </div>
 
               {/* Trust Indicators */}
-              <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
-                  <Shield className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                  <span className="text-sm text-white font-medium">ICNZ Registered Advisors</span>
+                  <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-white font-medium">ICNZ Registered Advisors</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
-                  <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                  <span className="text-sm text-white font-medium">10+ NZ Insurers Compared</span>
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-white font-medium">10+ NZ Insurers Compared</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
-                  <Zap className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                  <span className="text-sm text-white font-medium">Same-Day Quote Response</span>
+                  <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-white font-medium">Same-Day Quote Response</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
-                  <Lock className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                  <span className="text-sm text-white font-medium">No Broker Fees or Markups</span>
+                  <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-white font-medium">No Broker Fees or Markups</span>
                 </div>
               </div>
 
               {/* Why Choose Us */}
               <div className="mt-8">
-                <h2 className="text-xl font-bold text-white mb-4">Why Blue Water Sailors Choose Us</h2>
+                <h2 className="text-lg sm:text-xl font-bold text-white mb-4">Why Blue Water Sailors Choose Us</h2>
                 <ul className="space-y-2.5">
                   <li className="flex gap-3 items-start">
                     <CheckCircle2 className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
