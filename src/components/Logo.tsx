@@ -76,24 +76,14 @@ export default function Logo({ variant = 'default' }: LogoProps) {
       </div>
 
       {!isCompact && (
-        <div className="flex items-baseline gap-1.5">
-          <span
-            className={`text-[18px] sm:text-[22px] font-extrabold tracking-[0.1em] leading-tight ${
-              isWhite ? 'text-white' : 'text-sky-700'
-            }`}
-            style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
-          >
-            YACHT
-          </span>
-          <span
-            className={`text-[14px] sm:text-[17px] font-semibold tracking-[0.15em] leading-tight ${
-              isWhite ? 'text-sky-200' : 'text-slate-500'
-            }`}
-            style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
-          >
-            INSURANCE
-          </span>
-        </div>
+        <span
+          className={`text-[15px] sm:text-[19px] font-bold tracking-[0.08em] leading-tight ${
+            isWhite ? 'text-white' : 'text-sky-700'
+          }`}
+          style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+        >
+          YACHTINSURANCE<span className={`${isWhite ? 'text-sky-300' : 'text-teal-500'}`}>.co.nz</span>
+        </span>
       )}
     </Link>
   );
