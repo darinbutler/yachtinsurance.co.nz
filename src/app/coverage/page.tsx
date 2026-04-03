@@ -119,7 +119,7 @@ export default function Coverage() {
 
       {/* Hero Section */}
       <section
-        className="relative h-[40vh] min-h-[300px] sm:min-h-[380px] flex items-center justify-center overflow-hidden"
+        className="relative h-[46vh] min-h-[345px] sm:min-h-[437px] flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1769655991063-cc63efc4e2d0?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',

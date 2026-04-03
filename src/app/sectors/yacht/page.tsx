@@ -166,7 +166,7 @@ export default function YachtInsurancePage() {
 
       {/* Hero Section */}
       <section
-        className="h-[45vh] bg-gradient-to-br from-sky-600 via-sky-500 to-teal-500 text-white flex items-center justify-center relative overflow-hidden"
+        className="h-[52vh] bg-gradient-to-br from-sky-600 via-sky-500 to-teal-500 text-white flex items-center justify-center relative overflow-hidden"
         aria-label="Yacht insurance hero section"
       >
         <div className="absolute inset-0 opacity-10">

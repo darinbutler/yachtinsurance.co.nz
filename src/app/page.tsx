@@ -142,7 +142,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] min-h-[380px] sm:min-h-[450px] flex items-center justify-center overflow-hidden"
+        className="relative h-[69vh] min-h-[440px] sm:min-h-[520px] flex flex-col items-center justify-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1625045641924-3c15809b6689?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
@@ -153,7 +153,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/60" />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 flex-grow flex flex-col items-center justify-center">
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
             Compare Yacht Insurance in New Zealand
           </h1>
@@ -176,34 +176,34 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* Trust Bar */}
-      <section className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-sky-600">15+</p>
-              <p className="text-sm sm:text-base text-slate-600 mt-1">NZ Insurers</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-sky-600">Free</p>
-              <p className="text-sm sm:text-base text-slate-600 mt-1">Quote Service</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-sky-600">Expert</p>
-              <p className="text-sm sm:text-base text-slate-600 mt-1">Marine Advice</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-sky-600">ICNZ</p>
-              <p className="text-sm sm:text-base text-slate-600 mt-1">Registered</p>
+        {/* Trust Bar - Overlaying Hero */}
+        <div className="relative z-10 w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 bg-white/10 backdrop-blur-md rounded-xl px-6 py-5 border border-white/20">
+              <div className="text-center">
+                <p className="text-2xl sm:text-3xl font-bold text-white">15+</p>
+                <p className="text-sm sm:text-base text-sky-200 mt-1">NZ Insurers</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl sm:text-3xl font-bold text-white">Free</p>
+                <p className="text-sm sm:text-base text-sky-200 mt-1">Quote Service</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl sm:text-3xl font-bold text-white">Expert</p>
+                <p className="text-sm sm:text-base text-sky-200 mt-1">Marine Advice</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl sm:text-3xl font-bold text-white">ICNZ</p>
+                <p className="text-sm sm:text-base text-sky-200 mt-1">Registered</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Vessel Types Grid */}
-      <section className="py-12 md:py-20 bg-slate-50">
+      <section className="pt-8 pb-12 md:pt-10 md:pb-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">

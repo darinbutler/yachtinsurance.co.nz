@@ -70,7 +70,7 @@ export default function BlogPage() {
 
       {/* Hero Section */}
       <section
-        className="h-[35vh] bg-gradient-to-br from-sky-600 via-sky-500 to-teal-500 text-white flex items-center justify-center relative overflow-hidden"
+        className="h-[40vh] bg-gradient-to-br from-sky-600 via-sky-500 to-teal-500 text-white flex items-center justify-center relative overflow-hidden"
         aria-label="Blog hero section"
       >
         <div className="absolute inset-0 opacity-10">
