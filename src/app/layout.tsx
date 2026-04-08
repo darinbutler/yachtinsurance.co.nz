@@ -164,6 +164,11 @@ export default function RootLayout({
             __html: JSON.stringify(websiteSchema),
           }}
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745344450942342"
+          crossOrigin="anonymous"
+        />
       </head>
       <body
         className="antialiased min-h-full flex flex-col bg-white text-slate-900 font-sans"
