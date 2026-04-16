@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+Disallow: /_next/
+
+Sitemap: https://yachtinsurance.co.nz/sitemap.xml
