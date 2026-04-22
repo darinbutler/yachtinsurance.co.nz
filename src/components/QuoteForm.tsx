@@ -27,6 +27,7 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
       phone: fd.get('phone'),
       vessel_type: fd.get('vessel_type'),
       vessel_value: fd.get('vessel_value'),
+      vessel_make_model: fd.get('vessel_make_model'),
       mooring_location: fd.get('mooring_location'),
     };
 
@@ -108,6 +109,16 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
           <option value="$150,000 - $500,000">$150,000 – $500,000</option>
           <option value="Over $500,000">Over $500,000</option>
         </select>
+      </div>
+
+      {/* Make & Model */}
+      <div>
+        <label htmlFor="vesselMakeModel" className={labelClass}>Make &amp; Model</label>
+        <input
+          type="text" id="vesselMakeModel" name="vessel_make_model" required
+          className={inputClass}
+          placeholder="e.g. Beneteau Oceanis 46 or Yamaha WaveRunner"
+        />
       </div>
 
       {/* Mooring / Currently Located */}

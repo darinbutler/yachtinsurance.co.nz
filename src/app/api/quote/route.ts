@@ -22,7 +22,7 @@ const VESSEL_VALUE_MAP: Record<string, number> = {
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const { name, email, phone, vessel_type, vessel_value, mooring_location } = body;
+  const { name, email, phone, vessel_type, vessel_value, vessel_make_model, mooring_location } = body;
 
   // Split full name into first / last
   const parts = (name || '').trim().split(/\s+/);
@@ -41,6 +41,7 @@ export async function POST(request: NextRequest) {
     telephone: phone,
     vessel_type_id,
     vessel_price,
+    vessel_make_model: vessel_make_model || undefined,
     vessel_cruising_area: mooring_location || '*',
     mooring_location: mooring_location || '*',
 
