@@ -270,7 +270,7 @@ export default function Compare() {
               Provider Comparison Table
             </h2>
             <p className="text-lg text-slate-600">
-              Side-by-side comparison of features across all NZ yacht insurance providers
+              Side-by-side comparison of features across major NZ yacht insurance providers
             </p>
           </div>
 

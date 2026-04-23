@@ -184,7 +184,7 @@ export default function About() {
             </p>
 
             <p>
-              Today, we've built relationships with every major marine insurance provider in New Zealand. We maintain detailed knowledge of each insurer's coverage options, specialty focuses, and claims handling processes. This expertise allows us to guide vessel owners toward the providers and policies that genuinely fit their specific needs.
+              Today, we've built relationships with major marine insurance providers in New Zealand. We maintain detailed knowledge of each insurer's coverage options, specialty focuses, and claims handling processes. This expertise allows us to guide vessel owners toward the providers and policies that genuinely fit their specific needs.
             </p>
 
             <p>
@@ -360,9 +360,9 @@ export default function About() {
               Getting quotes through our platform is completely free. We don't charge boat owners any fees for comparing insurance options or accessing provider quotes. Our revenue comes from our insurer partnerships, never from customer charges.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 mt-8">Comprehensive Market Coverage</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">Strong Market Coverage</h3>
             <p>
-              We compare quotes from every major marine insurance provider in New Zealand. Rather than visiting 8+ insurance websites individually, you get comprehensive comparison from a single platform. This saves hours of research time and ensures you see all available options.
+              We work with major marine insurance providers in New Zealand. Rather than contacting multiple insurers individually, you get access to a range of competitive options through a single request. This saves hours of research time and connects you with providers well-suited to your vessel and needs.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-8">Expert Guidance</h3>
