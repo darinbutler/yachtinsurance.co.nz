@@ -96,7 +96,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
       {/* Hero */}
       <section
-        className="relative min-h-[60vh] flex items-center overflow-hidden"
+        className="relative min-h-[85vh] flex items-center overflow-hidden"
         style={{ backgroundImage: `url(${loc.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/88 via-slate-900/70 to-slate-900/40" />
