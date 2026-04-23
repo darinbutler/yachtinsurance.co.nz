@@ -157,11 +157,7 @@ export default function About() {
 
             {/* Right Column - Quote Form */}
             <div className="lg:col-span-2">
-              <div className="bg-sky-50 rounded-xl p-6 border-2 border-sky-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Ready to Compare?</h3>
-                <p className="text-sm text-slate-600 mb-6">Get quotes from multiple NZ marine insurers instantly</p>
-                <QuoteForm mode="compact" />
-              </div>
+              <QuoteForm mode="full" />
             </div>
           </div>
         </div>
