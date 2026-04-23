@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative h-[78vh] min-h-[500px] sm:min-h-[580px] flex flex-col items-center justify-center overflow-hidden"
+        className="relative h-[78vh] min-h-[560px] sm:min-h-[580px] flex flex-col items-center justify-start sm:justify-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1625045641924-3c15809b6689?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 via-slate-900/30 to-transparent" />
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10 flex-grow flex flex-col justify-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10 flex-grow flex flex-col justify-center pt-8 sm:pt-0">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-3xl drop-shadow-lg">
             Compare Yacht Insurance in New Zealand
           </h1>
