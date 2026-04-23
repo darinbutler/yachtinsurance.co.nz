@@ -76,13 +76,10 @@ export default function Logo({ variant = 'default' }: LogoProps) {
       </div>
 
       {!isCompact && (
-        <span
-          className={`text-[15px] sm:text-[19px] font-bold tracking-[0.08em] leading-tight ${
-            isWhite ? 'text-white' : 'text-sky-700'
-          }`}
-          style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
-        >
-          YACHTINSURANCE<span className={`${isWhite ? 'text-sky-300' : 'text-teal-500'}`}>.co.nz</span>
+        <span className="text-base sm:text-xl font-black leading-tight tracking-tight">
+          <span className={isWhite ? 'text-sky-300' : 'text-sky-600'}>Yacht</span>
+          <span className={isWhite ? 'text-white' : 'text-slate-900'}>Insurance</span>
+          <span className={`font-normal text-xs sm:text-sm ${isWhite ? 'text-sky-400/80' : 'text-slate-400'}`}>.co.nz</span>
         </span>
       )}
     </Link>
