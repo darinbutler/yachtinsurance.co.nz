@@ -301,10 +301,21 @@ export default function Home() {
             {topInsurers.map((insurer, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-slate-50 to-sky-50 rounded-lg p-6 border border-sky-200 hover:shadow-lg transition-shadow"
+                className={`relative rounded-lg p-6 hover:shadow-lg transition-all ${
+                  insurer.featured
+                    ? 'bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-400 ring-2 ring-amber-400/20 scale-[1.02]'
+                    : 'bg-gradient-to-br from-slate-50 to-sky-50 border border-sky-200'
+                }`}
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-bold text-slate-900">
+                {insurer.featured && insurer.badge && (
+                  <div className="absolute -top-px left-0 right-0 flex justify-center">
+                    <span className="bg-amber-400 text-slate-900 text-xs font-black tracking-widest px-4 py-0.5 rounded-b-lg">
+                      {insurer.badge}
+                    </span>
+                  </div>
+                )}
+                <div className={`flex items-center justify-between mb-4 ${insurer.featured ? 'mt-3' : ''}`}>
+                  <h3 className={`text-lg font-bold ${insurer.featured ? 'text-amber-600' : 'text-slate-900'}`}>
                     {insurer.name}
                   </h3>
                   <div className="flex items-center gap-1">
@@ -318,14 +329,18 @@ export default function Home() {
                   {insurer.description}
                 </p>
                 <div className="mb-4">
-                  <p className="text-xs text-slate-500 mb-2">Min. Premium</p>
-                  <p className="text-lg font-semibold text-sky-600">
-                    <span className="text-xs font-normal text-slate-500">from </span>{insurer.minPremium}
+                  <p className="text-xs text-slate-500 mb-2">Pricing</p>
+                  <p className={`text-lg font-semibold ${insurer.featured ? 'text-amber-600' : 'text-sky-600'}`}>
+                    {insurer.featured ? insurer.minPremium : <><span className="text-xs font-normal text-slate-500">from </span>{insurer.minPremium}</>}
                   </p>
                 </div>
                 <Link
                   href="/compare"
-                  className="inline-block px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-semibold hover:bg-sky-700 transition-colors w-full text-center"
+                  className={`inline-block px-4 py-2 rounded-lg text-sm font-semibold transition-colors w-full text-center ${
+                    insurer.featured
+                      ? 'bg-amber-400 text-slate-900 hover:bg-amber-500'
+                      : 'bg-sky-600 text-white hover:bg-sky-700'
+                  }`}
                 >
                   View Details
                 </Link>

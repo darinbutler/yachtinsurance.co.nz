@@ -5,9 +5,36 @@ export interface Insurer {
   rating: number;
   minPremium: string;
   specialties: string[];
+  featured?: boolean;
+  badge?: string;
 }
 
 export const insurers: Insurer[] = [
+  {
+    name: "Keane",
+    description:
+      "Family-run specialist marine underwriters offering cover for virtually any vessel on any waters, anywhere in the world. Keane is renowned for exceptional personal service, broad worldwide coverage, and flexible policies that others won't write — making them the go-to choice for serious boat owners.",
+    features: [
+      "Any boat, any waters, any use",
+      "Worldwide cruising coverage",
+      "Hull and machinery protection",
+      "Third-party liability included",
+      "Liveaboard protection available",
+      "Personal effects & navigation equipment",
+      "Salvage and wreck removal",
+      "Storm and extreme weather protection",
+    ],
+    rating: 4.9,
+    minPremium: "Competitively priced",
+    specialties: [
+      "Any vessel type",
+      "Worldwide coverage",
+      "Liveaboard policies",
+      "Complex & specialist risks",
+    ],
+    featured: true,
+    badge: "HIGHLY RATED",
+  },
   {
     name: "Mariner",
     description:
