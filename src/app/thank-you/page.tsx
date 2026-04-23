@@ -225,10 +225,10 @@ export default function ThankYouPage() {
             <div className="grid md:grid-cols-2 gap-4 mb-12">
               <div className="text-center p-4 bg-sky-50 rounded-lg border border-sky-200">
                 <p className="text-sm font-semibold text-sky-900 mb-1">
-                  ICNZ Registered
+                  Fair Practice Standard
                 </p>
                 <p className="text-xs text-sky-700">
-                  Licensed insurance comparison service
+                  Transparent referral service
                 </p>
               </div>
 

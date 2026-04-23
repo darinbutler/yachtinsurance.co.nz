@@ -50,6 +50,7 @@ export default function Footer() {
                 { label: 'Blog', href: '/blog' },
                 { label: 'About', href: '/about' },
                 { label: 'FAQs', href: '/faqs' },
+                { label: 'Making a Claim', href: '/claims' },
                 { label: 'Contact', href: '/contact' },
               ].map((link) => (
                 <li key={link.href}>

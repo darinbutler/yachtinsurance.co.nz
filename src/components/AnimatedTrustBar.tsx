@@ -7,7 +7,7 @@ const trustItems = [
   { value: 'Multiple', label: 'Insurers Compared', icon: BarChart3, countTo: null },
   { value: 'Zero', label: 'Brokerage Fees', icon: CircleDollarSign, countTo: null },
   { value: 'Expert', label: 'Maritime Advice', icon: Compass, countTo: null },
-  { value: 'ICNZ', label: 'Registered', icon: ShieldCheck, countTo: null },
+  { value: 'Fair', label: 'Practice Standard', icon: ShieldCheck, countTo: null },
 ];
 
 function CountUp({ target, duration = 1200 }: { target: number; duration?: number }) {
