@@ -68,7 +68,7 @@ export default function AnimatedTrustBar() {
 
   return (
     <div ref={barRef} className="relative z-10 w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8 mt-8 sm:mt-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-8 mt-8 sm:mt-0">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
           {trustItems.map((item, index) => {
             const Icon = item.icon;

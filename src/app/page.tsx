@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative h-[78vh] min-h-[560px] sm:min-h-[580px] flex flex-col items-center justify-start sm:justify-center overflow-hidden"
+        className="relative h-auto min-h-[78vh] sm:h-[78vh] sm:min-h-[580px] flex flex-col items-center justify-start sm:justify-center overflow-hidden"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1625045641924-3c15809b6689?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
