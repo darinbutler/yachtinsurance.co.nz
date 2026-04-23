@@ -115,6 +115,14 @@ export default function CoastalCruisingInsurancePage() {
     serviceType: 'Coastal Cruising Insurance',
   };
 
+  const authorSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Liam Ngata',
+    jobTitle: 'Marine Insurance Specialist',
+    worksFor: { '@type': 'Organization', name: 'YachtInsurance.co.nz', url: 'https://yachtinsurance.co.nz' },
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

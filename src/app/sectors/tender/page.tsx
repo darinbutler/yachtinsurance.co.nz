@@ -106,6 +106,14 @@ export default function TenderInsurancePage() {
     serviceType: 'Tender Insurance',
   };
 
+  const authorSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Liam Ngata',
+    jobTitle: 'Marine Insurance Specialist',
+    worksFor: { '@type': 'Organization', name: 'YachtInsurance.co.nz', url: 'https://yachtinsurance.co.nz' },
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

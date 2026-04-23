@@ -12,12 +12,23 @@ const vesselTypes = [
   { label: 'Blue Water Cruiser', href: '/sectors/bluewater' },
 ];
 
+const locationLinks = [
+  { label: 'Auckland', href: '/locations/auckland/' },
+  { label: 'Wellington', href: '/locations/wellington/' },
+  { label: 'Christchurch', href: '/locations/christchurch/' },
+  { label: 'Bay of Islands', href: '/locations/bay-of-islands/' },
+  { label: 'Tauranga', href: '/locations/tauranga/' },
+  { label: 'Marlborough Sounds', href: '/locations/marlborough/' },
+  { label: 'Queenstown', href: '/locations/queenstown/' },
+  { label: 'All Locations →', href: '/locations/' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-100">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1">
             <div className="mb-4">
@@ -64,6 +75,20 @@ export default function Footer() {
                     className="text-slate-300 hover:text-sky-400 transition-colors text-sm"
                   >
                     {type.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h3 className="text-white font-bold text-sm mb-4">By Location</h3>
+            <ul className="space-y-2.5">
+              {locationLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-slate-300 hover:text-sky-400 transition-colors text-sm">
+                    {link.label}
                   </Link>
                 </li>
               ))}
