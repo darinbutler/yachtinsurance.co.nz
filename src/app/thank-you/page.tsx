@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CheckCircle2, Clock, Mail, Phone, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Clock, Mail, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Quote Submitted | Thank You | YachtInsurance.co.nz',
@@ -78,7 +78,7 @@ export default function ThankYouPage() {
                       Quick Contact (Usually Within 24 Hours)
                     </h3>
                     <p className="text-slate-600">
-                      A specialist will call or email you with personalized insurance quotes
+                      A specialist will email you with personalized insurance quotes
                       from top providers. Check your email and voicemail for their message.
                     </p>
                   </div>
@@ -130,14 +130,6 @@ export default function ThankYouPage() {
                   <div>
                     <p className="font-semibold text-slate-900 mb-1">Email</p>
                     <p className="text-slate-600">hello@cover4you.co.nz</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 items-start">
-                  <Phone className="w-6 h-6 text-sky-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-slate-900 mb-1">Phone</p>
-                    <a href="tel:+6498859549" className="text-slate-600 hover:text-sky-600 transition-colors">09 885 9549</a>
                   </div>
                 </div>
 

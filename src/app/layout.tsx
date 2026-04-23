@@ -99,7 +99,6 @@ export default function RootLayout({
     foundingDate: "2026",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+64-1-800-YACHT-NZ",
       contactType: "Customer Service",
       areaServed: "NZ",
       availableLanguage: ["en"],

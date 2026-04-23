@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, Phone, Shield, BadgeCheck, Lock, Zap, CheckCircle2 } from 'lucide-react';
+import { Mail, Shield, BadgeCheck, Lock, Zap, CheckCircle2 } from 'lucide-react';
 import QuoteForm from '@/components/QuoteForm';
 import { faqs } from '@/data/faqs';
 
@@ -81,11 +81,9 @@ export default function ContactPage() {
     name: 'Yacht Insurance NZ Contact',
     description: 'Get your free yacht insurance quote',
     url: 'https://yachtinsurance.co.nz/contact',
-    telephone: '+64-1-800-YACHT-NZ',
     email: 'hello@cover4you.co.nz',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+64-1-800-YACHT-NZ',
       contactType: 'Customer Service',
       areaServed: 'NZ',
       availableLanguage: 'en',
@@ -247,18 +245,6 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
 
               <div className="space-y-6">
-                <div className="flex gap-4 items-start">
-                  <div className="p-3 bg-teal-600/20 rounded-xl">
-                    <Phone className="w-6 h-6 text-teal-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-400 font-medium mb-1">Call Us</p>
-                    <a href="tel:+6498859549" className="text-lg text-white font-semibold hover:text-teal-400 transition-colors">
-                      09 885 9549
-                    </a>
-                  </div>
-                </div>
-
                 <div className="flex gap-4 items-start">
                   <div className="p-3 bg-amber-600/20 rounded-xl">
                     <Shield className="w-6 h-6 text-amber-400" />

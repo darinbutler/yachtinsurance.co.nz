@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { HelpCircle, Shield, Anchor, Phone } from 'lucide-react';
+import { HelpCircle, Shield, Anchor, Mail } from 'lucide-react';
 import { faqs } from '@/data/faqs';
 import CTABanner from '@/components/CTABanner';
 
@@ -220,7 +220,7 @@ export default function FAQsPage() {
               className="flex items-center gap-3 p-5 bg-white rounded-xl border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all group"
             >
               <div className="p-2 bg-emerald-100 rounded-lg group-hover:bg-emerald-200 transition-colors">
-                <Phone size={20} className="text-emerald-600" />
+                <Mail size={20} className="text-emerald-600" />
               </div>
               <div>
                 <p className="font-semibold text-slate-900 group-hover:text-emerald-600 transition-colors">Get a Quote</p>

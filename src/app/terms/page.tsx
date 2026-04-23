@@ -311,7 +311,6 @@ export default function TermsPage() {
               </p>
               <p className="text-slate-700 mb-1">Email: hello@cover4you.co.nz</p>
               <p className="text-slate-700 mb-1">Website: yachtinsurance.co.nz</p>
-              <p className="text-slate-700">Phone: +64 9 XXX XXXX</p>
             </div>
           </section>
 

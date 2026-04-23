@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Logo from './Logo';
-import { Mail, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const vesselTypes = [
   { label: 'Yacht', href: '/sectors/yacht' },
@@ -81,15 +81,6 @@ export default function Footer() {
                   className="text-slate-300 hover:text-sky-400 transition-colors text-sm"
                 >
                   hello@cover4you.co.nz
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <Phone size={16} className="text-sky-400 flex-shrink-0 mt-0.5" />
-                <a
-                  href="tel:09-885-9549"
-                  className="text-slate-300 hover:text-sky-400 transition-colors text-sm"
-                >
-                  09 885 9549
                 </a>
               </li>
               <li className="text-slate-300 text-sm">

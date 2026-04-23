@@ -46,7 +46,7 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
       window.location.href = '/thank-you/';
     } catch {
       setStatus('error');
-      setErrorMsg('Something went wrong. Please try again or call us on 09 885 9549.');
+      setErrorMsg('Something went wrong. Please try again or email us at hello@cover4you.co.nz.');
     }
   }
 

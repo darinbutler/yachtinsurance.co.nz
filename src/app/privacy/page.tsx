@@ -285,7 +285,6 @@ export default function PrivacyPage() {
               </p>
               <p className="text-slate-700 mb-1">Email: hello@cover4you.co.nz</p>
               <p className="text-slate-700 mb-1">Website: yachtinsurance.co.nz</p>
-              <p className="text-slate-700">Phone: +64 9 XXX XXXX</p>
             </div>
           </section>
 
@@ -303,7 +302,6 @@ export default function PrivacyPage() {
               <p className="text-slate-900 font-semibold mb-2">
                 Office of the Privacy Commissioner
               </p>
-              <p className="text-slate-700 mb-1">Phone: 0800 803 909</p>
               <p className="text-slate-700">
                 Website: www.privacy.org.nz
               </p>
