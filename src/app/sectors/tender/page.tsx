@@ -4,7 +4,7 @@ import { Anchor, Shield, Waves, Zap, CheckCircle2, ArrowRight, Lock } from 'luci
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Tender Insurance New Zealand | Yacht Tender & RIB Coverage',
+  title: 'Tender Insurance | Yacht Tender & RIB Coverage',
   description:
     'Specialist tender and RIB boat insurance for New Zealand yacht owners. Protect your auxiliary vessel with comprehensive coverage.',
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/sectors/tender',
-    title: 'Tender Insurance New Zealand',
+    title: 'Tender Insurance',
     description:
       'Specialist insurance for yacht tenders, RIBs, and inflatable auxiliary vessels.',
     siteName: 'Yacht Insurance NZ',
@@ -91,7 +91,7 @@ export default function TenderInsurancePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Tender Insurance New Zealand',
+    name: 'Tender Insurance',
     description:
       'Specialist tender and RIB boat insurance for New Zealand yacht owners.',
     provider: {
@@ -167,7 +167,7 @@ export default function TenderInsurancePage() {
                 <span className="text-white font-medium">Tender</span>
               </nav>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Tender Insurance New Zealand
+                Tender Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
                 Protection for yacht tenders, RIBs, and auxiliary vessels

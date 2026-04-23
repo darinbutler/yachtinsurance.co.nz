@@ -13,7 +13,7 @@ import {
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Jet Ski Insurance New Zealand | Personal Watercraft Coverage',
+  title: 'Jet Ski Insurance | Personal Watercraft Coverage',
   description:
     'Get specialist jet ski and personal watercraft insurance in New Zealand. Comprehensive coverage with liability protection. Free quotes available now.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/sectors/jetski',
-    title: 'Jet Ski Insurance New Zealand',
+    title: 'Jet Ski Insurance',
     description:
       'Specialist jet ski and personal watercraft insurance with comprehensive coverage.',
     siteName: 'Yacht Insurance NZ',
@@ -114,7 +114,7 @@ export default function JetSkiInsurancePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Jet Ski Insurance New Zealand',
+    name: 'Jet Ski Insurance',
     description:
       'Specialist jet ski and personal watercraft insurance with comprehensive coverage for New Zealand operators.',
     provider: {
@@ -190,7 +190,7 @@ export default function JetSkiInsurancePage() {
                 <span className="text-white font-medium">Jet Ski</span>
               </nav>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Jet Ski Insurance New Zealand
+                Jet Ski Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
                 Specialist personal watercraft coverage with comprehensive protection

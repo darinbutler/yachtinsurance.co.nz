@@ -4,7 +4,7 @@ import { Sailboat, Shield, Trophy, Users, CheckCircle2, ArrowRight, Zap, Lock } 
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Dinghy Insurance New Zealand | Sailing & Tender Coverage',
+  title: 'Dinghy Insurance | Sailing & Tender Coverage',
   description:
     'Affordable dinghy insurance in New Zealand for sailing dinghies, racing dinghies, and tenders. Quick quotes from specialist providers.',
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/sectors/dinghy',
-    title: 'Dinghy Insurance New Zealand',
+    title: 'Dinghy Insurance',
     description:
       'Affordable insurance for sailing dinghies, racing dinghies, and tender vessels.',
     siteName: 'Yacht Insurance NZ',
@@ -86,7 +86,7 @@ export default function DinghyInsurancePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Dinghy Insurance New Zealand',
+    name: 'Dinghy Insurance',
     description:
       'Affordable dinghy and small boat insurance for sailing dinghies, racing dinghies, and inflatable tenders.',
     provider: {
@@ -162,7 +162,7 @@ export default function DinghyInsurancePage() {
                 <span className="text-white font-medium">Dinghy</span>
               </nav>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Dinghy Insurance New Zealand
+                Dinghy Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
                 Affordable coverage for sailing dinghies and small vessels

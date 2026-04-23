@@ -4,7 +4,7 @@ import { Trophy, Shield, Zap, Users, Globe, CheckCircle2, ArrowRight, Lock } fro
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Racing Boat Insurance New Zealand | Yacht Racing Coverage',
+  title: 'Racing Boat Insurance | Yacht Racing Coverage',
   description:
     'Specialist racing yacht and sailing boat insurance in New Zealand. Coverage for competitive sailing, regattas, and racing events. America\'s Cup heritage.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/sectors/racing-boat',
-    title: 'Racing Boat Insurance New Zealand',
+    title: 'Racing Boat Insurance',
     description:
       'Specialist racing yacht insurance for competitive sailing and regattas in New Zealand.',
     siteName: 'Yacht Insurance NZ',
@@ -92,7 +92,7 @@ export default function RacingBoatInsurancePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Racing Boat Insurance New Zealand',
+    name: 'Racing Boat Insurance',
     description:
       'Specialist racing yacht and competitive sailing boat insurance for New Zealand racers.',
     provider: {
@@ -168,7 +168,7 @@ export default function RacingBoatInsurancePage() {
                 <span className="text-white font-medium">Racing Boat</span>
               </nav>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Racing Boat Insurance New Zealand
+                Racing Boat Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
                 Specialist coverage for competitive sailing and racing yachts

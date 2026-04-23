@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/sectors/coastal-cruising',
-    title: 'Coastal Cruising Insurance New Zealand',
+    title: 'Coastal Cruising Insurance',
     description:
       'Insurance for coastal and bay cruising in New Zealand regional waters.',
     siteName: 'Yacht Insurance NZ',
@@ -100,7 +100,7 @@ export default function CoastalCruisingInsurancePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Coastal Cruising Insurance New Zealand',
+    name: 'Coastal Cruising Insurance',
     description:
       'Insurance for coastal and bay cruising in New Zealand regional waters including Hauraki Gulf and Bay of Islands.',
     provider: {
@@ -176,7 +176,7 @@ export default function CoastalCruisingInsurancePage() {
                 <span className="text-white font-medium">Coastal Cruising</span>
               </nav>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Coastal Cruising Insurance New Zealand
+                Coastal Cruising Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
                 Perfect for regional bay and coastal water cruising

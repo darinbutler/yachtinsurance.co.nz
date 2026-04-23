@@ -15,7 +15,7 @@ import {
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Yacht Insurance New Zealand | Comprehensive Marine Coverage',
+  title: 'Yacht Insurance | Comprehensive Marine Coverage',
   description:
     'Get expert yacht insurance coverage in New Zealand. We offer comprehensive protection for sailing and motor yachts of all sizes. Free quotes from specialists.',
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/sectors/yacht',
-    title: 'Yacht Insurance New Zealand',
+    title: 'Yacht Insurance',
     description:
       'Comprehensive yacht insurance coverage for sailing and motor yachts in New Zealand waters.',
     siteName: 'Yacht Insurance NZ',
@@ -136,7 +136,7 @@ export default function YachtInsurancePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Yacht Insurance New Zealand',
+    name: 'Yacht Insurance',
     description:
       'Comprehensive yacht and marine insurance coverage for sailing yachts, motor yachts, superyachts and classic yachts in New Zealand.',
     provider: {
@@ -218,7 +218,7 @@ export default function YachtInsurancePage() {
                 <span className="text-white font-medium">Yacht</span>
               </nav>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Yacht Insurance New Zealand
+                Yacht Insurance
               </h1>
               <p className="text-lg sm:text-xl text-slate-200 mb-6 max-w-2xl leading-relaxed">
                 Comprehensive marine coverage for sailing and motor yachts of all sizes
