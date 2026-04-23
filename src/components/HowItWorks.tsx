@@ -42,19 +42,29 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-14 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      ref={sectionRef}
+      className="relative py-14 md:py-20 overflow-hidden"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1626869710563-be671a0cd919?w=1920&h=1080&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 50%',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/92 via-slate-800/88 to-sky-900/90" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
           className={`text-center mb-14 transition-all duration-700 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <p className="text-sm font-semibold text-sky-600 uppercase tracking-widest mb-2">Simple Process</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <p className="text-sm font-semibold text-sky-400 uppercase tracking-widest mb-2">Simple Process</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             How It Works
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-sky-200 max-w-2xl mx-auto">
             Get personalized insurance quotes in three simple steps
           </p>
         </div>

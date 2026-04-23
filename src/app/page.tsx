@@ -249,13 +249,21 @@ export default function Home() {
       <HowItWorks />
 
       {/* Why Insure Section */}
-      <section className="py-12 md:py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative py-16 md:py-24 overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1534854638093-bada1813ca19?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 40%',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-sky-900/75 to-slate-900/85" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Insure Your Vessel?
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-sky-200 max-w-2xl mx-auto">
               Comprehensive protection for your marine investment
             </p>
           </div>
@@ -266,15 +274,15 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 hover:border-sky-400/50 transition-all"
                 >
-                  <div className="p-3 bg-teal-50 rounded-lg mb-4 w-fit">
-                    <Icon className="w-6 h-6 text-teal-600" />
+                  <div className="p-3 bg-sky-400/20 border border-sky-400/30 rounded-lg mb-4 w-fit">
+                    <Icon className="w-6 h-6 text-sky-300" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  <h3 className="text-lg font-bold text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 text-sm">{benefit.description}</p>
+                  <p className="text-sky-100/80 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
               );
             })}
@@ -360,13 +368,21 @@ export default function Home() {
       </section>
 
       {/* Mini Quote Form Section */}
-      <section className="py-12 md:py-20 bg-slate-50">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative py-16 md:py-24 overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1696028354827-0d36454dcaa8?w=1920&h=1080&fit=crop)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 60%',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-sky-900/70 to-slate-900/80" />
+        <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Get Your Free Quote in 2 Minutes
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-lg text-sky-200">
               No credit card required. Instant quotes from multiple insurers.
             </p>
           </div>
