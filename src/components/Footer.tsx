@@ -94,7 +94,7 @@ export default function Footer() {
         <div className="bg-slate-800 rounded-lg p-6 mb-8 border border-slate-700">
           <h4 className="text-white font-bold text-sm mb-2">How This Site Works</h4>
           <p className="text-slate-300 text-xs leading-relaxed">
-            YachtInsurance.co.nz is operated by Cover4You Group. We are a referral service — when you submit a quote request, your details are passed to licensed insurance advisers and brokers who will contact you with quotes and coverage options. We do not sell insurance directly and do not provide regulated financial advice. Our advisers earn commission from insurers when a policy is placed. This service is completely free to you — you pay nothing extra.
+            YachtInsurance.co.nz is operated by Cover4You. We are a referral service — when you submit a quote request, your details are passed to licensed insurance advisers and brokers who will contact you with quotes and coverage options. We do not sell insurance directly and do not provide regulated financial advice. Our advisers earn commission from insurers when a policy is placed. This service is completely free to you — you pay nothing extra.
           </p>
         </div>
 
