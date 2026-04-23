@@ -6,7 +6,7 @@ import { faqs } from '@/data/faqs';
 
 export const metadata: Metadata = {
   title: 'Get Your Free Yacht Insurance Quote | YachtInsurance.co.nz',
-  description: 'Get a free, no-obligation yacht insurance quote in under 2 minutes. Compare rates from 10+ NZ insurers. ICNZ registered, 100% secure, instant response.',
+  description: 'Get a free, no-obligation yacht insurance quote in under 2 minutes. Compare rates from multiple NZ insurers. ICNZ registered, 100% secure, instant response.',
   keywords: [
     'yacht insurance quote',
     'boat insurance quote nz',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     locale: 'en_NZ',
     url: 'https://yachtinsurance.co.nz/contact',
     title: 'Get Your Free Yacht Insurance Quote | YachtInsurance.co.nz',
-    description: 'Get a free, no-obligation yacht insurance quote in under 2 minutes. Compare rates from 10+ NZ insurers.',
+    description: 'Get a free, no-obligation yacht insurance quote in under 2 minutes. Compare rates from multiple NZ insurers.',
     siteName: 'Yacht Insurance NZ',
     images: [
       {
@@ -149,7 +149,7 @@ export default function ContactPage() {
               </p>
               <div className="space-y-4 text-slate-300 max-w-3xl">
                 <p>
-                  Compare quotes from 10+ top New Zealand marine insurers and find the perfect coverage for your yacht, boat, or jet ski.
+                  Compare quotes from multiple top New Zealand marine insurers and find the perfect coverage for your yacht, boat, or jet ski.
                 </p>
               </div>
 
@@ -206,7 +206,7 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {[
               { step: '1', title: 'Tell Us About Your Vessel', description: 'Fill out our quick form with details about your boat, yacht, or jet ski. It takes less than 2 minutes and there\'s no obligation.', icon: '🚤' },
-              { step: '2', title: 'We Compare 10+ Insurers', description: 'Our team contacts top NZ marine insurers on your behalf to find the best coverage options and most competitive premiums.', icon: '📊' },
+              { step: '2', title: 'We Compare Multiple Insurers', description: 'Our team contacts top NZ marine insurers on your behalf to find the best coverage options and most competitive premiums.', icon: '📊' },
               { step: '3', title: 'Get Your Tailored Quote', description: 'Receive personalised quotes within 24 hours. Choose the policy that suits you best with guidance from our expert advisors.', icon: '✅' },
             ].map((item) => (
               <div key={item.step} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-sky-300 hover:shadow-lg transition-all group">
@@ -229,7 +229,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
             {[
               { value: '24hrs', label: 'Average Response Time' },
-              { value: '10+', label: 'NZ Insurance Partners' },
+              { value: 'Multiple', label: 'Insurance Partners' },
               { value: 'All Types', label: 'Vessels Covered' },
               { value: '$0', label: 'Brokerage Fees' },
             ].map((stat, index) => (

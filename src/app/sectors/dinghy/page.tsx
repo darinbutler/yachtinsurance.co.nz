@@ -184,7 +184,7 @@ export default function DinghyInsurancePage() {
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
                   <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm text-white font-medium">10+ NZ Insurers Compared</span>
+                  <span className="text-xs sm:text-sm text-white font-medium">Multiple Insurers Compared</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
                   <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
