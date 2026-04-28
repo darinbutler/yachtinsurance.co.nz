@@ -87,6 +87,29 @@ export async function POST(request: NextRequest) {
 
   const data = await res.json();
 
+  // Send email notification regardless of Keane outcome
+  try {
+    await fetch('https://formsubmit.co/ajax/hello@cover4you.co.nz', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: 'New Quote Request - YachtInsurance.co.nz',
+        _cc: 'butlerdarin@gmail.com',
+        _captcha: 'false',
+        name,
+        email,
+        phone,
+        vessel_type,
+        vessel_value,
+        vessel_make_model: vessel_make_model || '',
+        mooring_location: mooring_location || '',
+        keane_reference: data.reference || data.id || '',
+      }),
+    });
+  } catch (emailErr) {
+    console.error('FormSubmit email error:', emailErr);
+  }
+
   if (!res.ok) {
     console.error('Keane API error:', data);
     return NextResponse.json({ error: data }, { status: res.status });
