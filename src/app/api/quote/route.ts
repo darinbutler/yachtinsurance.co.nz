@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
 
   // Send email notification regardless of Keane outcome
   try {
-    await fetch('https://formsubmit.co/ajax/johnlouis290@gmail.com', {
+    await fetch('https://formsubmit.co/ajax/hello@cover4you.co.nz', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
