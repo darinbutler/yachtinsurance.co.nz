@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle2, Clock, Mail, ArrowRight, Shield, Anchor, Star, Award } from 'lucide-react';
 import ReferenceDisplay from './ReferenceDisplay';
+import LeadEvent from '@/components/LeadEvent';
 
 export const metadata: Metadata = {
   title: 'Quote Form Submitted | Thank You | YachtInsurance.co.nz',
@@ -66,6 +67,7 @@ const KEANE_USPS = [
 export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
+      <LeadEvent variant="quote_form" />
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
