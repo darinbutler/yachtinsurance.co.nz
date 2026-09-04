@@ -13,8 +13,19 @@ import { useEffect } from 'react'
  *
  * sessionStorage is per-tab and cleared when the tab closes, which is the right
  * scope: a genuine second enquiry in a new session should count again.
+ *
+ * The event is pushed onto dataLayer whether or not gtag.js has finished
+ * loading. On a hard load of this page the tag script and this effect race each
+ * other, and simply checking for window.gtag would silently drop the conversion
+ * whenever the effect won. gtag.js replays everything already queued on
+ * dataLayer when it initialises, so queueing is safe and losing the race is not.
  */
 const KEY = 'ynz_lead_sent'
+
+type GtagWindow = Window & {
+  dataLayer?: unknown[]
+  gtag?: (...args: unknown[]) => void
+}
 
 export default function LeadEvent({ variant = '' }: { variant?: string }) {
   useEffect(() => {
@@ -27,14 +38,18 @@ export default function LeadEvent({ variant = '' }: { variant?: string }) {
     }
     if (already) return
 
-    const w = window as unknown as { gtag?: (...args: unknown[]) => void }
-    if (typeof w.gtag === 'function') {
-      w.gtag('event', 'generate_lead', {
-        event_category: 'enquiry',
-        event_label: variant || 'quote_form',
-        currency: 'NZD',
-      })
+    const w = window as GtagWindow
+    w.dataLayer = w.dataLayer || []
+    if (typeof w.gtag !== 'function') {
+      w.gtag = function gtag() {
+        // eslint-disable-next-line prefer-rest-params
+        w.dataLayer!.push(arguments)
+      }
     }
+    w.gtag('event', 'generate_lead', {
+      event_category: 'enquiry',
+      event_label: variant || 'quote_form',
+    })
 
     try {
       sessionStorage.setItem(KEY, '1')
