@@ -207,7 +207,7 @@ export default function Home() {
                 {[
                   { icon: '🇳🇿', title: 'NZ Expertise', desc: "We know Hauraki Gulf conditions, Cook Strait crossings, Fiordland remoteness, and the specific risks that matter for New Zealand boat owners." },
                   { icon: '🛡️', title: 'Market Access', desc: "We compare quotes from multiple NZ and international marine insurers — finding the best coverage for your vessel type and sailing grounds." },
-                  { icon: '📄', title: 'FSP registered', desc: "All referred advisors are registered with the Financial Markets Authority and hold relevant qualifications under the Financial Advice Regime." },
+                  { icon: '📄', title: 'FSP registered', desc: "Advisers we refer to are registered on the Financial Service Providers Register. You can check any adviser yourself at fsp-register.companiesoffice.govt.nz." },
                   { icon: '⏱️', title: 'Fast Turnaround', desc: "Cruising plans don't wait. Competitive quotes in less than 24 hours — even for specialist blue water or racing cover." },
                 ].map(item => (
                   <div key={item.title} className="flex gap-4">
