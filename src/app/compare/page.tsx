@@ -466,9 +466,9 @@ export default function Compare() {
               The real test of an insurer is how it behaves at claim time. Specialist marine insurers typically employ marine surveyors and engineers who understand vessel damage in a way that general claims handlers may not. This translates to more accurate assessments, faster resolution, and fewer disputes over repair methodology or replacement values. When comparing providers, look beyond the premium figure to the insurer&apos;s track record, claims process, and whether they have <Link href="/claims" className="text-sky-600 hover:text-sky-700 font-semibold">dedicated claims support</Link> for marine incidents.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 mt-8">ICNZ Fair Insurance Code</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mt-8">Claims Standards</h3>
             <p>
-              All providers listed on this page operate under the Insurance Council of New Zealand (ICNZ) Fair Insurance Code, which sets minimum standards for policy clarity, claims handling timeframes, and complaints resolution. If a claim is disputed, the ICNZ process provides a structured escalation path before formal dispute resolution. Our advisers are licensed under the Financial Markets Conduct Act and operate under disclosure obligations — meaning you will always be told how they are remunerated before a policy is placed.
+              All providers listed on this page operate as a general standard of good practice, which sets minimum standards for policy clarity, claims handling timeframes, and complaints resolution. If a claim is disputed, the FSP process provides a structured escalation path before formal dispute resolution. Our advisers are licensed under the Financial Markets Conduct Act and operate under disclosure obligations — meaning you will always be told how they are remunerated before a policy is placed.
             </p>
 
             <p className="text-slate-600 italic mt-8">

@@ -171,7 +171,7 @@ export default function FAQsPage() {
                 of properly protecting your vessel against weather, navigational hazards, and liability risks unique to our waters.
               </p>
               <p>
-                Marine insurance is governed by the Marine Insurance Act 1908 and the Insurance Council of New Zealand (ICNZ) Fair Insurance Code,
+                Marine insurance is governed by the Marine Insurance Act 1908 and the Financial Markets Authority industry claims standards,
                 which sets the legal and ethical framework for policy terms and claims handling.
                 Unlike vehicle insurance, marine cover is not legally compulsory — however, most lenders,
                 marinas, and mooring facilities require proof of insurance before they will allow your vessel to be

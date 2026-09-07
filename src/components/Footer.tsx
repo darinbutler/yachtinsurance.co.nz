@@ -153,8 +153,8 @@ export default function Footer() {
             <div className="text-slate-500 text-xs">
               <p>
                 &copy; {new Date().getFullYear()} YachtInsurance.co.nz — operated by <a href="https://www.cover4you.co.nz" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">Cover4You</a>. All rights reserved. |{' '}
-                <a href="https://icnz.org.nz" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">
-                  Insurance Council of New Zealand (ICNZ)
+                <a href="https://www.fma.govt.nz/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">
+                  Financial Markets Authority
                 </a>
               </p>
             </div>

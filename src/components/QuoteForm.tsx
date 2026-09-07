@@ -188,7 +188,7 @@ export default function QuoteForm({ mode = 'full' }: QuoteFormProps) {
       <div className="grid grid-cols-2 gap-3">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
-          <span className="text-xs text-slate-600 font-medium">Fair Practice Standard</span>
+          <span className="text-xs text-slate-600 font-medium">FSP Registered</span>
         </div>
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />

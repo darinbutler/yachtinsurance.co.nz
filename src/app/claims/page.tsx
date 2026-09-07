@@ -188,7 +188,7 @@ export default function ClaimsPage() {
               <ShieldCheck className="w-8 h-8 text-sky-600 mb-4" />
               <h3 className="text-lg font-bold text-slate-900 mb-3">Complaint About Your Insurer</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                If you have a complaint about your insurance policy, a claim decision, or the conduct of your insurer, contact your insurer directly in the first instance. Major NZ insurers are members of the Insurance Council of New Zealand (ICNZ) and are bound by the <a href="https://icnz.org.nz/fair-insurance-code/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline font-medium">Fair Insurance Code</a>.
+                If you have a complaint about your insurance policy, a claim decision, or the conduct of your insurer, contact your insurer directly in the first instance. Major New Zealand insurers are licensed and supervised by the Reserve Bank of New Zealand, with conduct regulated by the <a href="https://www.fma.govt.nz/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline font-medium">Claims Standards</a>.
               </p>
               <div className="space-y-2 text-sm text-slate-700">
                 <div className="flex gap-2 items-start">

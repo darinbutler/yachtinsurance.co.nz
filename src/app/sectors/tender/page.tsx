@@ -193,7 +193,7 @@ export default function TenderInsurancePage() {
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
                   <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm text-white font-medium">ICNZ Registered Advisors</span>
+                  <span className="text-xs sm:text-sm text-white font-medium">FSP Registered Advisors</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3">
                   <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400 flex-shrink-0" />

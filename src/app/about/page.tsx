@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     'insurance comparison nz',
     'marine insurance broker',
     'boat insurance quotes nz',
-    'insurance council nz',
   ],
   openGraph: {
     type: 'website',
@@ -288,7 +287,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ICNZ Compliance Section */}
+      {/* FSP Compliance Section */}
       <section className="py-12 md:py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg border-l-4 border-sky-600 p-8 shadow-md">
@@ -298,13 +297,13 @@ export default function About() {
               </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Insurance Council of New Zealand (ICNZ) Compliance
+                  Regulatory Compliance
                 </h2>
                 <p className="text-slate-600 mb-4 leading-relaxed">
-                  YachtInsurance.co.nz operates in compliance with the Insurance Council of New Zealand (ICNZ) regulations and professional standards. The ICNZ is the peak body for the insurance industry in Aotearoa, ensuring member organizations maintain ethical practices, consumer protections, and industry compliance.
+                  YachtInsurance.co.nz operates in compliance with the Financial Markets Authority regulations and professional standards. The FSP is the peak body for the insurance industry in Aotearoa, ensuring member organizations maintain ethical practices, consumer protections, and industry compliance.
                 </p>
                 <p className="text-slate-600 mb-6 leading-relaxed">
-                  All insurance providers we work with are ICNZ-registered and comply with New Zealand insurance regulations. This ensures they maintain appropriate reserves, follow fair claims practices, and adhere to professional standards that protect consumers.
+                  All insurance providers we work with are FSP registered and comply with New Zealand insurance regulations. This ensures they maintain appropriate reserves, follow fair claims practices, and adhere to professional standards that protect consumers.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-slate-200">
@@ -326,14 +325,14 @@ export default function About() {
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-slate-900">Regulated Partners</h4>
-                      <p className="text-sm text-slate-600 mt-1">All insurers we connect you with are ICNZ-registered and regulated</p>
+                      <p className="text-sm text-slate-600 mt-1">All insurers we connect you with are FSP registered and regulated</p>
                     </div>
                   </div>
                   <div className="flex gap-3 items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-slate-900">Industry Oversight</h4>
-                      <p className="text-sm text-slate-600 mt-1">We maintain compliance with ICNZ professional practice standards</p>
+                      <p className="text-sm text-slate-600 mt-1">We maintain compliance with professional practice standards</p>
                     </div>
                   </div>
                 </div>

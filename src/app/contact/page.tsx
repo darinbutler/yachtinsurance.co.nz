@@ -6,7 +6,7 @@ import { faqs } from '@/data/faqs';
 
 export const metadata: Metadata = {
   title: 'Get Your Yacht Insurance Quote | YachtInsurance.co.nz',
-  description: 'Get a no-obligation yacht insurance quote in under 2 minutes. Compare rates from multiple NZ insurers. ICNZ registered, 100% secure, instant response.',
+  description: 'Get a no-obligation yacht insurance quote in under 2 minutes. Compare rates from multiple NZ insurers. FSP registered, 100% secure, instant response.',
   keywords: [
     'yacht insurance quote',
     'boat insurance quote nz',
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 const trustBadges = [
   {
     icon: BadgeCheck,
-    title: 'ICNZ Registered',
-    description: 'Insurance Council of NZ verified',
+    title: 'FSP registered',
+    description: 'Financial Markets Authority verified',
   },
   {
     icon: Zap,

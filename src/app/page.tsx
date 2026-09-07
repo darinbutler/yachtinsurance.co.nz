@@ -97,7 +97,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
               {[
-                { label: 'Registered Advisors', value: 'ICNZ',   icon: <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /> },
+                { label: 'Registered Advisors', value: 'FSP',   icon: <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /> },
                 { label: 'Quote Response',      value: '<24hrs', icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> },
                 { label: 'Nationwide Cover',    value: 'NZwide', icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /> },
                 { label: 'Claims Support',      value: '24/7',   icon: <><path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" /></> },
@@ -207,7 +207,7 @@ export default function Home() {
                 {[
                   { icon: '🇳🇿', title: 'NZ Expertise', desc: "We know Hauraki Gulf conditions, Cook Strait crossings, Fiordland remoteness, and the specific risks that matter for New Zealand boat owners." },
                   { icon: '🛡️', title: 'Market Access', desc: "We compare quotes from multiple NZ and international marine insurers — finding the best coverage for your vessel type and sailing grounds." },
-                  { icon: '📄', title: 'ICNZ Registered', desc: "All referred advisors are registered with the Insurance Council of New Zealand and hold relevant qualifications under the Financial Advice Regime." },
+                  { icon: '📄', title: 'FSP registered', desc: "All referred advisors are registered with the Financial Markets Authority and hold relevant qualifications under the Financial Advice Regime." },
                   { icon: '⏱️', title: 'Fast Turnaround', desc: "Cruising plans don't wait. Competitive quotes in less than 24 hours — even for specialist blue water or racing cover." },
                 ].map(item => (
                   <div key={item.title} className="flex gap-4">
